@@ -49,7 +49,7 @@ Infrared Sensor Bar USB for Wii Emulator Remote Motion Detection Setup
 │  ████  LOGITECH MX MASTER 3 (Flow mouse) ████████████████████████████████               │
 │  ████  LOGITECH MX Keys Mini (Flow keyboard) ████████████████████████████               │
 │  ████████████████████████████████████████████████████████████████████████               │
-│                                                                                         │
+│  https://github.com/igiteam/logitec_mx_mouse_3_macos                                    │
 │  🕹️  Wii Remotes (3x) for motion controls                                               │
 │  📡  2 x Infrared Sensor Bar for pointer tracking                                       │
 │  🎧  3.5mm Earphones for audio                                                          │
