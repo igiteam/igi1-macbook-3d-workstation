@@ -1,0 +1,56 @@
+MacBook Pro 16" 2019 i9 8-Core 2.4Ghz 32GB Ram 1TB SSD AMD 5500M 8GB Space Grey
+MacBook Pro 16" 2019 i9-9880H 2.3 Ghz 1TB SSD 32GB RAM A2141 AMD 5500M 4GB Space Grey
+Macbook Pro 15.4" 2014 i7 Dual Core 2.5GHz 500GB SSD 16GB RAM NVIDIA GT 750M 2GB Silver
+Logitech MX Master 3 Mac Edition
+Logitech MX Keys Mini Wireless Keyboard
+2x Universal Red & Blue Anaglyph 3D Glasses for Movies, Games & Photos
+Nintendo Wii Official White Remote Controller Wiimote Genuine With Nunchuck
+Infrared Sensor Bar USB-A for Wii Emulator Remote Motion Detection Setup
+OFFICIAL GENUINE APPLE USB-C TO DIGITAL AV HDMI MULTIPORT ADAPTER ORIGINAL A2119
+Earphones for Apple iPhone iPad Headphones Handsfree With Mic 3.5MM
+3rd Party Nintendo Wii Remote Controller With Motion Plus Attachment + Nunchuck & SleeveX2
+Panasonic VIERA VT30 Series 55" 3D Plasma TV - 2 x 3D official glasses in cases with chargers, remote and manual
+Amazon Basics 4K HDMI Cable 3m - 18Gbps High Speed with Ethernet, 4K@60Hz, 2160p
+Infrared Sensor Bar USB for Wii Emulator Remote Motion Detection Setup
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                       3D DEVELOPMENT STUDIO                                             │
+│                                                                                         │
+│  ┌─────────────────────────────────────────────────────────────────────┐                │
+│  │              PANASONIC VIERA VT30 55" 3D PLASMA TV                  │                │
+│  │                                                                     │                │
+│  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐                  │                │
+│  │  │  HDMI 1     │  │  HDMI 2     │  │  HDMI 3     │                  │                │
+│  │  │  MAC 1      │  │  MAC 2      │  │  MAC 3      │                  │                │
+│  │  │  (Canvas)   │  │  (Ref)      │  │  (Testing)  │                  │                │
+│  │  └─────────────┘  └─────────────┘  └─────────────┘                  │                │
+│  │                                                                     │                │
+│  │  🕶️ 3D GLASSES READY   │   💿 USB Port → 3D Videos                   │                │
+│  └─────────────────────────────────────────────────────────────────────┘                │
+│                                    ▲                                                    │
+│                                    │                                                    │
+│                    ┌───────────────┴──────────────┐──────────────────────────┐          │
+│                    │                              │                          │          │
+│  ┌─────────────────┴─────────────────┐ ┌──────────┴──────────┐ ┌────────────────────┐   │
+│  │        MAC 1 (The Canvas)         │ │   MAC 2 (Reference) │ │   MAC 3 (Testing)  │   │
+│  │                                   │ │                     │ │                    │   │
+│  │  ╔═══════════════════════════════╗│ │  ╔═════════════════╗│ │   ╔═══════════════╗│   │
+│  │  ║  OFP MISSION EDITOR/COMPILE   ║│ │  ║  PROJECT IGI    ║│ │   ║   OFP IGI     ║│   │
+│  │  ║  3D Viewport                  ║│ │  ║  (Original)     ║│ │   ║  (Test game)  ║│   │
+│  │  ║  Level Building               ║│ │  ║  Reference      ║│ │   ║    Gameplay   ║│   │
+│  │  ║  Scripting                    ║│ │  ║  Map/Notes      ║│ │   ║   3d enabled  ║│   │
+│  │  ╚═══════════════════════════════╝│ │  ╚═════════════════╝│ │   ╚═══════════════╝│   │
+│  │                                   │ │                     │ │                    │   │
+│  │  🎮 Wii Remote (Motion control)   │ │  🎮 Wii Remote       │ │    🎮 Wii Remote   │   │
+│  │  🕶️ Anaglyph 3D Preview           │ │  📋 Reference Docs   │ │    🕶️ Anaglyph 3D  │   │
+│  └───────────────────────────────────┘ └─────────────────────┘  └───────────────────┘   │
+│                                                                                         │
+│  ████████████████████████████████████████████████████████████████████████               │
+│  ████  LOGITECH MX MASTER 3 (Flow mouse) ████████████████████████████████               │
+│  ████  LOGITECH MX Keys Mini (Flow keyboard) ████████████████████████████               │
+│  ████████████████████████████████████████████████████████████████████████               │
+│                                                                                         │
+│  🕹️  Wii Remotes (3x) for motion controls                                               │
+│  📡  2 x Infrared Sensor Bar for pointer tracking                                       │
+│  🎧  3.5mm Earphones for audio                                                          │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
