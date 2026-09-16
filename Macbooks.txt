@@ -33,7 +33,7 @@ Infrared Sensor Bar USB for Wii Emulator Remote Motion Detection Setup
 │                    │                              │                          │          │
 │  ┌─────────────────┴─────────────────┐ ┌──────────┴──────────┐ ┌────────────────────┐   │
 │  │        MAC 1 (The Canvas)         │ │   MAC 2 (Reference) │ │   MAC 3 (Testing)  │   │
-│  │                                   │ │                     │ │                    │   │
+│  │           12.4 Monetery           │ │     14.5 Sonoma     │ │     11.7 Big Sur   │   │
 │  │  ╔═══════════════════════════════╗│ │  ╔═════════════════╗│ │   ╔═══════════════╗│   │
 │  │  ║  OFP MISSION EDITOR/COMPILE   ║│ │  ║  PROJECT IGI    ║│ │   ║   OFP IGI     ║│   │
 │  │  ║  3D Viewport                  ║│ │  ║  (Original)     ║│ │   ║  (Test game)  ║│   │
