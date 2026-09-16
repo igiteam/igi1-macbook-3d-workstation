@@ -54,3 +54,23 @@ Infrared Sensor Bar USB for Wii Emulator Remote Motion Detection Setup
 │  📡  2 x Infrared Sensor Bar for pointer tracking                                       │
 │  🎧  3.5mm Earphones for audio                                                          │
 └─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────┐
+│                                                       │
+│   [IR BAR 1]  ← on the Mac (desk)                     │
+│        │                                              │
+│        ▼  You sit here/stand → point Wiimote at Mac   │
+│                                                       │
+│   ═══════════════════════════════════════════════     │
+│                                                       │
+│   [IR BAR 2]  ← on/near the TV                        │
+│        │                                              │
+│        ▼  You walk here → point Wiimote at TV         │
+│                                                       │
+│   [VT30 55" Plasma]  ← eventually                     │
+│                                                       │
+└───────────────────────────────────────────────────────┘
+
+MacBook Pro 16" 2019 → Apple USB-C to Digital AV HDMI Multiport Adapter (A2119) → HDMI 3m cable → TV
+Macbook Pro 15.4" 2014 → native HDMI port → HDMI 3m cable → TV
+
