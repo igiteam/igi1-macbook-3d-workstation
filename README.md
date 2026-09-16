@@ -38,3 +38,13 @@ python3 ebay_search.py
 ======================================================================
    GBP 349.99   https://www.ebay.co.uk/itm/6789012345
    ...
+
+
+🔑 What You Need to Know
+Thing	                Where
+eBay Developer Account	developer.ebay.com
+App ID (Client ID)	    "Application Keys" → "App ID"
+Cert ID (Client Secret)	"Application Keys" → "Cert ID"
+
+Marketplace	EBAY-GB for UK, EBAY-US for US
+Rate limit	5 calls/sec default — the script sleeps 0.5s between items
