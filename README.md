@@ -125,7 +125,7 @@ handle both the editor and the game at once."
 
 Every friction point has a dedicated machine, a dedicated OS, a dedicated screen.
 
-
+```
 ## 1. Install requests
 pip3 install requests
 
@@ -143,12 +143,13 @@ export EBAY_CLIENT_SECRET="PRD-xxxxxxxxxxxx-xxxx-xxxx-xxxx-xxxx"
 
 ## 4. Run it (make sure ebay-items.json is in the same folder)
 python3 ebay_search.py
+```
 
 📦 Loaded 14 items from ebay-items.json
 
 🔑 Getting eBay access token...
 ✅ Token acquired
-
+```
 ======================================================================
 [1/14] MacBook Pro 16" 2019 i9 8-Core 2.4Ghz 32GB Ram 1TB SSD AMD 5500M 8GB Space Grey
 ======================================================================
@@ -163,7 +164,7 @@ python3 ebay_search.py
 ======================================================================
    GBP 349.99   https://www.ebay.co.uk/itm/6789012345
    ...
-
+```
 
 🔑 What You Need to Know
 Thing	                Where
