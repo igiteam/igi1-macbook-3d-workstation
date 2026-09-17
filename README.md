@@ -3,10 +3,21 @@ Read Macbooks.txt
 
 ![Alt text](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/igi1-macbook-3d-workstation.jpeg?raw=true)
 
+![Alt text](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/operation-flashpoint-project-igi-dual-screen.jpeg)
+
+![Alt text](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/Panasonic%2055VT30%203D.jpeg?raw=true)
+
+![Alt text](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/anaglyph_3d_glasses.jpg?raw=true)
+
+
+```
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                    WHY THIS SETUP EXISTS                                │
 │                    3D DEVELOPMENT STUDIO                                │
 └─────────────────────────────────────────────────────────────────────────┘
+```
+
+
 Remake classic PC games — faithfully and fast — across multiple engines.
 
 Not ports. Not remasters with new assets. Recreations that run the original gameplay,
