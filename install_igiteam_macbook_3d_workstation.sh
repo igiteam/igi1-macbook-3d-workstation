@@ -31,6 +31,7 @@ smcFanControl
 OBS
 MXFlowSwitch
 MXKeysMini
+Grace3PlaySwitch
 Mumble
 gfxCardStatus
 Firefox Developer Edition
@@ -50,3 +51,11 @@ python
 netlify-cli
 npm
 node
+
+User>Login Items
+MXFlowSwitch
+MXKeysMini
+Grace3PlaySwitch
+SSD Monitor
+smcFanControl
+gfxCardStatus
