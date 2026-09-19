@@ -12,7 +12,8 @@ Earphones for Apple iPhone iPad Headphones Handsfree With Mic 3.5MM
 Panasonic VIERA VT30 Series 55" 3D Plasma TV - 2 x 3D official glasses in cases with chargers, remote and manual
 Amazon Basics 4K HDMI Cable 3m - 18Gbps High Speed with Ethernet, 4K@60Hz, 2160p
 Infrared Sensor Bar USB for Wii Emulator Remote Motion Detection Setup
-
+JBL Quantum 200 Gaming Headset Wired Over-Ear with Microphone, Multi-Platform
+Grace Digital GDI-BTPB300 3Play Bluetooth Audio Receiver 
 ┌─────────────────────────────────────────────────────────────────────────────────────────┐
 │                       3D DEVELOPMENT STUDIO                                             │
 │                                                                                         │
@@ -102,19 +103,19 @@ Macbook Pro 15.4" 2014 → native HDMI port → HDMI 3m cable → TV
                  │                   │                   │        HDMI 1  (live)
                  └───────────────────┼───────────────────┘
                                      │
-                       ┌─────────────┴─────────────┐
-                       │                           │
-                       ▼                           ▼
-            ┌──────────────────────┐    ┌──────────────────────┐
-            │  INPUT — LEFT HAND   │    │  INPUT — RIGHT HAND  │
-            │                      │    │                      │
-            │  ⌨️  MX KEYS MINI    │    │  🖱️  MX MASTER 3      │
-            │  Logitech Flow       │    │  Logitech Flow       │
-            │  Custom app:         │    │  Custom app:         │
-            │  MXKeysSwitch        │    │  logitec_mx_mouse_3  │
-            │                      │    │                      │
-            │  Host 1/2/3 via menu │    │  Host 1/2/3 via menu │
-            └──────────────────────┘    └──────────────────────┘
+                       ┌─────────────┴─────────────┐───────────────────────────┐
+                       │                           │                           │
+                       ▼                           ▼                           ▼
+            ┌──────────────────────┐    ┌──────────────────────┐    ┌──────────────────────┐
+            │  ᛒINPUT — LEFT HAND  │    │  ᛒINPUT — RIGHT HAND │    │   ᛒAUDIO             │ 
+            │                      │    │                      │    │   OUTPUT - MAC 1/2/3 │ 
+            │  ⌨️  MX KEYS MINI    │    │  🖱️  MX MASTER 3      │    │   Grace Digital      │ 
+            │  Logitech Flow       │    │  Logitech Flow       │    │   GDI-BTPB300 3Play  │ 
+            │  Custom app:         │    │  Custom app:         │    │   └─ 3.5mm jack      │  
+            │  MXKeysSwitch        │    │  logitec_mx_mouse_3  │    │   🎧 JBL Quantum 200 │ 
+            │                      │    │                      │    │                      │  
+            │  Host 1/2/3 via menu │    │  Host 1/2/3 via menu │    │  Host 1/2/3 via menu │
+            └──────────────────────┘    └──────────────────────┘    └──────────────────────┘
                       │                           │
                       └─────────────┬─────────────┘
                                     │
