@@ -14,6 +14,9 @@ Amazon Basics 4K HDMI Cable 3m - 18Gbps High Speed with Ethernet, 4K@60Hz, 2160p
 Infrared Sensor Bar USB for Wii Emulator Remote Motion Detection Setup
 JBL Quantum 200 Gaming Headset Wired Over-Ear with Microphone, Multi-Platform
 Grace Digital GDI-BTPB300 3Play Bluetooth Audio Receiver 
+
+Logitech MX Master 3 Mac Edition +  Logitech MX Keys Mini Wireless Keyboard
+https://github.com/igiteam/logitec_mx_mouse_3_macos 
 ┌─────────────────────────────────────────────────────────────────────────────────────────┐
 │                       3D DEVELOPMENT STUDIO                                             │
 │                                                                                         │
