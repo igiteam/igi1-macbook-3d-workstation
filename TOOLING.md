@@ -58,3 +58,20 @@ Wine wrapper name	Where the game lives on your Macs
 Tool location	Where the tool lives (Windows? Wine? Native Mac?)
 
 The FEAR → RtCW → OFP example you gave is exactly the kind of chain this system needs to track.
+
+
+no its like there are monday and all these progress tracking shit, but i need to do something
+
+which allows me to actually progress. now i have the hardware, i have the software - the lab is running lets say
+
+the very next thing would be to download all games, install them one by one, making sure if i click any it runs
+
+but then it would ok then install the tools for each game
+than when it is good
+than ok now i have everything installed, ready at hand
+
+but we are talking about 100+ apps  
+
+and i want to ship games 
+
+so thats the question
