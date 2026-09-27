@@ -220,6 +220,12 @@ success "✨ Done! Your Pi is now reachable via wine.macosxjs.com (once route is
 #                               ↓
 #                          Forgejo responds
 
+# wine.macosxjs.com → Cloudflare's IPs → Cloudflare looks up the hostname
+#                                         → finds the tunnel named for it
+#                                         → pushes traffic down the tunnel
+#                                         → Pi receives it
+# This is why you don't need a public IP. Cloudflare is your public IP.
+
 # The Pi starts the conversation. Cloudflare keeps it open. Traffic flows both ways through that already-open connection. CGNAT can't block an outbound connection that the Pi initiated.
 # 📋 What Each Part of the Script Does
 # 1. Checks Docker is installed. The tunnel runs as a Docker container, so Docker has to be there first.
@@ -284,3 +290,16 @@ success "✨ Done! Your Pi is now reachable via wine.macosxjs.com (once route is
 # The script installs a program that makes your Pi reachable from anywhere in the world without needing a public IP, without port forwarding, 
 # and without paying for a VPS. It works around CGNAT by initiating the connection from the Pi side. 
 # Once it's running, your Macs can reach wine.macosxjs.com no matter where the Pi is physically located.
+
+# ⚠️ The Two Things to Remember
+
+# 1. The Public Hostname step is manual. The script sets up the tunnel. 
+# But you have to go into Cloudflare's dashboard once and say "when traffic comes to wine.macosxjs.com, 
+# send it to localhost:3000 on the Pi." After that, it's persistent.
+
+# 2. Forgejo's ROOT_URL must match. If your app.ini says http://localhost:3000 
+# but the browser sees https://wine.macosxjs.com/forgejolfs, links break. Set:
+# ini
+# [server]
+# ROOT_URL = https://wine.macosxjs.com/forgejolfs
+
