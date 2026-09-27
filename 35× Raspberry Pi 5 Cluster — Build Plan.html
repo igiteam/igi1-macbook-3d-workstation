@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>35× Raspberry Pi 5 Cluster — Build Plan</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --panel-2: #1e222b;
+    --border: #2a2f3a;
+    --text: #e6e9ef;
+    --muted: #9aa3b2;
+    --accent: #4a9eff;
+    --good: #3ddc84;
+    --warn: #ffb020;
+    --bad: #ff5c5c;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 2rem 1rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+  }
+
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 0.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .subtitle {
+    color: var(--muted);
+    margin: 0 0 2rem;
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin: 2.5rem 0 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin: 1.5rem 0 0.5rem;
+    color: var(--accent);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.92rem;
+    margin-bottom: 1rem;
+  }
+
+  th, td {
+    padding: 0.7rem 0.9rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  th {
+    background: var(--panel-2);
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(74, 158, 255, 0.04); }
+
+  .best { color: var(--good); font-weight: 600; }
+  .warn { color: var(--warn); }
+  .bad  { color: var(--bad); }
+
+  .callout {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--good);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .callout h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: var(--good);
+  }
+
+  .callout p { margin: 0.4rem 0; color: var(--muted); }
+
+  .callout.warn { border-left-color: var(--warn); }
+  .callout.warn h3 { color: var(--warn); }
+
+  .callout.bad { border-left-color: var(--bad); }
+  .callout.bad h3 { color: var(--bad); }
+
+  ol, ul { margin: 0.5rem 0; padding-left: 1.4rem; }
+  li { margin: 0.35rem 0; }
+
+  code {
+    background: var(--panel-2);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: var(--accent);
+  }
+
+  pre {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--text);
+    margin: 1rem 0;
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    color: var(--text);
+  }
+
+  .step {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+  }
+
+  .step-title {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .kpi {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    text-align: center;
+  }
+
+  .kpi-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+  }
+
+  .kpi-label {
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>35× Raspberry Pi 5 Cluster — Build Plan</h1>
+  <p class="subtitle">A 280GB RAM, 140-core distributed lab for Forgejo, WineJS, and whatever else you want to throw at it.</p>
+
+  <h2>📊 What 35 × Pi 5 (8GB) Actually Equals</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Per Pi 5</th>
+        <th>× 35 Units</th>
+        <th>Equivalent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>RAM</td><td>8GB</td><td class="best">280GB total</td><td>A high-end dedicated server</td></tr>
+      <tr><td>CPU</td><td>4× Cortex-A76 @ 2.4GHz</td><td class="best">140 cores</td><td>More cores than most $200/mo VPSs</td></tr>
+      <tr><td>Storage</td><td>256GB–1TB NVMe</td><td class="best">9TB–35TB</td><td>A small NAS</td></tr>
+      <tr><td>Network</td><td>1GbE each</td><td>35 separate IPs (if needed)</td><td>Full isolation per node</td></tr>
+      <tr><td>Power</td><td>~5W idle, ~12W load</td><td>175W–420W</td><td>Less than a gaming PC</td></tr>
+    </tbody>
+  </table>
+
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-value">280GB</span><span class="kpi-label">Total RAM</span></div>
+    <div class="kpi"><span class="kpi-value">140</span><span class="kpi-label">CPU Cores</span></div>
+    <div class="kpi"><span class="kpi-value">9–35TB</span><span class="kpi-label">NVMe Storage</span></div>
+    <div class="kpi"><span class="kpi-value">35</span><span class="kpi-label">Isolated Nodes</span></div>
+  </div>
+
+  <h2>🎯 What You Can Actually Run</h2>
+  <p>With that much hardware, you're not just running Forgejo. You could run:</p>
+  <ul>
+    <li><strong>35 separate Forgejo instances</strong> — one per project, fully isolated, each with its own LFS store</li>
+    <li><strong>A Kubernetes cluster</strong> — 35 nodes is enough for a serious k3s or k8s lab</li>
+    <li><strong>A CI/CD farm</strong> — each Pi runs one Forgejo runner; parallel builds across 35 nodes</li>
+    <li><strong>A distributed database</strong> — CockroachDB, Cassandra, or ScyllaDB across 35 nodes</li>
+    <li><strong>A rendering farm</strong> — if you ever do 3D or video work</li>
+    <li><strong>A game server cluster</strong> — PufferPanel on each, one game server per node</li>
+    <li><strong>A monitoring stack</strong> — Prometheus + Grafana scraping all 35 nodes</li>
+    <li><strong>A honeypot network</strong> — 35 isolated nodes for security research</li>
+  </ul>
+  <p>The WineJS platform you've been building would scale beautifully across this. Each Pi could host a different set of Windows apps, and the translator could route between them.</p>
+
+  <h2>⚠️ The Real Challenges at 35 Nodes</h2>
+  <p>The math is compelling, but there are practical issues that only show up at scale.</p>
+
+  <h3>1. Rack, Power, and Cooling</h3>
+  <ul>
+    <li>35 Pis in a rack need a proper <strong>19" rack enclosure</strong> with shelves or DIN rails. That's £200–£500.</li>
+    <li><strong>Power:</strong> 35 × 27W PSUs = ~945W peak. You need a <strong>UPS</strong> and probably a dedicated circuit. A decent 1500VA UPS is £200–£400.</li>
+    <li><strong>Cooling:</strong> 35 Pis in a closed rack will get hot. You need rack fans or an open-frame rack. Budget £100–£300.</li>
+    <li><strong>Network:</strong> You need a <strong>48-port gigabit switch</strong> (~£150–£400) and enough power outlets (a rack PDU, ~£100–£200).</li>
+  </ul>
+
+  <h3>2. Management Overhead</h3>
+  <p>Managing 35 separate Pis by hand is painful. You'd want:</p>
+  <ul>
+    <li><strong>Ansible</strong> (or similar) to push configs to all 35 at once</li>
+    <li><strong>A monitoring stack</strong> (Prometheus + Grafana + node_exporter) to see which ones are down</li>
+    <li><strong>Centralized logging</strong> (Loki or similar) so you're not SSHing into each one</li>
+    <li><strong>A container registry</strong> so you build once and deploy everywhere</li>
+  </ul>
+
+  <h3>3. Physical Space</h3>
+  <p>35 Pis + rack + UPS + switch + PDU is roughly the size of a <strong>small mini-fridge</strong>. You need a dedicated corner, closet, or rack.</p>
+
+  <h3>4. Failure Rate</h3>
+  <p>At 35 nodes, you <em>will</em> have failures. SD cards die, PSUs fail, fans seize. You need:</p>
+  <ul>
+    <li><strong>Spare Pis</strong> on hand (buy 2–3 extras)</li>
+    <li><strong>A rebuild process</strong> that's fully automated (this is where your first-boot SD card idea pays off)</li>
+    <li><strong>Monitoring that alerts you</strong> when a node goes down</li>
+  </ul>
+
+  <h2>💰 The Full 35-Node Budget</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>35 × Pi 5 8GB</td><td>$6,125</td></tr>
+      <tr><td>35 × Case + PSU + Cooler + SSD</td><td>$2,100</td></tr>
+      <tr><td>19" Rack + Shelves</td><td>$400</td></tr>
+      <tr><td>48-port Gigabit Switch</td><td>$300</td></tr>
+      <tr><td>Rack PDU + Cables</td><td>$200</td></tr>
+      <tr><td>1500VA UPS</td><td>$300</td></tr>
+      <tr><td>Rack Cooling Fans</td><td>$150</td></tr>
+      <tr><td><strong>Total Upfront</strong></td><td class="best"><strong>~$9,575</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Plus <strong>~£280/year</strong> in electricity (at UK rates).</p>
+
+  <h3>📈 Break-Even vs. VPS</h3>
+  <p>Compare that to <strong>35 × VPS at $5.24/mo = $2,200/year</strong>, and you break even in <strong>~4.3 years</strong>. After that, everything is profit.</p>
+
+  <h2>💡 The Smarter Alternative (If You Don't Need Physical Units)</h2>
+  <p>If the goal is <em>compute</em>, not <em>hardware ownership</em>, consider:</p>
+  <ul>
+    <li><strong>A single mini PC with 64GB RAM + Ryzen 9</strong> (~$700) can run 35 Docker containers easily. That's <strong>$700 vs $9,575</strong>.</li>
+    <li><strong>A used server</strong> (Dell R730, 128GB RAM, dual Xeon) on eBay is ~$400–$600. Runs 100+ containers.</li>
+  </ul>
+  <p>But you lose:</p>
+  <ul>
+    <li><strong>Physical isolation</strong> (one kernel panic = everything down)</li>
+    <li><strong>Hardware passthrough</strong> (no GPIO, no Wiimotes per node)</li>
+    <li><strong>Portability</strong> (can't take one node with you)</li>
+    <li><strong>The learning experience</strong> of managing a real cluster</li>
+  </ul>
+
+  <h2>🎯 When 35 Pis Makes Sense</h2>
+
+  <h3>✅ It makes sense if:</h3>
+  <ul>
+    <li><strong>You want a physical, visible, hands-on lab</strong> — for learning, teaching, or demonstrating</li>
+    <li><strong>You need hardware isolation</strong> — each node has its own GPIO, USB, Bluetooth</li>
+    <li><strong>You want to build a portable cluster</strong> — for demos, conferences, or field work</li>
+    <li><strong>You're building a product</strong> that needs physical distribution</li>
+    <li><strong>You want to learn distributed systems</strong> the hard way (which is the best way)</li>
+  </ul>
+
+  <h3>❌ It doesn't make sense if:</h3>
+  <ul>
+    <li>You just want to run 35 containers</li>
+    <li>You need high availability with a single point of management</li>
+    <li>You're optimizing purely for cost per CPU cycle</li>
+  </ul>
+
+  <h2>🔧 Recommended Build Path</h2>
+  <p>If you're serious about 35 nodes, here's the order I'd do it in:</p>
+
+  <div class="step">
+    <div class="step-title"><span class="step-num">1</span> Start with 3–5 Pis</div>
+    <p>Prove your automated build process works end-to-end before committing to 35.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-title"><span class="step-num">2</span> Build the first-boot SD card image</div>
+    <p>Each node reads a config file from <code>/boot/firmware/winejs.conf</code> and self-configures via a systemd unit. No SSH, no prompts, no manual steps.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-title"><span class="step-num">3</span> Write an Ansible playbook</div>
+    <p>Push updates, new apps, and config changes to all nodes from your Mac with one command.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-title"><span class="step-num">4</span> Set up monitoring before scaling</div>
+    <p>Prometheus + Grafana + node_exporter on all nodes. You need to see failures before they cascade.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-title"><span class="step-num">5</span> Only then buy the rest</div>
+    <p>Once the process is solid and you've rebuilt a few nodes from scratch, scale to 35.</p>
+  </div>
+
+  <h2>🗺️ The Architecture at 35 Nodes</h2>
+  <pre><code>[Mac / Dev Machine]
+    │
+    ├── Ansible controller
+    ├── Container registry (local)
+    └── Backup target
+    │
+    ▼
+[48-port Gigabit Switch]
+    │
+    ├── pi-01  →  Forgejo + Runner   (192.168.1.101)
+    ├── pi-02  →  Forgejo + Runner   (192.168.1.102)
+    ├── pi-03  →  WineJS apps        (192.168.1.103)
+    ├── pi-04  →  Mumble server      (192.168.1.104)
+    ├── pi-05  →  PufferPanel        (192.168.1.105)
+    ├── ...
+    ├── pi-34  →  Prometheus + Grafana
+    └── pi-35  →  Backup + spare
+    │
+    ▼
+[UPS] → [Rack PDU] → [19" Rack]
+    │
+    ▼
+[Tailscale] → https://pi-01.tailnet.ts.net
+</code></pre>
+
+  <div class="callout">
+    <h3>The 35-node rack is a genuinely cool project</h3>
+    <p>It's the kind of thing that teaches you more about systems engineering than any cloud certification. Just go in knowing the rack, power, and cooling side is as much work as the software side.</p>
+  </div>
+
+  <div class="footer">
+    35× Raspberry Pi 5 Cluster Build Plan — for personal Forgejo, WineJS, and distributed systems work. Prices and availability change — verify before purchase.
+  </div>
+
+</div>
+</body>
+</html>

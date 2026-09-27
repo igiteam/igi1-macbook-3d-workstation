@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forgejo Git LFS Server Build Guide</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --panel-2: #1e222b;
+    --border: #2a2f3a;
+    --text: #e6e9ef;
+    --muted: #9aa3b2;
+    --accent: #4a9eff;
+    --good: #3ddc84;
+    --warn: #ffb020;
+    --bad: #ff5c5c;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 2rem 1rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+  }
+
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    margin: 0 0 0.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .subtitle {
+    color: var(--muted);
+    margin: 0 0 2rem;
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin: 2.5rem 0 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin: 1.5rem 0 0.5rem;
+    color: var(--accent);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.92rem;
+  }
+
+  th, td {
+    padding: 0.7rem 0.9rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  th {
+    background: var(--panel-2);
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  tr:hover td { background: rgba(74, 158, 255, 0.04); }
+
+  .best {
+    color: var(--good);
+    font-weight: 600;
+  }
+
+  .warn { color: var(--warn); }
+  .bad  { color: var(--bad); }
+
+  .tag {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  .tag-essential { background: rgba(255, 92, 92, 0.15); color: var(--bad); }
+  .tag-recommended { background: rgba(255, 176, 32, 0.15); color: var(--warn); }
+  .tag-portable { background: rgba(74, 158, 255, 0.15); color: var(--accent); }
+
+  .callout {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--good);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .callout h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: var(--good);
+  }
+
+  .callout p { margin: 0.4rem 0; color: var(--muted); }
+
+  .callout.warn {
+    border-left-color: var(--warn);
+  }
+
+  .callout.warn h3 { color: var(--warn); }
+
+  ol, ul { margin: 0.5rem 0; padding-left: 1.4rem; }
+  li { margin: 0.35rem 0; }
+
+  code {
+    background: var(--panel-2);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: var(--accent);
+  }
+
+  pre {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    color: var(--text);
+  }
+
+  .step {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+  }
+
+  .step-title {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Forgejo Git LFS Server Build Guide</h1>
+  <p class="subtitle">Portable Raspberry Pi 5 + Ubuntu Server + Forgejo with Git LFS — hardware comparison, headless setup, and build checklist.</p>
+
+  <h2>📊 Core Comparison of the Three Options</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Option 1: Fanxiang 1TB SSD</th>
+        <th>Option 2: Pi 5 4GB Bundle</th>
+        <th>Option 3: Pi 5 8GB Complete Bundle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Price</td>
+        <td>£118.67</td>
+        <td>£115.10 (Buy It Now)</td>
+        <td class="best">£79.08 (Current Bid)</td>
+      </tr>
+      <tr>
+        <td>Pi Version</td>
+        <td class="bad">Not Included</td>
+        <td>Pi 5 4GB</td>
+        <td class="best">Pi 5 8GB</td>
+      </tr>
+      <tr>
+        <td>Memory</td>
+        <td>—</td>
+        <td>4GB</td>
+        <td class="best">8GB</td>
+      </tr>
+      <tr>
+        <td>Storage</td>
+        <td class="best">1TB NVMe</td>
+        <td class="bad">Not Included</td>
+        <td>256GB NVMe</td>
+      </tr>
+      <tr>
+        <td>Cooling</td>
+        <td>—</td>
+        <td>Active Cooler</td>
+        <td>Active Cooler</td>
+      </tr>
+      <tr>
+        <td>Power Supply</td>
+        <td>—</td>
+        <td>Official 27W</td>
+        <td class="warn">Not Explicitly Mentioned (Needs Confirmation)</td>
+      </tr>
+      <tr>
+        <td>Case</td>
+        <td>—</td>
+        <td>3D Printed Case</td>
+        <td class="best">Geekworm Metal Case</td>
+      </tr>
+      <tr>
+        <td>Core Issue</td>
+        <td>SSD Alone</td>
+        <td>No Storage</td>
+        <td class="best">Most Complete, Best Value</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🎯 What You Actually Need</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Component</th>
+        <th>Priority</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pi 5 (8GB preferred)</td>
+        <td><span class="tag tag-essential">Essential</span></td>
+        <td>4GB works, 8GB gives breathing room</td>
+      </tr>
+      <tr>
+        <td>Official 27W PSU</td>
+        <td><span class="tag tag-essential">Essential</span></td>
+        <td>Required for stable NVMe operation</td>
+      </tr>
+      <tr>
+        <td>Active Cooler</td>
+        <td><span class="tag tag-essential">Essential</span></td>
+        <td>Pi 5 runs hot under sustained load</td>
+      </tr>
+      <tr>
+        <td>NVMe HAT</td>
+        <td><span class="tag tag-essential">Essential</span></td>
+        <td>Gets you SSD storage, far better than microSD</td>
+      </tr>
+      <tr>
+        <td>1TB NVMe SSD</td>
+        <td><span class="tag tag-essential">Essential</span></td>
+        <td>Pick a reputable brand, not the cheapest possible</td>
+      </tr>
+      <tr>
+        <td>Case</td>
+        <td><span class="tag tag-recommended">Recommended</span></td>
+        <td>Geekworm metal cases are proven with their HATs</td>
+      </tr>
+      <tr>
+        <td>PD power bank + 5V/5A converter</td>
+        <td><span class="tag tag-portable">For portability</span></td>
+        <td>20,000mAh gives ~5-7 hours</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>✅ Bottom Line</h2>
+  <div class="callout">
+    <h3>Yes — this is the cheapest viable portable setup</h3>
+    <p>Pi 5 + Ubuntu Server + Forgejo + Git LFS is the cheapest viable portable setup. The Pi itself is cheap, Forgejo is lightweight, and the power bank route works in practice.</p>
+    <p>Just budget for a proper PD converter so the Pi doesn't brown out when the SSD is active, and skip the Fanxiang drive in favor of something with a better track record.</p>
+  </div>
+
+  <h2>🖥️ Headless Install — No Monitor, No Keyboard</h2>
+  <p class="subtitle">You write the OS and your settings to the SD card on your Mac, insert it into the Pi, power on, and that's it. The Pi reads your pre-configured settings on first boot, connects to Wi-Fi, and enables SSH.</p>
+
+  <div class="callout">
+    <h3>Yes — SD card on Mac, then insert and go</h3>
+    <p>Everything is pre-configured on the SD card. No monitor or keyboard is ever needed. The Pi comes up on your network and waits for an SSH connection.</p>
+  </div>
+
+  <h3>🛠️ Step 1: Pre-Configure on Your Mac</h3>
+  <div class="step">
+    <div class="step-title"><span class="step-num">1</span> Install Raspberry Pi Imager</div>
+    <p>Download and install <strong>Raspberry Pi Imager</strong> on your Mac. Insert your microSD card using a card reader.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-title"><span class="step-num">2</span> Choose Device and OS</div>
+    <ul>
+      <li><strong>Choose Device:</strong> Select "Raspberry Pi 5".</li>
+      <li><strong>Choose OS:</strong> Go to "Other general-purpose OS" &gt; <strong>Ubuntu</strong> &gt; <strong>Ubuntu Server 24.04 LTS (64-bit)</strong>. Do not pick the Desktop version.</li>
+      <li><strong>Choose Storage:</strong> Select your SD card. Double-check you picked the right drive.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-title"><span class="step-num">3</span> Open the Settings Menu</div>
+    <p>Click <strong>Next</strong>. When the popup asks about applying customisation, click <strong>"Edit Settings"</strong>. (On some versions, press <code>Ctrl+Shift+X</code>.)</p>
+  </div>
+
+  <h3>🔑 Step 2: Fill in the Settings</h3>
+  <div class="step">
+    <div class="step-title"><span class="step-num">4</span> General Tab</div>
+    <ul>
+      <li><strong>Hostname:</strong> Give it a name, like <code>forgejo-pi</code> or <code>winejs</code>. This becomes its address on your network (<code>forgejo-pi.local</code>).</li>
+      <li><strong>Username/Password:</strong> Set a custom username and a strong password. There is no default <code>pi</code> user anymore.</li>
+      <li><strong>Wireless LAN:</strong> Enter your <strong>Wi-Fi SSID</strong>, <strong>Password</strong>, and <strong>Country</strong>. The country code is mandatory; the Pi won't turn on Wi-Fi without it.</li>
+      <li><strong>Locale:</strong> Set your timezone.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-title"><span class="step-num">5</span> Services Tab</div>
+    <ul>
+      <li><strong>Enable SSH:</strong> Check this box. Choose <strong>"Allow public-key authentication only"</strong> if you have an SSH key, or <strong>"Use password authentication"</strong> for simplicity. <strong>You absolutely must enable this</strong>, or you will have no way to log in.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-title"><span class="step-num">6</span> Save and Write</div>
+    <p>Click Save, then Yes to apply the settings and write the image to the SD card. Wait for it to finish and eject the card.</p>
+  </div>
+
+  <h3>🚀 Step 3: Boot and Connect</h3>
+  <div class="step">
+    <div class="step-title"><span class="step-num">7</span> Power On</div>
+    <p>Insert the SD card into your Raspberry Pi 5. Power it on. It will take a minute or two to boot and connect to the network for the first time.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-title"><span class="step-num">8</span> Find Its Address</div>
+    <ul>
+      <li><strong>Best way:</strong> Open a terminal on your Mac and try <code>ssh username@forgejo-pi.local</code>. The <code>.local</code> suffix uses mDNS, which usually just works on Macs and Linux.</li>
+      <li><strong>Fallback:</strong> Log into your router's admin page and look for a "DHCP Client List" to find the IP address assigned to the Pi. Then run <code>ssh username@&lt;that-ip-address&gt;</code>.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-title"><span class="step-num">9</span> Log In</div>
+    <p>The first time you connect, it will ask you to accept a fingerprint. Type <code>yes</code>, then enter the password you set in Step 2.</p>
+  </div>
+
+  <h3>🖥️ Optional: Graphical Desktop via VNC</h3>
+  <p>You don't need a monitor, but if you ever want to see a desktop GUI remotely, you can enable <strong>VNC</strong> after you're logged in via SSH. Run <code>sudo raspi-config</code>, go to "Interface Options" &gt; "VNC" &gt; "Enable". Then use a VNC viewer app on your Mac to connect to <code>forgejo-pi.local</code>.</p>
+
+  <h3>🔌 NVMe Boot and Firmware</h3>
+  <div class="callout warn">
+    <h3>Modern Pi 5 units boot from NVMe out of the box</h3>
+    <p>Raspberry Pi has shipped newer bootloader firmware since late 2024 that supports NVMe boot natively. If you bought a recent Pi 5, it likely already boots from NVMe without any update.</p>
+    <p>If your Pi 5 is from an old batch, you may need to update the bootloader. The easiest way is to flash Raspberry Pi OS to a temporary microSD card, boot it once with a monitor and keyboard attached, run <code>sudo rpi-eeprom-update</code>, then shut down. After that, the Pi will boot from NVMe headless forever.</p>
+  </div>
+
+  <h2>🏠 Why Self-Host Instead of DigitalOcean</h2>
+  <p class="subtitle">You've outgrown DigitalOcean for this particular project. Self-hosting gives you things a VPS can't.</p>
+
+  <h3>✅ The Wins</h3>
+  <ul>
+    <li><strong>No monthly bill</strong> for a machine that's mostly idle</li>
+    <li><strong>The 1TB is yours</strong> — no Block Storage fees, no egress charges</li>
+    <li><strong>Full hardware control</strong> — plug in a gamepad, Wiimote, webcam, sensor, whatever</li>
+    <li><strong>Physical ownership</strong> — the box is on your desk, not in a datacenter you'll never see</li>
+    <li><strong>No surprise bills</strong> if something loops or a container gets stuck</li>
+  </ul>
+
+  <h3>⚠️ The Trade-offs</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Trade-off</th>
+        <th>Reality</th>
+        <th>Mitigation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>You are the sysadmin now</td>
+        <td>Uptime, backups, patches, TLS renewal — all on you</td>
+        <td>Automate with systemd timers + a backup script</td>
+      </tr>
+      <tr>
+        <td>Home network exposure</td>
+        <td>Reaching it from outside needs a tunnel</td>
+        <td>Tailscale or Cloudflare Tunnel — never open raw ports</td>
+      </tr>
+      <tr>
+        <td>Power and heat</td>
+        <td>Pi 5 with NVMe pulls 8–12W under load; mini PC 15–30W</td>
+        <td>Fine for home use; adds up over a year</td>
+      </tr>
+      <tr>
+        <td>No static IP</td>
+        <td>Home IPs change</td>
+        <td>DynDNS or a tunnel solves this cleanly</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🗺️ What Your Setup Actually Looks Like Now</h2>
+  <p>With the Pi 5 bundle, the whole thing becomes:</p>
+
+  <pre><code>[Pi 5 8GB]
+   ├── NVMe SSD (Forgejo + WineJS data)
+   ├── Ubuntu Server 24.04
+   ├── Docker + Compose
+   ├── /opt/winejs/          ← WineJS platform
+   │     ├── apps/forgejo/   ← Forgejo installer
+   │     ├── apps/mumble/    ← Mumble installer
+   │     ├── apps/pufferpanel/
+   │     └── translator/     ← Node.js router
+   └── nginx + Caddy/Tailscale for TLS</code></pre>
+
+  <p>You plug it in, it boots headless, you SSH in once, run your installers, and then it just sits there serving your projects. If you want it reachable from outside, add <strong>Tailscale</strong> (free for personal use) and you get a stable <code>https://forgejo-pi.tailnet-name.ts.net</code> URL without touching your router.</p>
+
+  <h2>💎 The Real Win</h2>
+  <div class="callout">
+    <h3>It's genuinely yours</h3>
+    <p>The thing you're building — WineJS with Forgejo, Mumble, PufferPanel, and the whole app ecosystem — is genuinely yours. No provider can deprecate it, no billing system can shut it off, no ToS change can kill it. That's worth the extra setup effort.</p>
+  </div>
+
+  <h2>🛠️ Next Steps</h2>
+  <p>When you're ready, these are the pieces that turn the build into a repeatable, low-effort process:</p>
+  <ul>
+    <li><strong>First-boot automation</strong> (config file + systemd unit) so each new Pi is a 10-minute setup</li>
+    <li><strong>Tailscale or Cloudflare Tunnel</strong> so you get HTTPS without opening ports</li>
+    <li><strong>Backup script</strong> that mirrors Forgejo's data to a USB drive or another machine</li>
+    <li><strong>Fixing the Forgejo installer bugs</strong> (heredoc, SSH port) so it works cleanly on first run</li>
+  </ul>
+
+  <h2>🔁 Reusable Build Notes (Multi-Server)</h2>
+  <ul>
+    <li>Standardise on <code>Ubuntu Server 24.04 LTS (64-bit)</code> for every node.</li>
+    <li>Enable <code>dtparam=pciex1_gen=3</code> in <code>/boot/firmware/config.txt</code> if the NVMe drive needs it.</li>
+    <li>Run Forgejo via Docker Compose with <code>LFS_START_SERVER = true</code>.</li>
+    <li>Mount the NVMe SSD as the Forgejo data volume so repositories and LFS objects live on fast storage.</li>
+    <li>Set <code>ROOT_URL</code> to the node's IP or hostname (e.g. <code>http://forgejo-01.local:3000/</code>) — never <code>localhost</code>.</li>
+    <li>Use SQLite for a single-user instance; move to PostgreSQL if you scale up.</li>
+    <li>Set up a nightly <code>rsync</code> backup of the data volume to an external target.</li>
+  </ul>
+
+  <div class="footer">
+    Generated for personal Forgejo + Git LFS deployment planning. Prices and availability change — verify before purchase.
+  </div>
+
+</div>
+</body>
+</html>
