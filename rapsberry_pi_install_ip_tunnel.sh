@@ -187,3 +187,100 @@ success "✨ Done! Your Pi is now reachable via wine.macosxjs.com (once route is
 # You likely already have this set from your earlier installer, but it's worth double-checking.
 # Read article:
 # https://theitbros.com/cloudflare-tunnel/
+
+# 🎯 What It Does
+# It installs a small program on your Pi called cloudflared. That program creates a permanent outbound connection from your Pi to Cloudflare's servers. 
+# Cloudflare then forwards any traffic coming to wine.macosxjs.com down that connection to your Pi.
+
+# Your Pi never needs a public IP. Your router never needs port forwarding. CGNAT doesn't matter. The tunnel is outbound-only, 
+# so it works from any network, anywhere in the world.
+# 🔌 Why This Solves Your CGNAT Problem
+
+# Here's the fundamental issue:
+
+# Without the tunnel:
+# Mac → wine.macosxjs.com → DNS → your home IP
+#                                    ↓
+#                             [Blocked by CGNAT]
+#                             Nothing is listening
+#                             Mac fails to connect
+
+# Your ISP's CGNAT layer drops the incoming connection because there's no unique public address for it to route to.
+
+# With the tunnel:
+# Pi → dials OUT to Cloudflare (works fine through CGNAT)
+#          ↓
+#      Tunnel established
+#          ↓
+# Mac → wine.macosxjs.com → Cloudflare edge
+#                               ↓
+#                          Finds the tunnel
+#                               ↓
+#                          Routes down to Pi
+#                               ↓
+#                          Forgejo responds
+
+# The Pi starts the conversation. Cloudflare keeps it open. Traffic flows both ways through that already-open connection. CGNAT can't block an outbound connection that the Pi initiated.
+# 📋 What Each Part of the Script Does
+# 1. Checks Docker is installed. The tunnel runs as a Docker container, so Docker has to be there first.
+# 2. Asks for your Cloudflare Tunnel Token. This is a secret string you get from the Cloudflare dashboard. It identifies your specific tunnel. Anyone with the token can run the tunnel, so treat it like a password.
+# 3. Creates /opt/cloudflare-tunnel/. A home for the tunnel config.
+# 4. Writes two files:
+#     .env — stores your token in a file instead of on the command line. This is a security thing: if the token is on the command line, anyone running ps aux can see it. In a file with chmod 600, only root can read it.
+#     docker-compose.yml — describes the container. It says:
+#         Use the official cloudflare/cloudflared image
+#         Name it cloudflare-tunnel
+#         Auto-restart it if it crashes
+#         Run it with --no-autoupdate (so the version is controlled by the Docker image, not by the app updating itself)
+#         Pass the token from the .env file
+#         Don't expose any ports — because it's outbound-only
+
+# 5. Starts the container. docker compose up -d runs it in the background.
+# 6. Verifies it's running. Checks the container is up, then looks in the logs for the phrase "Registered tunnel connection" — that's Cloudflare's way of saying "the tunnel is live."
+
+# 7. Prints instructions for the last manual step: creating the Public Hostname in the Cloudflare dashboard.
+# 🔗 The Missing Piece (Manual Step)
+
+# The script sets up the tunnel, but it doesn't know what to route through it. That's the Public Hostname step:
+#     Subdomain: wine
+#     Domain: macosxjs.com
+#     Type: HTTPS
+#     URL: https://localhost:3000
+
+# This tells Cloudflare: "When traffic comes in for wine.macosxjs.com, send it down the tunnel to localhost:3000 on the Pi."
+
+# Once that's set, https://wine.macosxjs.com/forgejolfs works from your Macs, anywhere.
+# 🎯 What Actually Happens After Setup
+
+# At home in the UK:
+#     Pi boots → Wi-Fi LCD configurator gets it online → cloudflared starts → tunnel reconnects
+#     Macs reach wine.macosxjs.com → Cloudflare → tunnel → Pi → Forgejo responds
+
+# You move to NYC:
+#     Pi boots → Wi-Fi LCD configurator gets it online on the new Wi-Fi → cloudflared starts → tunnel reconnects
+#     Macs reach wine.macosxjs.com → Cloudflare → tunnel → Pi → Forgejo responds
+
+# Nothing on the Macs changes. Nothing on the Cloudflare side changes. The Pi's public IP changes, but Cloudflare doesn't care — the tunnel is already there.
+# ⚠️ What It Doesn't Do
+#     Doesn't set up HTTPS locally. Cloudflare terminates TLS at its edge and forwards plain HTTP to your Pi. 
+#     That's fine because the tunnel itself is encrypted. But if you look at the traffic between Cloudflare and your Pi, it's HTTP.
+
+#     Doesn't do SSH. The Cloudflare Tunnel used here only forwards HTTPS. If you ever wanted git@ over SSH, you'd need 
+#     a separate configuration (Cloudflare Tunnel does support SSH, but Forgejo-over-SSH has known issues behind Cloudflare proxy).
+
+#     Doesn't handle DNS. You still have to point wine.macosxjs.com at Cloudflare by moving your domain's nameservers to Cloudflare. 
+#     Once Cloudflare manages the DNS, the Public Hostname step auto-creates the CNAME record.
+
+#     Doesn't survive if Cloudflare is down. If Cloudflare's edge goes offline, your tunnel goes dark. That's rare but worth knowing.
+
+# 🧠 The Mental Model
+# Think of it like this:
+#     Without a tunnel: You have a house with no street address. Nobody can find you.
+#     With a VPS relay: You rent a mailbox in the city. Your house forwards mail to it. But you're paying rent on the mailbox.
+#     With Cloudflare Tunnel: You get a free mailbox from Cloudflare, and your house is wired to it automatically. No rent. No address. Just works.
+
+# The trade is that you're depending on Cloudflare's free service. They could change the terms, but for personal use they've offered this free for years.
+# 🎯 Bottom Line
+# The script installs a program that makes your Pi reachable from anywhere in the world without needing a public IP, without port forwarding, 
+# and without paying for a VPS. It works around CGNAT by initiating the connection from the Pi side. 
+# Once it's running, your Macs can reach wine.macosxjs.com no matter where the Pi is physically located.
