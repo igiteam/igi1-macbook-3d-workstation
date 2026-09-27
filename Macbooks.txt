@@ -130,3 +130,5 @@ Macbook Pro 15.4" 2014 → native HDMI port → HDMI 3m cable → TV
                         │   Flow moves both.       │
                         │   Menu bar switches.     │
                         └──────────────────────────┘
+
+

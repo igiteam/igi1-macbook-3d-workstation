@@ -358,3 +358,82 @@ Why This Works and Lists Don't
     It says the next physical action. Not "work on models." But "open model 4 OBJ in Blender 2.49." That's the smallest possible next step.
 
     It tracks which Mac is loaded with what. So when you rotate, you know what's ready-at-hand.
+
+
+    so i took a paper and draw two lines
+MAC1 | MAC2 | MAC3 
+
+
+and i wrote different stuffs to different macs what i would need to see
+
+i also imagining my wall, putting printed papers on the wall. such as dialogues, gameplay parts like a detective who uses the wall to connect things
+
+i also thought about printing multiple papers and putting next to each other like screenshoots
+
+
+for example i found a video which explains in operation flashpoint how to change the skin
+the video is 30min long uses oxygen2, photoshop, text-editor, unpack/pack pbo, and the mission editor
+
+based on that idea i came up with a system which can be applied to any game
+
+so when i have an idea, 
+i would take this template of papers next to each other, and just i would know how to do things
+
+
+so any work, can be converted into these papers
+i want to make a video? where is that paper
+i want to convert a animation? where is that paper
+
+so every workflow, pipeline would have a paper version which tells exactly what time which app has to be seen
+
+
+now the question is how to use the mac1,mac2,mac3 to actually do simulataus work
+
+what was interesting  that i took a picture of my 3 mac setup with all the tools, so when i look at i was able to remember how does it feel to use, and i just project my toughts on it
+but what i did i took my iphone out and there was another identical setup, now 6 macs and i was thinking how would it feel like if i would have 6 mac
+
+and i had the physical mx keyboard + mouse in my hand so there was something to actually hold
+
+
+
+do not code, do not write, just tell talk
+
+three papers running at once, one per Mac
+
+no wrong. one paper runs, but the macs being calibrated to do the different parts of the video
+
+so for example 30 minutes video can be literally split into apps for each minute of screentime right?
+
+One paper runs. The video — 30 minutes, one workflow — gets split across the Macs by minute, not by stage. Minute 1–4 is Oxygen on Mac 1. Minute 5–9 is Photoshop on Mac 2. Minute 10–12 is text editor on Mac 3. Minute 13–15 is PBO packer back on Mac 1. And so on.
+
+The paper is the timeline. The Macs are the stations. Each station holds the apps that the timeline lands on at its minute-marks. So when the video says "now open Photoshop," Photoshop is already open on Mac 2, and you just flick to it. When it says "now back to Oxygen," Oxygen is already open on Mac 1. You don't launch anything. You don't switch contexts. You move your hands, and the next app is already there, in the state you left it.
+
+
+ok i think this is it somehow
+
+and also how the data, the states would flow natually between devices
+
+its like a factory assembly line - the guy who made the original tutorial had only 1 machine doing everything
+now i have a factory so i can split the work into small section and have a dedicated machine to do things 
+
+
+so for example when i was thinkkng of the wall, i imagined i have all the conversation ingame printed out and put onthe wall
+
+
+now just to give you a piece of my mind
+
+
+its all on the computer, but on the computer the screen is limited, and its soo much data, even conversations if i print can be like 60 pages
+
+now thats 60*0.25$ is a lot
+
+now i could print all code out on paper and put it on my wall. not just code but the charactes the music etc
+
+and ah i want to add a new line for this character
+than its not just words, but how to record the audio, what apps i need to use, how to test it etc
+
+
+so when it comes to the new audio line
+i am stanging at the wall where the audiologs are printed. this wall is a magi wall, and can placed really big paper sheets lets say - now i want to add a new line - the idea -
+
+than the second thing is to go to the template manager how will give me the exact papers. the manuals ready to look at. and if i like it based on that i could press a button, and the 3 macs got into that state immediately
