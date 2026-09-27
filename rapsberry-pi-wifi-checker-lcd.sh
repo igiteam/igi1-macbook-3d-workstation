@@ -165,6 +165,8 @@ RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'
 BLUE='\033[0;34m'; MAGENTA='\033[0;35m'; CYAN='\033[0;36m'; NC='\033[0m'
 # An image of the device
 IMAGE_URL='https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/adafruit-16x2-lcd-keypad-kit-for-raspberry-pi.jpg'
+info "📷 Hardware reference image:"
+info "   $IMAGE_URL"
 
 log()     { echo -e "${GREEN}[$(date '+%H:%M:%S')]${NC} $1"; }
 error()   { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
