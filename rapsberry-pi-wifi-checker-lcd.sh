@@ -1127,3 +1127,45 @@ success "✨ Done! Reboot the Pi to test the LCD Wi-Fi configurator."
 #     Doesn't handle hidden SSIDs (user would need to type the SSID manually, which isn't implemented)
 #     Doesn't persist the LCD state across reboots if STAY_RESIDENT=0
 #     Doesn't talk to Forgejo, Docker, or anything else — it's purely Wi-Fi + IP display
+
+# 🧪 Pre-Deploy Sanity Check
+# Run these on your Mac (or wherever you have the file):
+# # 1. Shell syntax check
+# bash -n install-wifi-lcd.sh
+# # Expected: no output (clean)
+
+# # 2. Python syntax check (extract helper, compile it)
+# awk '/^PYEOF$/{p=0} p{print} /^cat > \/usr\/local\/bin\/wifi-lcd-helper.py/{p=1}' install-wifi-lcd.sh > /tmp/check.py
+# python3 -m py_compile /tmp/check.py && echo "Python OK"
+# # Expected: "Python OK"
+
+# If both pass, you're ready to ship.
+# 🚀 Deploy
+# # Copy to the Pi
+# scp install-wifi-lcd.sh pi@<pi-ip>:~/
+
+# # SSH in and run it
+# ssh pi@<pi-ip>
+# sudo bash install-wifi-lcd.sh
+
+# # Reboot to test the boot-time flow
+# sudo reboot
+
+# On the next boot, the LCD should light up with Scanning WiFi... within ~15 seconds.
+# 🎯 One Last Thing to Verify Before You Reboot
+
+# After install but before rebooting, run this on the Pi:
+# # Confirm the service is enabled
+# sudo systemctl is-enabled wifi-lcd
+
+# # Confirm i2c sees the LCD
+# i2cdetect -y 1
+# # Look for 0x20 in the grid
+
+# # Optional: dry-run the configurator now
+# sudo systemctl start wifi-lcd
+# # Watch the LCD
+
+# If i2cdetect doesn't show 0x20, the LCD isn't wired correctly or I2C isn't enabled yet. 
+# The install script enables I2C in /boot/firmware/config.txt, but that only takes effect after a reboot. 
+# So if i2cdetect shows nothing on the first run, don't panic — reboot and try again.
