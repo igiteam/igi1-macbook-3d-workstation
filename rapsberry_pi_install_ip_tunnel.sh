@@ -303,3 +303,106 @@ success "✨ Done! Your Pi is now reachable via wine.macosxjs.com (once route is
 # [server]
 # ROOT_URL = https://wine.macosxjs.com/forgejolfs
 
+# 🎯 Bottom Line
+# Three pieces, all working together:
+# rapsberry_pi_wifi_checker_lcd.sh
+# https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry_pi_wifi_checker_lcd.sh
+# LCD configurator → gets the Pi online anywhere
+    
+# Forgejo + LFS → serves your repos
+# https://raw.githubusercontent.com/igiteam/winejs/refs/heads/main/winejs.sh
+# https://raw.githubusercontent.com/igiteam/winejs/refs/heads/main/winejs_install_forgejogitlfs.sh
+
+# Cloudflare Tunnel → exposes the Pi to the internet without a public IP
+# https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry_pi_install_ip_tunnel.sh
+
+# The installer script handles #3. You still need to do the one-time Cloudflare dashboard setup (Public Hostname). After that, it just runs.
+
+# 🎯 The Stack, End to End
+# ┌─────────────────────────────────────────────────────────────┐
+# │  Raspberry Pi 5 + 1TB NVMe + LCD Keypad + Active Cooler     │
+# │                                                             │
+# │  Piece 1: rapsberry_pi_wifi_checker_lcd.sh                  │
+# │           └─ Gets the Pi online on any Wi-Fi                │
+# │           └─ Shows the IP on the LCD                        │
+# │                                                             │
+# │  Piece 2: winejs.sh                                         │
+# │           └─ Base platform (Docker, nginx, PM2)             │
+# │                                                             │
+# │  Piece 3: winejs_install_forgejogitlfs.sh                   │
+# │           └─ Forgejo + Git LFS on port 3000                 │
+# │           └─ Stores repos on the 1TB NVMe                   │
+# │                                                             │
+# │  Piece 4: rapsberry_pi_install_ip_tunnel.sh                 │
+# │           └─ Cloudflare Tunnel → wine.macosxjs.com          │
+# │           └─ Works behind CGNAT, no public IP needed        │
+# │                                                             │
+# │  Mac 1/2/3 → https://wine.macosxjs.com/forgejolfs           │
+# │           └─ Same URL everywhere, forever                   │
+# └─────────────────────────────────────────────────────────────┘
+
+# ✅ What's Solid
+#     The Cloudflare tunnel script is correct and complete
+#     The bottom section ties all three installers together with their raw GitHub URLs
+#     The mental model (house with no address vs free mailbox) is preserved
+#     The two things to remember (manual hostname step + ROOT_URL) are called out
+#     The CGNAT explanation is clear enough that you'd remember it in a year
+
+# 🎯 The Final Workflow, In Order
+
+# On a fresh Pi:
+#     Flash Ubuntu Server to the NVMe (or SD card)
+#     Boot, SSH in
+#     Run rapsberry_pi_wifi_checker_lcd.sh → reboot → verify LCD works
+#     Run winejs.sh → installs base platform
+#     Run winejs_install_forgejogitlfs.sh → Forgejo on port 3000
+#     Run rapsberry_pi_install_ip_tunnel.sh → paste Cloudflare token
+#     In Cloudflare dashboard → add Public Hostname wine.macosxjs.com → https://localhost:3000
+#     On Macs → git clone https://wine.macosxjs.com/forgejolfs/username/repo.git
+
+# On subsequent boots anywhere in the world:
+#     Power on
+#     LCD shows "Scanning WiFi..." → user picks network → types password → connects
+#     LCD shows IP
+#     Cloudflare tunnel starts automatically
+#     Forgejo is live at wine.macosxjs.com/forgejolfs
+#     Macs just keep working
+
+# 🧠 What You've Actually Built
+# This is a portable, self-hosted, CGNAT-proof Git + LFS server with a physical button interface for network setup. 
+# Most people who self-host never solve the CGNAT problem, or if they do, they solve it with a VPS they pay for. You've solved it with Cloudflare's free tier.
+
+# The physical LCD keypad is the piece that makes it genuinely portable. Without it, you'd need a monitor or a pre-configured SD card for every new network. With it, anyone can walk up, pick a network, and type a password using five buttons.
+# ⚠️ Two Last Things to Verify Before Deploying
+
+# 1. Docker Compose v2 on the Pi:
+# docker compose version
+
+# If that errors, your install has v1 (docker-compose). All scripts that call docker compose need docker-compose instead. Quick check before you run anything.
+
+# 2. Forgejo's ROOT_URL:
+# After installing Forgejo, check /opt/winejs/config/forgejo/app.ini:
+# [server]
+# ROOT_URL = https://wine.macosxjs.com/forgejolfs
+
+# If it says http://localhost:3000, edit it and restart the container.
+
+
+# https://htmlpreview.github.io/?https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/Raspberry%20Pi%20Build%20Cost%20Comparison.html
+# Every build option, every price, every link, from the cheapest Pi 3B+ base to the Pi 5 with dual 1TB NVMe and the LCD keypad.
+# 🎯 What the Table Shows
+
+# Nine distinct builds, from £61.78 to £344.30. Each one is a complete, ready-to-assemble configuration. 
+# The LCD keypad row is populated on every build that includes it, and the totals reflect the full cost.
+
+# The sweet spots:
+# Build	Price	What it's for
+# Pi 3B+ + LCD	£86.28	Absolute cheapest portable node
+# Pi 4 + LCD	£139.25	Cheap Pi 5 alternative
+# Pi 5 2GB + 512GB + LCD	£172.16	Entry Pi 5, one small SSD
+# Pi 5 8GB + 1TB + LCD	£248.31	The recommended build — matches your studio plan
+# Pi 5 8GB + 2× 1TB + LCD	£344.30	Maximum storage, dual NVMe
+# Pi 5 8GB + 2× 512GB + LCD	£224.58	Dual NVMe but smaller drives
+
+# The one that matches your setup: Pi 5 8GB + 1TB NVMe + LCD at £248.31. That's the portable Forgejo + LFS + Cloudflare Tunnel machine. 
+# 1TB for your repos and 3D assets, 8GB RAM for headroom, LCD keypad for portable network setup.
