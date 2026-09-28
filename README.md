@@ -1,16 +1,16 @@
 # igi1-macbook-3d-workstation
 Read Macbooks.txt
 
-![Alt text](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/igi1-macbook-3d-workstation.jpeg?raw=true)
+![igi1-macbook-3d-workstation](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/igi1-macbook-3d-workstation.jpeg?raw=true)
 
-![Alt text](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/operation-flashpoint-project-igi-dual-screen.jpeg)
+![operation-flashpoint-project-igi-dual-screen](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/operation-flashpoint-project-igi-dual-screen.jpeg)
 
-![Alt text](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/Panasonic%2055VT30%203D.jpeg?raw=true)
+![Panasonic 55VT30 3D](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/Panasonic%2055VT30%203D.jpeg?raw=true)
 
-![Alt text](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/anaglyph_3d_glasses.jpg?raw=true)
+![anaglyph_3d_glasses](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry-pi5-ssd/anaglyph_3d_glasses.jpg)
 
 
-Rapsberry-pi-5-portable-1tb-forjegogitlfs-ubuntu.pdf
+## Rapsberry-pi-5-portable-1tb-forjegogitlfs-ubuntu.pdf
 https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry-pi5-ssd/rapsberry-pi-5-portable-forgejogitlf-ubuntu.pdf
 
 ```
