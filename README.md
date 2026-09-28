@@ -1,5 +1,5 @@
 # igi1-macbook-3d-workstation
-Read Macbooks.txt
+>>>>> Read Macbooks.txt <<<<<
 
 ![igi1-macbook-3d-workstation](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/igi1-macbook-3d-workstation.jpeg?raw=true)
 
@@ -7,7 +7,7 @@ Read Macbooks.txt
 
 ![Panasonic 55VT30 3D](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/Panasonic%2055VT30%203D.jpeg?raw=true)
 
-![anaglyph_3d_glasses](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry-pi5-ssd/anaglyph_3d_glasses.jpg)
+![anaglyph_3d_glasses](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/anaglyph_3d_glasses.jpg?raw=true)
 
 
 ## Rapsberry-pi-5-portable-1tb-forjegogitlfs-ubuntu.pdf
