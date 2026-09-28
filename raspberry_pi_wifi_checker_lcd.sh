@@ -4,8 +4,8 @@
 # ============================================================
 # This is a standalone boot-time Wi-Fi configurator for your
 # portable Pi.
-#rapsberry-pi-5-portable-forgejogitlf-ubuntu.pdf
-#https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry-pi5-ssd/rapsberry-pi-5-portable-forgejogitlf-ubuntu.pdf
+#raspberry-pi-5-portable-forgejogitlf-ubuntu.pdf
+#https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/raspberry-pi5-ssd/raspberry-pi-5-portable-forgejogitlf-ubuntu.pdf
 
 # Raspberry Pi 5 (8GB)
 # https://www.amazon.co.uk/gp/product/B0CK2FCG1K/ref=ox_sc_act_title_6?smid=A2TRIJRGK1887G&psc=1
@@ -81,7 +81,7 @@
 #   /etc/systemd/system/wifi-lcd.service  ← runs on boot
 #
 # And this installer:
-#   rapsberry_pi_wifi_checker_lcd.sh                   ← one-shot install (chmod, deps, systemd unit)
+#   raspberry_pi_wifi_checker_lcd.sh                   ← one-shot install (chmod, deps, systemd unit)
 #
 # 🔑 Key Design Decisions
 #
@@ -283,7 +283,7 @@ cat > /usr/local/bin/wifi-lcd-helper.py << 'PYEOF'
 # ============================================================
 # Raspberry Pi Portable Wi-Fi LCD Configurator - PYTHON HELPER
 # ============================================================
-# See rapsberry_pi_wifi_checker_lcd.sh for the full design doc.
+# See raspberry_pi_wifi_checker_lcd.sh for the full design doc.
 #
 # This file contains the state machine:
 #   STATE_SCAN         → scan for networks
@@ -791,7 +791,7 @@ cat > /usr/local/bin/wifi-lcd.sh << 'SHEOF'
 #   4. Cleans up on exit
 #
 # It is meant to be called by systemd at boot.
-# See rapsberry_pi_wifi_checker_lcd.sh for the full design doc.
+# See raspberry_pi_wifi_checker_lcd.sh for the full design doc.
 # ============================================================
 
 LOG_TAG="wifi-lcd"
@@ -956,19 +956,19 @@ success "✨ Done! Reboot the Pi to test the LCD Wi-Fi configurator."
 
 # 🧪 Pre-Deploy Sanity Check
 # # 1. Verify shell syntax
-# bash -n rapsberry_pi_wifi_checker_lcd.sh
+# bash -n raspberry_pi_wifi_checker_lcd.sh
 
 # # 2. Verify Python helper syntax (extracted)
-# awk '/^PYEOF$/{p=0} p{print} /^cat > \/usr\/local\/bin\/wifi-lcd-helper.py/{p=1}' rapsberry_pi_wifi_checker_lcd.sh > /tmp/check.py
+# awk '/^PYEOF$/{p=0} p{print} /^cat > \/usr\/local\/bin\/wifi-lcd-helper.py/{p=1}' raspberry_pi_wifi_checker_lcd.sh > /tmp/check.py
 # python3 -m py_compile /tmp/check.py && echo "Python OK"
 
 # # Both should return clean. If they do, scp it to the Pi and run:
-# sudo bash rapsberry_pi_wifi_checker_lcd.sh
+# sudo bash raspberry_pi_wifi_checker_lcd.sh
 # sudo reboot
 
 # On the Pi (installation time)
 
-# You run sudo bash rapsberry_pi_wifi_checker_lcd.sh once. It does the following:
+# You run sudo bash raspberry_pi_wifi_checker_lcd.sh once. It does the following:
 #     Checks you're root. Bails if not.
 #     Finds your username. Looks for SUDO_USER, falls back to pi, falls back to the first non-root user in /etc/passwd. Prints it.
 #     Installs packages. Runs apt-get install for python3, python3-pip, python3-smbus, i2c-tools, network-manager.
@@ -1163,22 +1163,22 @@ success "✨ Done! Reboot the Pi to test the LCD Wi-Fi configurator."
 # 🧪 Pre-Deploy Sanity Check
 # Run these on your Mac (or wherever you have the file):
 # # 1. Shell syntax check
-# bash -n rapsberry_pi_wifi_checker_lcd.sh
+# bash -n raspberry_pi_wifi_checker_lcd.sh
 # # Expected: no output (clean)
 
 # # 2. Python syntax check (extract helper, compile it)
-# awk '/^PYEOF$/{p=0} p{print} /^cat > \/usr\/local\/bin\/wifi-lcd-helper.py/{p=1}' rapsberry_pi_wifi_checker_lcd.sh > /tmp/check.py
+# awk '/^PYEOF$/{p=0} p{print} /^cat > \/usr\/local\/bin\/wifi-lcd-helper.py/{p=1}' raspberry_pi_wifi_checker_lcd.sh > /tmp/check.py
 # python3 -m py_compile /tmp/check.py && echo "Python OK"
 # # Expected: "Python OK"
 
 # If both pass, you're ready to ship.
 # 🚀 Deploy
 # # Copy to the Pi
-# scp rapsberry_pi_wifi_checker_lcd.sh pi@<pi-ip>:~/
+# scp raspberry_pi_wifi_checker_lcd.sh pi@<pi-ip>:~/
 
 # # SSH in and run it
 # ssh pi@<pi-ip>
-# sudo bash rapsberry_pi_wifi_checker_lcd.sh
+# sudo bash raspberry_pi_wifi_checker_lcd.sh
 
 # # Reboot to test the boot-time flow
 # sudo reboot

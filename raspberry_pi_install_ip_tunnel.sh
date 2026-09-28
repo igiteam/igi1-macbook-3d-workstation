@@ -305,8 +305,8 @@ success "✨ Done! Your Pi is now reachable via wine.macosxjs.com (once route is
 
 # 🎯 Bottom Line
 # Three pieces, all working together:
-# rapsberry_pi_wifi_checker_lcd.sh
-# https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry_pi_wifi_checker_lcd.sh
+# raspberry_pi_wifi_checker_lcd.sh
+# https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/raspberry_pi_wifi_checker_lcd.sh
 # LCD configurator → gets the Pi online anywhere
     
 # Forgejo + LFS → serves your repos
@@ -314,7 +314,7 @@ success "✨ Done! Your Pi is now reachable via wine.macosxjs.com (once route is
 # https://raw.githubusercontent.com/igiteam/winejs/refs/heads/main/winejs_install_forgejogitlfs.sh
 
 # Cloudflare Tunnel → exposes the Pi to the internet without a public IP
-# https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry_pi_install_ip_tunnel.sh
+# https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/raspberry_pi_install_ip_tunnel.sh
 
 # The installer script handles #3. You still need to do the one-time Cloudflare dashboard setup (Public Hostname). After that, it just runs.
 
@@ -322,7 +322,7 @@ success "✨ Done! Your Pi is now reachable via wine.macosxjs.com (once route is
 # ┌─────────────────────────────────────────────────────────────┐
 # │  Raspberry Pi 5 + 1TB NVMe + LCD Keypad + Active Cooler     │
 # │                                                             │
-# │  Piece 1: rapsberry_pi_wifi_checker_lcd.sh                  │
+# │  Piece 1: raspberry_pi_wifi_checker_lcd.sh                  │
 # │           └─ Gets the Pi online on any Wi-Fi                │
 # │           └─ Shows the IP on the LCD                        │
 # │                                                             │
@@ -333,7 +333,7 @@ success "✨ Done! Your Pi is now reachable via wine.macosxjs.com (once route is
 # │           └─ Forgejo + Git LFS on port 3000                 │
 # │           └─ Stores repos on the 1TB NVMe                   │
 # │                                                             │
-# │  Piece 4: rapsberry_pi_install_ip_tunnel.sh                 │
+# │  Piece 4: raspberry_pi_install_ip_tunnel.sh                 │
 # │           └─ Cloudflare Tunnel → wine.macosxjs.com          │
 # │           └─ Works behind CGNAT, no public IP needed        │
 # │                                                             │
@@ -353,10 +353,10 @@ success "✨ Done! Your Pi is now reachable via wine.macosxjs.com (once route is
 # On a fresh Pi:
 #     Flash Ubuntu Server to the NVMe (or SD card)
 #     Boot, SSH in
-#     Run rapsberry_pi_wifi_checker_lcd.sh → reboot → verify LCD works
+#     Run raspberry_pi_wifi_checker_lcd.sh → reboot → verify LCD works
 #     Run winejs.sh → installs base platform
 #     Run winejs_install_forgejogitlfs.sh → Forgejo on port 3000
-#     Run rapsberry_pi_install_ip_tunnel.sh → paste Cloudflare token
+#     Run raspberry_pi_install_ip_tunnel.sh → paste Cloudflare token
 #     In Cloudflare dashboard → add Public Hostname wine.macosxjs.com → https://localhost:3000
 #     On Macs → git clone https://wine.macosxjs.com/forgejolfs/username/repo.git
 
