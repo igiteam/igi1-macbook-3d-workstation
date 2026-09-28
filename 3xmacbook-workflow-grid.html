@@ -1,248 +1,258 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Line Grid</title>
-<style>
-  @page {
-    size: A4 landscape;
-    margin: 6mm;
-  }
+  <head>
+    <meta charset="utf-8" />
+    <title>Line Grid</title>
+    <style>
+      @page {
+        size: A4 landscape;
+        margin: 6mm;
+      }
 
-  * {
-    box-sizing: border-box;
-  }
+      * {
+        box-sizing: border-box;
+      }
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    background: #fff;
-    color: #111;
-  }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        background: #fff;
+        color: #111;
+      }
 
-  .sheet {
-    width: 100vw;
-    height: 100vh;
-    padding: 4mm;
-    display: flex;
-    flex-direction: column;
-    gap: 3mm;
-  }
+      .sheet {
+        width: 100vw;
+        height: 100vh;
+        padding: 4mm;
+        display: flex;
+        flex-direction: column;
+        gap: 3mm;
+      }
 
-  .title {
-    font-size: 14pt;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin-bottom: 2mm;
-  }
+      .title {
+        font-size: 14pt;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin-bottom: 2mm;
+      }
 
-  .subtitle {
-    font-size: 9pt;
-    color: #666;
-    margin-top: 0;
-  }
+      .subtitle {
+        font-size: 9pt;
+        color: #666;
+        margin-top: 0;
+      }
 
-  .grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 16mm 1fr 1fr 1fr;
-    grid-template-rows: 7mm repeat(6, 1fr);
-    gap: 1.5mm;
-    min-height: 0;
-  }
+      .grid {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 16mm 1fr 1fr 1fr;
+        grid-template-rows: 7mm repeat(6, 1fr);
+        gap: 1.5mm;
+        min-height: 0;
+      }
 
-  .head {
-    font-size: 10pt;
-    font-weight: 600;
-    text-align: center;
-    padding: 1.5mm 0;
-    border-bottom: 0.5pt solid #ccc;
-    align-self: end;
-  }
+      .head {
+        font-size: 10pt;
+        font-weight: 600;
+        text-align: center;
+        padding: 1.5mm 0;
+        border-bottom: 0.5pt solid #ccc;
+        align-self: end;
+      }
 
-  .head.time {
-    text-align: left;
-  }
+      .head.time {
+        text-align: left;
+      }
 
-  .time-cell {
-    font-size: 9pt;
-    font-variant-numeric: tabular-nums;
-    color: #666;
-    padding-top: 1.5mm;
-  }
+      .time-cell {
+        font-size: 9pt;
+        font-variant-numeric: tabular-nums;
+        color: #666;
+        padding-top: 1.5mm;
+      }
 
-  .cell {
-    border: 0.75pt solid #999;
-    border-radius: 2mm;
-    padding: 1.5mm 2mm;
-    font-size: 8.5pt;
-    line-height: 1.2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 0;
-    overflow: hidden;
-  }
+      .cell {
+        border: 0.75pt solid #999;
+        border-radius: 2mm;
+        padding: 1.5mm 2mm;
+        font-size: 8.5pt;
+        line-height: 1.2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 0;
+        overflow: hidden;
+      }
 
-  .cell .app {
-    font-weight: 600;
-    font-size: 9pt;
-    margin-bottom: 0.5mm;
-  }
+      .cell .app {
+        font-weight: 600;
+        font-size: 9pt;
+        margin-bottom: 0.5mm;
+      }
 
-  .cell .detail {
-    color: #333;
-  }
+      .cell .detail {
+        color: #333;
+      }
 
-  .cell.idle {
-    border-style: dashed;
-    border-color: #ccc;
-    color: #999;
-    font-style: italic;
-  }
+      .cell.idle {
+        border-style: dashed;
+        border-color: #ccc;
+        color: #999;
+        font-style: italic;
+      }
 
-  .cell.done {
-    border-color: #ddd;
-    background: #f7f7f7;
-    color: #999;
-  }
+      .cell.done {
+        border-color: #ddd;
+        background: #f7f7f7;
+        color: #999;
+      }
 
-  [contenteditable]:focus {
-    outline: 1pt dashed #4a90e2;
-    outline-offset: 1mm;
-  }
+      [contenteditable]:focus {
+        outline: 1pt dashed #4a90e2;
+        outline-offset: 1mm;
+      }
 
-  .footer {
-    font-size: 8pt;
-    color: #888;
-    display: flex;
-    justify-content: space-between;
-  }
+      .footer {
+        font-size: 8pt;
+        color: #888;
+        display: flex;
+        justify-content: space-between;
+      }
 
-  @media print {
-    html, body { height: auto; }
-    .sheet { height: 100vh; padding: 0; }
-    [contenteditable]:focus { outline: none; }
-  }
-</style>
-</head>
-<body>
+      @media print {
+        html,
+        body {
+          height: auto;
+        }
+        .sheet {
+          height: 100vh;
+          padding: 0;
+        }
+        [contenteditable]:focus {
+          outline: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sheet">
+      <div>
+        <div class="title" contenteditable>
+          3xMacbook - Asset/Sound/Script/Texture
+        </div>
+        <div class="subtitle" contenteditable>
+          One asset, three Macs. Edit any cell. Print when ready.
+        </div>
+      </div>
 
-<div class="sheet">
+      <div class="grid">
+        <div class="head time"></div>
+        <div class="head" contenteditable>MAC1</div>
+        <div class="head" contenteditable>MAC2</div>
+        <div class="head" contenteditable>MAC3</div>
 
-  <div>
-    <div class="title" contenteditable>LINE GRID — MP5 THROUGH THREE STATIONS</div>
-    <div class="subtitle" contenteditable>One asset, three Macs. Edit any cell. Print when ready.</div>
-  </div>
+        <!-- row 1 -->
+        <div class="time-cell" contenteditable>00:00</div>
+        <div class="cell">
+          <div class="app" contenteditable>Blender</div>
+          <div class="detail" contenteditable>FBX loaded, pick MP5</div>
+        </div>
+        <div class="cell idle">
+          <div class="app" contenteditable>(idle)</div>
+          <div class="detail" contenteditable></div>
+        </div>
+        <div class="cell idle">
+          <div class="app" contenteditable>(idle)</div>
+          <div class="detail" contenteditable></div>
+        </div>
 
-  <div class="grid">
+        <!-- row 2 -->
+        <div class="time-cell" contenteditable>02:00</div>
+        <div class="cell">
+          <div class="app" contenteditable>Blender</div>
+          <div class="detail" contenteditable>export OBJ → open 2.49</div>
+        </div>
+        <div class="cell">
+          <div class="app" contenteditable>Oxygen 2</div>
+          <div class="detail" contenteditable>open, wait for p3d</div>
+        </div>
+        <div class="cell idle">
+          <div class="app" contenteditable>(idle)</div>
+          <div class="detail" contenteditable></div>
+        </div>
 
-    <div class="head time"></div>
-    <div class="head" contenteditable>MAC1</div>
-    <div class="head" contenteditable>MAC2</div>
-    <div class="head" contenteditable>MAC3</div>
+        <!-- row 3 -->
+        <div class="time-cell" contenteditable>06:00</div>
+        <div class="cell done">
+          <div class="app" contenteditable>(done)</div>
+          <div class="detail" contenteditable></div>
+        </div>
+        <div class="cell">
+          <div class="app" contenteditable>Oxygen 2</div>
+          <div class="detail" contenteditable>cleanup, LODs</div>
+        </div>
+        <div class="cell">
+          <div class="app" contenteditable>text editor</div>
+          <div class="detail" contenteditable>config.cpp open</div>
+        </div>
 
-    <!-- row 1 -->
-    <div class="time-cell" contenteditable>00:00</div>
-    <div class="cell">
-      <div class="app" contenteditable>Blender</div>
-      <div class="detail" contenteditable>FBX loaded, pick MP5</div>
+        <!-- row 4 -->
+        <div class="time-cell" contenteditable>10:00</div>
+        <div class="cell done">
+          <div class="app" contenteditable>(done)</div>
+          <div class="detail" contenteditable></div>
+        </div>
+        <div class="cell">
+          <div class="app" contenteditable>Photoshop 7</div>
+          <div class="detail" contenteditable>textures</div>
+        </div>
+        <div class="cell">
+          <div class="app" contenteditable>OFP editor</div>
+          <div class="detail" contenteditable>test weapon</div>
+        </div>
+
+        <!-- row 5 -->
+        <div class="time-cell" contenteditable>14:00</div>
+        <div class="cell idle">
+          <div class="app" contenteditable></div>
+          <div class="detail" contenteditable></div>
+        </div>
+        <div class="cell idle">
+          <div class="app" contenteditable></div>
+          <div class="detail" contenteditable></div>
+        </div>
+        <div class="cell idle">
+          <div class="app" contenteditable></div>
+          <div class="detail" contenteditable></div>
+        </div>
+
+        <!-- row 6 -->
+        <div class="time-cell" contenteditable>18:00</div>
+        <div class="cell idle">
+          <div class="app" contenteditable></div>
+          <div class="detail" contenteditable></div>
+        </div>
+        <div class="cell idle">
+          <div class="app" contenteditable></div>
+          <div class="detail" contenteditable></div>
+        </div>
+        <div class="cell idle">
+          <div class="app" contenteditable></div>
+          <div class="detail" contenteditable></div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div contenteditable>
+          Edit any cell. No scroll. Print → A4 landscape.
+        </div>
+        <div contenteditable>Page 1 / 1</div>
+      </div>
     </div>
-    <div class="cell idle">
-      <div class="app" contenteditable>(idle)</div>
-      <div class="detail" contenteditable></div>
-    </div>
-    <div class="cell idle">
-      <div class="app" contenteditable>(idle)</div>
-      <div class="detail" contenteditable></div>
-    </div>
-
-    <!-- row 2 -->
-    <div class="time-cell" contenteditable>02:00</div>
-    <div class="cell">
-      <div class="app" contenteditable>Blender</div>
-      <div class="detail" contenteditable>export OBJ → open 2.49</div>
-    </div>
-    <div class="cell">
-      <div class="app" contenteditable>Oxygen 2</div>
-      <div class="detail" contenteditable>open, wait for p3d</div>
-    </div>
-    <div class="cell idle">
-      <div class="app" contenteditable>(idle)</div>
-      <div class="detail" contenteditable></div>
-    </div>
-
-    <!-- row 3 -->
-    <div class="time-cell" contenteditable>06:00</div>
-    <div class="cell done">
-      <div class="app" contenteditable>(done)</div>
-      <div class="detail" contenteditable></div>
-    </div>
-    <div class="cell">
-      <div class="app" contenteditable>Oxygen 2</div>
-      <div class="detail" contenteditable>cleanup, LODs</div>
-    </div>
-    <div class="cell">
-      <div class="app" contenteditable>text editor</div>
-      <div class="detail" contenteditable>config.cpp open</div>
-    </div>
-
-    <!-- row 4 -->
-    <div class="time-cell" contenteditable>10:00</div>
-    <div class="cell done">
-      <div class="app" contenteditable>(done)</div>
-      <div class="detail" contenteditable></div>
-    </div>
-    <div class="cell">
-      <div class="app" contenteditable>Photoshop 7</div>
-      <div class="detail" contenteditable>textures</div>
-    </div>
-    <div class="cell">
-      <div class="app" contenteditable>OFP editor</div>
-      <div class="detail" contenteditable>test weapon</div>
-    </div>
-
-    <!-- row 5 -->
-    <div class="time-cell" contenteditable>14:00</div>
-    <div class="cell idle">
-      <div class="app" contenteditable></div>
-      <div class="detail" contenteditable></div>
-    </div>
-    <div class="cell idle">
-      <div class="app" contenteditable></div>
-      <div class="detail" contenteditable></div>
-    </div>
-    <div class="cell idle">
-      <div class="app" contenteditable></div>
-      <div class="detail" contenteditable></div>
-    </div>
-
-    <!-- row 6 -->
-    <div class="time-cell" contenteditable>18:00</div>
-    <div class="cell idle">
-      <div class="app" contenteditable></div>
-      <div class="detail" contenteditable></div>
-    </div>
-    <div class="cell idle">
-      <div class="app" contenteditable></div>
-      <div class="detail" contenteditable></div>
-    </div>
-    <div class="cell idle">
-      <div class="app" contenteditable></div>
-      <div class="detail" contenteditable></div>
-    </div>
-
-  </div>
-
-  <div class="footer">
-    <div contenteditable>Edit any cell. No scroll. Print → A4 landscape.</div>
-    <div contenteditable>Page 1 / 1</div>
-  </div>
-
-</div>
-
-</body>
+  </body>
 </html>
