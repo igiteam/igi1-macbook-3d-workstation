@@ -10,6 +10,9 @@ Read Macbooks.txt
 ![Alt text](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/anaglyph_3d_glasses.jpg?raw=true)
 
 
+Rapsberry-pi-5-portable-1tb-forjegogitlfs-ubuntu.pdf
+https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry-pi5-ssd/rapsberry-pi-5-portable-forgejogitlf-ubuntu.pdf
+
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                    WHY THIS SETUP EXISTS                                │
