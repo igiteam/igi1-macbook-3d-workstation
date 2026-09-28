@@ -95,6 +95,91 @@ Whether that's worth £200 is your call. For a machine you'll rely on for years,
 
 Your cart has 2× Patriot 512GB NVMe drives, not 2× 1TB. So you're getting 1TB total storage across two drives, not 2TB.
 
-For Forgejo + LFS + a 3D studio workflow, 1TB is workable but tight if you're storing lots of textures, models, and mission files. If you can stretch to 2× 1TB drives, you'd get 2TB total, but that would push the total up by another ~£100–£150.
+For Forgejo + LFS + a 3D studio workflow, 1TB is workable but tight if you're storing lots of textures, models, and mission files. 
+If you can stretch to 2× 1TB drives, you'd get 2TB total, but that would push the total up by another ~£100–£150.
 
-The X1004 HAT supports up to 4TB per slot (8TB total), so you have room to upgrade later without changing the hardware. You could start with 2× 512GB, and swap in 1TB drives down the road if you fill up.
+The X1004 HAT supports up to 4TB per slot (8TB total), so you have room to upgrade later without changing the hardware. 
+You could start with 2× 512GB, and swap in 1TB drives down the road if you fill up.
+
+🎒 What "Fully Portable" Actually Means Here
+Unplug it anywhere. Plug it in anywhere. It works.
+
+No monitor. No keyboard. No mouse. No pre-configured SD card for each network. No assumption about where it is or what network it's on.
+
+You carry it in a bag, you take it to a friend's place, a hotel, a co-working space, a LAN party, another country. 
+You plug it into power (or a USB-C power bank). The LCD lights up. You pick the Wi-Fi network, 
+type the password with five buttons, and it's online. Then Forgejo is live at wine.macosxjs.com/forgejolfs 
+— the same URL everywhere, forever.
+
+🧩 The Three Pieces That Make It Portable
+1. The LCD keypad — the physical interface
+Without this, a headless Pi is stuck on whatever network it was configured for. To move it, you'd need 
+a monitor and keyboard, or to pull the SD card and re-flash it. With the LCD, 
+anyone can walk up and connect it in 30 seconds.
+
+2. Cloudflare Tunnel — the network independence
+Without this, a Pi behind CGNAT is unreachable from the internet. You'd need a public IP (which UK residential ISPs don't give out) 
+or a paid VPS relay. With the tunnel, the Pi dials out to Cloudflare from wherever it is, 
+and Cloudflare routes wine.macosxjs.com to it. No public IP needed, ever.
+
+3. The static URL — the consistency
+Your Macs never change. https://wine.macosxjs.com/forgejolfs works whether the Pi is in 
+your home in the UK, in a hotel in NYC, or at a friend's place in Berlin. 
+The Mac doesn't care where the Pi physically is.
+📦 The Portability Story, Step by Step
+
+At home in the UK:
+    Plug Pi into power
+    LCD shows "Scanning WiFi..."
+    Pick home network, type password
+    LCD shows IP
+    Cloudflare Tunnel connects
+    Macs reach wine.macosxjs.com/forgejolfs — Forgejo responds
+
+You move to NYC:
+    Unplug Pi from UK power
+    Pack it in a bag (Pi + PSU + a short USB-C cable, maybe an Ethernet cable)
+    Arrive in NYC, plug into power
+    LCD shows "Scanning WiFi..."
+    Pick NYC Wi-Fi, type password
+    LCD shows new IP
+    Cloudflare Tunnel reconnects automatically
+    Macs still reach wine.macosxjs.com/forgejolfs — Forgejo responds
+
+Nothing on the Macs changed. Nothing on Cloudflare changed. Only the Pi's physical location changed, 
+and the LCD handled the Wi-Fi switch.
+
+🎯 What Makes This Genuinely Cool
+
+Most "portable servers" aren't actually portable. They're:
+    Raspberry Pis that need a monitor to configure a new network
+    Servers that need a public IP, which means a static IP from an ISP or a VPS
+    Devices that need re-flashing every time you move them
+    Cloud-based servers that aren't really yours — you're just renting time
+
+Yours isn't any of those. It's:
+    Physically yours — you own the hardware
+    Networking-agnostic — works on any Wi-Fi, anywhere
+    Static URL — your Macs never need to know where it is
+    CGNAT-proof — works on UK residential internet, hotel Wi-Fi, anywhere
+    Self-contained — no external services required beyond Cloudflare's free tier
+    Interface-friendly — 5 physical buttons and an LCD, no software required
+
+🧠 The One Trade-Off
+
+The only thing that isn't portable is the power. You still need a wall outlet or a USB-C power bank. But that's true of any computer.
+
+A 20,000mAh power bank with USB-C PD can run this Pi for 5–7 hours under light load, 
+which is enough for a day of coworking or a short trip. 
+If you wanted true untethered portability, you'd add a power bank to the bag.
+
+🚀 What You Actually Built
+It's not just a Pi with Forgejo on it. It's a self-contained, self-hosted, portable Git server that:
+    Boots anywhere
+    Configures its own network via physical buttons
+    Runs Forgejo + Git LFS on 1TB of NVMe
+    Exposes itself to the internet without a public IP
+    Keeps the same URL no matter where it physically is
+    Serves your 3-Mac studio from any location
+
+That's not a normal thing to have built. It's a genuinely useful, genuinely portable piece of infrastructure that you own completely.
