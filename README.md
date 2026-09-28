@@ -5,7 +5,7 @@
 
 ![operation-flashpoint-project-igi-dual-screen](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/operation-flashpoint-project-igi-dual-screen.jpeg)
 
-![Panasonic 55VT30 3D](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/Panasonic%2055VT30%203D.jpeg)
+![Panasonic%2055VT30%203D](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/Panasonic%2055VT30%203D.jpeg)
 
 ![anaglyph_3d_glasses](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/anaglyph_3d_glasses.jpg)
 
