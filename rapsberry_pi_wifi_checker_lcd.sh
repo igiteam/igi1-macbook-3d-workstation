@@ -4,7 +4,9 @@
 # ============================================================
 # This is a standalone boot-time Wi-Fi configurator for your
 # portable Pi.
-#
+#rapsberry-pi-5-portable-forgejogitlf-ubuntu.pdf
+#https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry-pi5-ssd/rapsberry-pi-5-portable-forgejogitlf-ubuntu.pdf
+
 # Raspberry Pi 5 (8GB)
 # https://www.amazon.co.uk/gp/product/B0CK2FCG1K/ref=ox_sc_act_title_6?smid=A2TRIJRGK1887G&psc=1
 
