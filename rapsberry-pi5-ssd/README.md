@@ -59,3 +59,42 @@ https://www.amazon.co.uk/gp/product/B0GT3Z7C8W/ref=ox_sc_act_title_4?smid=A2PW45
 
 ## UANTIN SD Card Reader, Dual Slots USB A & USB C to Micro SD Card
 https://www.amazon.co.uk/gp/product/B0F2H3WFCR/ref=ox_sc_act_title_3?smid=A323W53PMQ1B00&psc=1
+
+🎯 What £437.43 Actually Gets You
+Item	Purpose
+Raspberry Pi 5 (8GB)	The brain
+Geekworm X1004 dual-NVMe HAT	Holds two SSDs
+Geekworm P579 case	Encloses everything
+Raspberry Pi Active Cooler	Keeps it cool
+iRasptek 27W USB-C PSU	Powers it
+Adafruit RGB 16×2 LCD + Keypad	Physical Wi-Fi config interface
+Patriot P320 512GB NVMe	SSD #1
+Patriot P300 512GB NVMe	SSD #2
+KEXIN 16GB microSD	Boot card
+UANTIN SD card reader	For flashing the microSD
+
+That's the Pi 5 8GB + 2× 512GB NVMe + LCD build from the comparison table, but with Patriot drives instead of the generic ones. At 2× 512GB you get 1TB of NVMe storage total — enough for your Forgejo repos, Git LFS objects, and 3D assets.
+💰 How That Compares
+
+The comparison table showed:
+Build	Table Price	Your Amazon Price
+Pi 5 8GB + 2× 512GB NVMe + LCD	£224.58	£437.43
+Pi 5 8GB + 2× 1TB NVMe + LCD	£344.30	—
+
+The table's £224.58 was based on eBay prices and generic parts. Your Amazon cart is all-new, brand-name, warrantied, free-delivery — that's why it's higher.
+
+The difference is roughly £200, and here's what that buys you:
+    Warranty — Amazon returns are trivial; eBay private sellers aren't
+    Matched components — Patriot drives are brand-name, not no-name
+    No surprises — no missing screws, no bent pins, no stripped threads
+    Free delivery — Amazon Prime, arrives in days
+    Everything boxed — nothing used, nothing refurbished
+
+Whether that's worth £200 is your call. For a machine you'll rely on for years, the warranty and reliability are probably worth it.
+⚠️ One Thing to Check
+
+Your cart has 2× Patriot 512GB NVMe drives, not 2× 1TB. So you're getting 1TB total storage across two drives, not 2TB.
+
+For Forgejo + LFS + a 3D studio workflow, 1TB is workable but tight if you're storing lots of textures, models, and mission files. If you can stretch to 2× 1TB drives, you'd get 2TB total, but that would push the total up by another ~£100–£150.
+
+The X1004 HAT supports up to 4TB per slot (8TB total), so you have room to upgrade later without changing the hardware. You could start with 2× 512GB, and swap in 1TB drives down the road if you fill up.
