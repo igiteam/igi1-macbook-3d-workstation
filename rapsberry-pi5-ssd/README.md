@@ -1,18 +1,21 @@
-🎯 What This Cart Builds
-This is the Pi 5 8GB + dual NVMe + LCD configuration, bought new, in one order. Rough total:
-Item	Price
-Raspberry Pi 5 (8GB)	£74.99
-Geekworm X1004 dual-NVMe HAT	£33.33
-Geekworm P579 case	£11.80
-Raspberry Pi Active Cooler	£8.27
-Adafruit RGB 16×2 LCD + Keypad	~£24.50
-iRasptek 27W USB-C PSU	~£12
-Acer FA100 M.2 SSD	£89.99
-Netac NV3000 500GB SSD	£69.99
-Lexar 512GB M.2 SSD	£79.68
-KEXIN 16GB microSD	£8.99
-LIANTIN SD card reader	£6.99
-Total	~£420
+## 🎯 What This Cart Builds
+
+This is the **Pi 5 8GB + dual NVMe + LCD** configuration, bought new, in one order.
+
+| Item | Price |
+|---|---|
+| Raspberry Pi 5 (8GB) | £74.99 |
+| Geekworm X1004 dual-NVMe HAT | £33.33 |
+| Geekworm P579 case | £11.80 |
+| Raspberry Pi Active Cooler | £8.27 |
+| Adafruit RGB 16×2 LCD + Keypad | ~£24.50 |
+| iRasptek 27W USB-C PSU | ~£12 |
+| Acer FA100 M.2 SSD | £89.99 |
+| Netac NV3000 500GB SSD | £69.99 |
+| Lexar 512GB M.2 SSD | £79.68 |
+| KEXIN 16GB microSD | £8.99 |
+| LIANTIN SD card reader | £6.99 |
+| **Total** | **~£420** |
 
 That's the all-new price for the top-end build from the table. The eBay bundles (£79–£115) are cheaper because they're used, but this cart is everything boxed, everything warrantied, everything from Amazon with free delivery.
 ✅ Why "All New" Is a Good Choice
