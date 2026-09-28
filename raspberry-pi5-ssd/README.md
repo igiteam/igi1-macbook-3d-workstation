@@ -185,4 +185,47 @@ It's not just a Pi with Forgejo on it. It's a self-contained, self-hosted, porta
     Keeps the same URL no matter where it physically is
     Serves your 3-Mac studio from any location
 
-That's not a normal thing to have built. It's a genuinely useful, genuinely portable piece of infrastructure that you own completely.
+That's not a normal thing to have built. It's a genuinely useful, 
+genuinely portable piece of infrastructure that you own completely.
+Fair comparison. If you spec a DigitalOcean Droplet with the same CPU, RAM, and 1TB of storage, 
+it costs far more than your one-time £437 build.
+
+💰 The DigitalOcean 1TB Setup
+DigitalOcean sells storage in two ways. To match your Pi, you need a Droplet plus a Volume.
+Component	Spec	Monthly Cost
+Droplet	8GB RAM / 4 vCPU / 160GB SSD	$48/mo
+Volume (Storage)	1TB (1000 GB) Block Storage	$100/mo
+Total	8GB RAM + 1TB	$148/mo
+
+📉 The Break-Even Math
+Your Amazon cart is £437.43 (roughly $550 USD).
+DigitalOcean costs $148/month for the same 8GB + 1TB config.
+$550 ÷ $148 = 3.7 months.
+
+Your Pi pays for itself in under 4 months. After that, it's effectively free (aside from electricity).
+🎯 Why the Gap Is So Large
+
+DigitalOcean's storage pricing is the killer:
+    **Block Storage is $0.10/GiB/month** . That's $100/mo for 1TB.
+    Droplets only include 25GB–320GB of local storage depending on the plan . You can't just buy a Droplet with 1TB built-in.
+    Reserved instances save up to 40% on compute, but storage is not discounted .
+
+So even with a 3-year prepay on the CPU, you're still paying $100/mo for the 1TB forever.
+📊 Long-Term Cost Comparison
+Period	DigitalOcean (8GB + 1TB)	Your Raspberry Pi 5 Build
+1 Year	$1,776	$550 (one-time)
+3 Years	$5,328	$550 + electricity
+5 Years	$8,880	$550 + electricity
+
+You save over $8,000 in 5 years by owning the hardware.
+🧠 The Trade-off
+
+You're trading:
+    Guaranteed uptime + a static public IP (DigitalOcean)
+    Managed backups + no hardware maintenance (DigitalOcean)
+
+For:
+    Full ownership + physical portability (Pi)
+    No recurring bill + full hardware control (Pi)
+
+For a personal project, the Pi wins on economics by a landslide. You've made the right call.

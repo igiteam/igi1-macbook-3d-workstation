@@ -9,6 +9,8 @@
 
 ![anaglyph_3d_glasses](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/anaglyph_3d_glasses.jpg)
 
+# PORTABLE FORGEJOGITLF Ubuntu Git Server
+https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/raspberry-pi5-ssd/README.md
 ## Raspberry-pi-5-portable-1tb-forgejogitlf-ubuntu.pdf
 https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/raspberry-pi5-ssd/raspberry-pi-5-portable-forgejogitlf-ubuntu.pdf
 
