@@ -1,5 +1,5 @@
 # igi1-macbook-3d-workstation
->>>>> Read Macbooks.txt <<<<<
+> Read Macbooks.txt 
 
 ![igi1-macbook-3d-workstation](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/igi1-macbook-3d-workstation.jpeg?raw=true)
 
