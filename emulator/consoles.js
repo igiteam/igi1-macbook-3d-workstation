@@ -1,0 +1,656 @@
+// Registry of every console the unified /emulator/ shell supports.
+//
+// Adding a console:
+//   1. Drop a record here (id, title, ejsCore, accents, iaBaseUrl, …).
+//   2. npm run sync:emulator  — regenerates hub picker tiles + creates a
+//      missing emulator/<id>/index.html lander (never overwrites existing).
+//   3. Add an apps-registry.json entry for the lander.
+//   4. npm run sync:catalog   — sitemap / PAGES / manifest shortcuts.
+//
+// Shared shell files (rom-browser, launch, internet-archive) read from this
+// object and reconfigure themselves automatically.
+// Consoles that need a system BIOS (Neo Geo, Sega CD, Saturn, PS1) set `biosRequired` +
+// `biosFileName`; launch.js persists the upload in IndexedDB.
+// Optional `biosIaBaseUrl` fetches BIOS from a different IA item than
+// the game library (PS1: games are local-only, BIOS still auto-loads).
+//
+// EmulatorJS core IDs come from https://emulatorjs.org/docs/Options#ejs_core.
+// `iaBaseUrl` is the Internet Archive collection the ROM browser searches;
+// leave it `null` and the ROM browser silently hides itself so the user
+// is steered to the local-file picker instead.
+//
+// Collections are search-only for every console: a result hands the visitor
+// an Archive download link and the game re-enters through the local file
+// picker. No console record can opt into fetching ROM bytes in the page —
+// see the policy note in emulator/rom-acquire.js. Keep `romHelp` / `howto`
+// copy on that flow. `iaExternalDownload` only marks disc-sized items so the
+// UI says "disc" and warns about the download size.
+(function () {
+  'use strict';
+
+  const CONSOLES = {
+    nes: {
+      id: 'nes',
+      title: 'NES',
+      subtitle: 'Nintendo Entertainment System',
+      emoji: '🕹️',
+      // EmulatorJS core (libretro: FCEUmm) — fast WASM 6502 with full mapper coverage.
+      ejsCore: 'nes',
+      fileAccept: '.nes,.zip,.7z',
+      fileExtsLabel: '.nes',
+      // Identity accent — Famicom red. Used by both the boot card and
+      // the EJS chrome (EJS_color). Sega / GB get their own hue below.
+      accentHex: '#dc2626',
+      accentGoldHex: '#7c2d12',
+      // Per-game .zip listing. `nes-collection` still appears in IA search but
+      // metadata/files APIs return empty / "Couldn't locate item" (darked or
+      // deranged item). `NintendoEntertainmentSystem` serves a real file list.
+      iaBaseUrl: 'https://archive.org/download/NintendoEntertainmentSystem',
+      iaDescriptionPrefix: 'Classic NES game',
+      romHelp:
+        'Bring your own .nes dump, or browse the collection: pick a game, download it from Internet Archive, then load the saved file here.',
+      // Keyboard help — EmulatorJS default bindings (EJS_defaultControls = 1).
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: 'A button', key: 'Z' },
+        { label: 'B button', key: 'X' },
+        { label: 'Select', key: 'V' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    sega: {
+      id: 'sega',
+      title: 'Sega Genesis',
+      subtitle: 'Mega Drive Emulator',
+      emoji: '🎮',
+      // EmulatorJS core: genesis_plus_gx.
+      ejsCore: 'segaMD',
+      fileAccept: '.md,.bin,.gen,.smd,.zip,.7z',
+      fileExtsLabel: '.md / .bin / .gen',
+      accentHex: '#e94560',
+      accentGoldHex: '#c2410c',
+      iaBaseUrl: 'https://archive.org/download/sega-genesis-romset-ultra-usa',
+      iaDescriptionPrefix: 'Classic Sega Genesis game',
+      romHelp:
+        'Bring your own .md / .bin / .gen dump, or browse the collection: pick a game, download it from Internet Archive, then load the saved file here.',
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: 'A button', key: 'Z' },
+        { label: 'B button', key: 'X' },
+        { label: 'C button', key: 'C' },
+        { label: 'X button', key: 'A' },
+        { label: 'Y button', key: 'S' },
+        { label: 'Z button', key: 'D' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    gg: {
+      id: 'gg',
+      title: 'Game Gear',
+      subtitle: 'Sega handheld',
+      emoji: '📟',
+      // EmulatorJS core: genesis_plus_gx (same family as Genesis).
+      ejsCore: 'segaGG',
+      fileAccept: '.gg,.zip,.7z',
+      fileExtsLabel: '.gg',
+      // Handheld teal — distinct from Genesis pink and GB violet.
+      accentHex: '#0d9488',
+      accentGoldHex: '#0f766e',
+      // No-Intro flat per-game .7z set.
+      iaBaseUrl: 'https://archive.org/download/nointro.gg',
+      iaDescriptionPrefix: 'Classic Game Gear game',
+      iaFileExtensions: ['.7z'],
+      iaPreferMetadata: true,
+      iaExcludeNames: ['[BIOS] Sega Game Gear (USA)'],
+      romHelp:
+        'Bring your own .gg dump, or browse the collection: pick a game, download it from Internet Archive, then load the saved file here.',
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: 'Button 1', key: 'Z' },
+        { label: 'Button 2', key: 'X' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    sega32x: {
+      id: 'sega32x',
+      title: 'Sega 32X',
+      subtitle: 'Genesis add-on',
+      emoji: '🚀',
+      // EmulatorJS core: picodrive.
+      ejsCore: 'sega32x',
+      fileAccept: '.32x,.bin,.zip,.7z',
+      fileExtsLabel: '.32x / .bin',
+      // Mars orange — adjacent to Genesis without colliding.
+      accentHex: '#ea580c',
+      accentGoldHex: '#c2410c',
+      iaBaseUrl: 'https://archive.org/download/nointro.32x',
+      iaDescriptionPrefix: 'Classic Sega 32X game',
+      iaFileExtensions: ['.7z'],
+      iaPreferMetadata: true,
+      // BIOS dumps + SDK carts aren't playable titles.
+      audioUnlock: true,
+      audioNote:
+        'Click the game once if it is silent. 32X music is often missing in the browser; sound effects may still play.',
+      romHelp:
+        'Bring your own .32x / .bin dump, or browse the collection: pick a game, download it from Internet Archive, then load the saved file here.',
+      iaExcludeNames: [
+        '[BIOS] 32X M68000 (USA)',
+        '[BIOS] 32X SH-2 Master (USA)',
+        '[BIOS] 32X SH-2 Slave (USA)',
+        '32X Sample Program - PWM Sound Demo (Unknown) (SDK Build)',
+        'Mars Check Program Version 1.0 (Unknown) (SDK Build) (Set 1)',
+        'Mars Check Program Version 1.0 (Unknown) (SDK Build) (Set 2)',
+        'Mars Sample Program - Gnu Sierra (Unknown) (SDK Build)',
+        'Mars Sample Program - Pharaoh (Unknown) (SDK Build)',
+        'Mars Sample Program - Runlength Mode Test (Unknown) (SDK Build)',
+        'Mars Sample Program - Texture Test (Unknown) (SDK Build)',
+        'Time Warner 32X CMD Download Cartridge (USA) (Program)'
+      ],
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: 'A button', key: 'Z' },
+        { label: 'B button', key: 'X' },
+        { label: 'C button', key: 'C' },
+        { label: 'X button', key: 'A' },
+        { label: 'Y button', key: 'S' },
+        { label: 'Z button', key: 'D' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    segacd: {
+      id: 'segacd',
+      title: 'Sega CD',
+      subtitle: 'Mega CD',
+      emoji: '📀',
+      ejsCore: 'segaCD',
+      fileAccept: '.chd,.iso,.bin,.cue,.zip,.7z',
+      fileExtsLabel: '.zip / .chd / .iso',
+      accentHex: '#0ea5e9',
+      accentGoldHex: '#0369a1',
+      // Redump set, flat per-game .zip (each ~250-400 MB). `chd_segacd`
+      // is `is_dark: true` and 404s through every proxy.
+      iaBaseUrl: 'https://archive.org/download/sega_mega-cd_sega-cd',
+      iaDescriptionPrefix: 'Sega CD game',
+      iaPreferMetadata: true,
+      iaExternalDownload: true,
+      biosRequired: true,
+      biosFileName: 'bios_CD_U.bin',
+      biosStorageKey: 'segacd',
+      // US Model 1 v1.10 dump is a fixed 128 KiB.
+      biosMinBytes: 128 * 1024,
+      biosIaBaseUrl: 'https://archive.org/download/SEGACDBIOS/Sega%20Mega%20CD%20BIOS.zip',
+      biosIaFileName:
+        'Sega%20Mega%20CD%20BIOS%2FSega%20CD%20%28U%29%20-%20Model%201%20v1.10%20%281992%29.bin',
+      biosHelp:
+        'US BIOS (bios_CD_U.bin) — load once if auto-download fails, then it stays in this browser. EU/JP: bios_CD_E.bin / bios_CD_J.bin.',
+      howto: [
+        'Wait until BIOS says ready.',
+        'Browse the disc collection, download the .zip from Internet Archive, then Load local disc.',
+        'Chromebooks with little disk space may not have room for a full CD image.'
+      ],
+      romHelp:
+        'Discs are never streamed into the page. Download from Internet Archive, then load the saved file here. School Chromebooks with tiny disks may fail.',
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: 'A button', key: 'Z' },
+        { label: 'B button', key: 'X' },
+        { label: 'C button', key: 'C' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    saturn: {
+      id: 'saturn',
+      title: 'Sega Saturn',
+      subtitle: 'Sega 32-bit disc console',
+      emoji: '🪐',
+      // EmulatorJS core: yabause. Software-rendered (no WebGL dependency),
+      // but two SH-2s plus VDP1/VDP2 in WASM make this the slowest console
+      // in the shell — see the howto warning.
+      ejsCore: 'segaSaturn',
+      fileAccept: '.chd,.iso,.cue,.bin,.ccd,.mds,.zip',
+      fileExtsLabel: '.chd / .iso',
+      seoDescription:
+        'Browser Sega Saturn emulator. Search the 1G1R disc collection on Internet Archive, download a game, then load the saved .chd here — the BIOS auto-loads once and stays on this device. Powered by EmulatorJS and Yabause.',
+      // Emerald — the last hue the other consoles had not claimed.
+      accentHex: '#059669',
+      accentGoldHex: '#065f46',
+      // 1G1R CHD set: flat, single-file discs, no regional duplicates.
+      // Same shape as the PS1 CHD item, so the disc handoff flow applies.
+      iaBaseUrl: 'https://archive.org/download/sega-saturn-1g1r-chd-perfect-collection_202306',
+      iaDescriptionPrefix: 'Sega Saturn game',
+      iaFileExtensions: ['.chd'],
+      iaPreferMetadata: true,
+      iaExternalDownload: true,
+      biosRequired: true,
+      // Canonical name yabause looks for; the IA dump is renamed on fetch.
+      biosFileName: 'saturn_bios.bin',
+      biosStorageKey: 'saturn',
+      // Every Saturn BIOS dump is exactly 512 KiB.
+      biosMinBytes: 512 * 1024,
+      // JP v1.00 — the one dump yabause_libretro.info blesses by md5
+      // (af5828fdff51384f99b3c4926be27762). Yabause does not enforce the
+      // region lock, so it boots the US/EU discs in the collection too.
+      biosIaBaseUrl:
+        'https://archive.org/download/saturnbios/Sega%20Saturn%20Bios%20%28All%20Regions%29.zip',
+      biosIaFileName:
+        'Sega%20Saturn%20Bios%20%28All%20Regions%29%2FSega%20Saturn%20BIOS%20v1.00%20%28JAP%29.bin',
+      biosHelp:
+        'BIOS auto-loads once from Internet Archive, then stays in this browser. Without it yabause falls back to an HLE BIOS that breaks many games.',
+      howto: [
+        'Wait until BIOS says ready.',
+        'Browse the disc collection, download the .chd from Internet Archive, then Load local disc.',
+        'Saturn is the heaviest console here — expect slowdown on Chromebooks and low-end laptops.',
+        'Gamepad recommended.'
+      ],
+      romHelp:
+        'Discs are never streamed into the page. Download from Internet Archive, then load the saved .chd here. Games run 30–400 MB, so a Chromebook with a tiny disk may not have room.',
+      showSaveStates: true,
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: 'A button', key: 'S' },
+        { label: 'B button', key: 'X' },
+        { label: 'C button', key: 'Z' },
+        { label: 'X button', key: 'A' },
+        { label: 'Y button', key: 'Q' },
+        { label: 'Z button', key: 'E' },
+        { label: 'L / R', key: 'Tab / R' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    gb: {
+      id: 'gb',
+      title: 'Game Boy',
+      subtitle: 'Game Boy & Game Boy Color',
+      emoji: '👾',
+      // EmulatorJS core: gambatte (handles both DMG and GBC).
+      ejsCore: 'gb',
+      fileAccept: '.gb,.gbc,.zip,.7z',
+      fileExtsLabel: '.gb / .gbc',
+      accentHex: '#8b5cf6',
+      accentGoldHex: '#6d28d9',
+      // Pull from two complementary IA items so the library spans both eras
+      // gambatte handles. First source wins on dedupe — DMG titles get the
+      // pristine no-intro builds, GBC-only games come from the curated
+      // gameboycolorsystemcollection. Combined: Pokémon Red/Blue/Yellow,
+      // Crystal/Gold/Silver, Metroid II, original Tetris, Super Mario Land
+      // 1+2, Wario Land 1/2/3, Kirby's Dream Land 1+2, FF Adventure /
+      // Legend, Castlevania I+II, Mega Man I-V, Zelda Link's Awakening +
+      // Oracle of Ages / Seasons, etc.
+      iaBaseUrl: [
+        'https://archive.org/download/theentiregameboycollection',
+        'https://archive.org/download/gameboycolorsystemcollection'
+      ],
+      iaDescriptionPrefix: 'Classic Game Boy / Color game',
+      romHelp:
+        'Bring your own .gb / .gbc dump, or browse the collection: pick a game, download it from Internet Archive, then load the saved file here.',
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: 'A button', key: 'Z' },
+        { label: 'B button', key: 'X' },
+        { label: 'Select', key: 'V' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    gba: {
+      id: 'gba',
+      title: 'GBA',
+      subtitle: 'Game Boy Advance',
+      emoji: '🟪',
+      ejsCore: 'gba',
+      fileAccept: '.gba,.zip,.7z',
+      fileExtsLabel: '.gba',
+      accentHex: '#7c3aed',
+      accentGoldHex: '#6d28d9',
+      // Sibling upload to the Game Boy item above: flat per-game .zip.
+      // `nointro.gba` looks live but is `is_dark: true`, so every proxy
+      // 404s on the directory listing.
+      iaBaseUrl: 'https://archive.org/download/theentiregameboyadvancecollection',
+      iaDescriptionPrefix: 'Game Boy Advance game',
+      iaPreferMetadata: true,
+      howto: [
+        'This is Game Boy Advance, not Game Boy. For GB/GBC use the Game Boy page.',
+        'Tap a game to get its Archive download link, then load the saved .gba file.'
+      ],
+      romHelp:
+        'This is GBA, not Game Boy. Pick a game from the collection, download it from Internet Archive, then load the saved file here. For GB/GBC use the Game Boy page.',
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: 'A button', key: 'Z' },
+        { label: 'B button', key: 'X' },
+        { label: 'L / R', key: 'Q / W' },
+        { label: 'Select', key: 'V' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    nds: {
+      id: 'nds',
+      title: 'Nintendo DS',
+      subtitle: 'Dual-screen handheld',
+      emoji: '🖊️',
+      // EmulatorJS resolves `nds` to melonDS. No BIOS panel here on purpose:
+      // bios7/bios9/firmware are optional for all three DS cores, and melonDS
+      // logs "Missing bios/firmware in system directory. Using FreeBIOS."
+      // rather than failing, so gating launch on an upload would be a lie.
+      // DeSmuME / DeSmuME 2015 are reachable from the in-player Core setting.
+      ejsCore: 'nds',
+      fileAccept: '.nds,.zip,.7z',
+      fileExtsLabel: '.nds',
+      seoDescription:
+        'Browser Nintendo DS emulator. Both screens stack in one window and the mouse doubles as the stylus, with no BIOS upload to hunt down. Load your own .nds dump; saves and save states stay on this device. Powered by EmulatorJS and melonDS.',
+      // Coral rose — the one family the other twelve consoles left alone.
+      accentHex: '#e11d48',
+      accentGoldHex: '#9f1239',
+      // Flat per-game .zip from the same uploader as the N64 pack, so the
+      // metadata listing works without the nested-directory special case.
+      iaBaseUrl: 'https://archive.org/download/pack-roms-nintendo-ds-eu-usa-jap-rabbits-games',
+      iaDescriptionPrefix: 'Nintendo DS game',
+      iaPreferMetadata: true,
+      howto: [
+        'Both screens stack inside the one window. The lower screen is the touch screen.',
+        'Click or drag on the lower screen to use the stylus.',
+        'Tap a game to get its Internet Archive download link, then load the saved .zip.',
+        'If a game refuses to boot, switch from melonDS to DeSmuME under the settings gear.'
+      ],
+      romHelp:
+        'Bring your own .nds dump, or browse the collection: pick a game, download it from Internet Archive, then load the saved file here. Most games are 10–60 MB. Click the lower screen to use the stylus.',
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: 'A button', key: 'Z' },
+        { label: 'B button', key: 'X' },
+        { label: 'X button', key: 'A' },
+        { label: 'Y button', key: 'S' },
+        { label: 'L / R', key: 'Q / E' },
+        { label: 'Touch screen', key: 'Mouse' },
+        { label: 'Select', key: 'V' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    neogeo: {
+      id: 'neogeo',
+      title: 'Neo Geo',
+      subtitle: 'AES / MVS Arcade',
+      emoji: '🥊',
+      // EmulatorJS arcade core → FinalBurn Neo (handles Neo Geo AES/MVS).
+      ejsCore: 'arcade',
+      fileAccept: '.zip,.7z',
+      fileExtsLabel: '.zip (FBNeo set)',
+      // SNK yellow-on-black identity.
+      accentHex: '#eab308',
+      accentGoldHex: '#a16207',
+      // Flat per-game FBNeo zips (includes neogeo.zip BIOS in the same item).
+      iaBaseUrl: 'https://archive.org/download/Neo-geoRomCollectionByGhostware',
+      iaDescriptionPrefix: 'Neo Geo game',
+      // BIOS / system zips live in the collection but aren't playable titles.
+      iaExcludeNames: ['neogeo', 'gg-bios'],
+      // FBNeo looks up the BIOS by filename; keep this exact.
+      biosRequired: true,
+      biosFileName: 'neogeo.zip',
+      biosStorageKey: 'neogeo',
+      biosHelp: 'BIOS auto-loads once from Internet Archive, then stays in this browser.',
+      // Short steps on the boot card — keep it terse.
+      howto: [
+        'Wait for BIOS “ready”.',
+        'Browse Collection, download the set from Internet Archive, then load the saved .zip.',
+        'Skip random ROM sites — .bin dumps usually fail.'
+      ],
+      romHelp:
+        'Neo Geo needs a matching FBNeo arcade .zip. Pick one from the collection, download it from Internet Archive, then load the saved file here.',
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: 'A button', key: 'Z' },
+        { label: 'B button', key: 'X' },
+        { label: 'C button', key: 'A' },
+        { label: 'D button', key: 'S' },
+        { label: 'Coin / Select', key: 'V' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    ngp: {
+      id: 'ngp',
+      title: 'Neo Geo Pocket',
+      subtitle: 'NGP & Color',
+      emoji: '🟠',
+      // EmulatorJS core → mednafen_ngp (original + Color carts).
+      ejsCore: 'ngp',
+      fileAccept: '.ngp,.ngc,.zip,.7z',
+      fileExtsLabel: '.ngp / .ngc',
+      // SNK orange — distinct from arcade yellow so the hub tiles don't collide.
+      accentHex: '#f97316',
+      accentGoldHex: '#c2410c',
+      // Flat per-game zips (same Ghostware shape as the arcade Neo Geo item).
+      iaBaseUrl: 'https://archive.org/download/Neo-GeoPocketColorRomCollectionByGhostware',
+      iaDescriptionPrefix: 'Neo Geo Pocket Color game',
+      howto: [
+        'This is Neo Geo Pocket / Color — the handheld. For AES/MVS arcade, use Neo Geo.',
+        'Tap a game to get its Archive download link, then load the saved .ngp / .ngc file.'
+      ],
+      romHelp:
+        'This is Neo Geo Pocket, not the arcade AES/MVS. Pick a game from the collection, download it from Internet Archive, then load the saved file here. For arcade titles use the Neo Geo page.',
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: 'A button', key: 'Z' },
+        { label: 'B button', key: 'X' },
+        { label: 'Option', key: 'V' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    snes: {
+      id: 'snes',
+      title: 'SNES',
+      subtitle: 'Super Nintendo',
+      emoji: '🟣',
+      // EmulatorJS core: snes9x.
+      ejsCore: 'snes',
+      fileAccept: '.sfc,.smc,.zip,.7z',
+      fileExtsLabel: '.sfc / .smc',
+      accentHex: '#7c3aed',
+      accentGoldHex: '#5b21b6',
+      iaBaseUrl: 'https://archive.org/download/snes-collection_202406',
+      iaDescriptionPrefix: 'Classic SNES game',
+      romHelp:
+        'Bring your own .sfc / .smc dump, or browse the collection: pick a game, download it from Internet Archive, then load the saved file here.',
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: 'A button', key: 'X' },
+        { label: 'B button', key: 'Z' },
+        { label: 'X button', key: 'S' },
+        { label: 'Y button', key: 'A' },
+        { label: 'L / R', key: 'Q / W' },
+        { label: 'Select', key: 'V' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    n64: {
+      id: 'n64',
+      title: 'N64',
+      subtitle: 'Nintendo 64',
+      emoji: '🎲',
+      // EmulatorJS resolves `n64` to mupen64plus_next (parallel-n64 on iOS).
+      ejsCore: 'n64',
+      fileAccept: '.z64,.n64,.v64,.zip,.7z',
+      fileExtsLabel: '.z64 / .n64 / .v64',
+      // Nintendo 64 logo red and deep blue.
+      accentHex: '#e60012',
+      accentGoldHex: '#1d4ed8',
+      // Flat, per-game BigEndian ROMs, usually 8–64 MB — the browser only
+      // reads the listing; the file itself comes straight from Archive.
+      iaBaseUrl: 'https://archive.org/download/pack-roms-nintendo-64-eu-us-jap',
+      iaDescriptionPrefix: 'Nintendo 64 game',
+      iaFileExtensions: ['.z64'],
+      howto: [
+        'Tap a game to get its Internet Archive download link.',
+        'Wait for the file to save, then Load saved ROM.',
+        'A gamepad helps. Keyboard still works for menus.'
+      ],
+      romHelp:
+        'These games are big (often 8–64 MB). Download from Internet Archive, then load the saved .z64 here.',
+      controls: [
+        { label: 'Analog stick', key: 'Arrow keys' },
+        { label: 'A / B', key: 'X / Z' },
+        { label: 'C buttons', key: 'I / J / K / L' },
+        { label: 'L / R', key: 'Q / E' },
+        { label: 'Z trigger', key: 'Tab' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    },
+
+    ps1: {
+      id: 'ps1',
+      title: 'PS1',
+      subtitle: 'PlayStation',
+      emoji: '💿',
+      // EmulatorJS core: pcsx_rearmed.
+      ejsCore: 'psx',
+      // Prefer single-file disc images; .bin+.cue needs companions and is awkward.
+      fileAccept: '.chd,.pbp,.iso,.bin,.cue,.zip,.7z',
+      fileExtsLabel: '.chd / .pbp / .iso',
+      // PlayStation brand blue (not purple — site bias avoid).
+      accentHex: '#0070d1',
+      accentGoldHex: '#003791',
+      // Curated Redump → CHD set (single-file discs EmulatorJS can load).
+      // Raw .iso dumps are rare as flat IA listings; CHD is the searchable
+      // stand-in. Disc images run 100–500+ MB, so they are downloaded from
+      // Archive and loaded back through the picker.
+      iaBaseUrl: 'https://archive.org/download/CuratedPSXRedumpCHDs',
+      iaDescriptionPrefix: 'PlayStation game',
+      iaFileExtensions: ['.chd'],
+      iaPreferMetadata: true,
+      iaExternalDownload: true,
+      biosRequired: true,
+      // Canonical name for pcsx_rearmed; IA source file is renamed on fetch.
+      biosFileName: 'scph5501.bin',
+      biosStorageKey: 'ps1',
+      // PlayStationBIOSFilesNAEUJP returns 401; nested zip path works.
+      biosIaBaseUrl: 'https://archive.org/download/PlayStationBios/PlayStation%20Bios.zip',
+      biosIaFileName: 'SCPH-7001.bin',
+      biosHelp:
+        'US BIOS auto-loads once, then stays in this browser. EU/JP: load scph5502.bin / scph5500.bin manually.',
+      howto: [
+        'Wait for BIOS “ready”.',
+        'Browse Collection, download the disc from Internet Archive, then Load local disc.',
+        'Use Save (F5) / Load (F9) on the bar — that is a quick save, not the in-game memory card menu.',
+        'Gamepad recommended.'
+      ],
+      romHelp:
+        'PS1 discs are large and are never streamed into the page. Download from Internet Archive, then load the saved .chd here. F5 quick-saves; F9 loads it. That is not the in-game memory card menu.',
+      showSaveStates: true,
+      controls: [
+        { label: 'D-Pad', key: 'Arrow keys' },
+        { label: '× Cross', key: 'X' },
+        { label: '○ Circle', key: 'S' },
+        { label: '□ Square', key: 'A' },
+        { label: '△ Triangle', key: 'W' },
+        { label: 'L1 / R1', key: 'Q / E' },
+        { label: 'L2 / R2', key: 'R / F' },
+        { label: 'Select', key: 'V' },
+        { label: 'Start', key: 'Enter' },
+        { label: 'Save state', key: 'F5' },
+        { label: 'Load state', key: 'F9' }
+      ]
+    }
+  };
+
+  /**
+   * Path landers: /emulator/nes/, /emulator/sega/, …
+   * Legacy query: /emulator/?console=nes (rewritten to the path form).
+   */
+  function getConsoleIdFromPathname(pathname) {
+    const parts = String(pathname || '')
+      .replace(/\/+$/, '')
+      .split('/')
+      .filter(Boolean);
+    if (parts[0] !== 'emulator' || !parts[1]) return null;
+    const id = parts[1].toLowerCase();
+    return CONSOLES[id] ? id : null;
+  }
+
+  function getConsoleIdFromSearch(search) {
+    const params = new URLSearchParams(search || '');
+    const requested = (params.get('console') || '').toLowerCase();
+    return CONSOLES[requested] ? requested : null;
+  }
+
+  // Prefer path landers; fall back to ?console= for old bookmarks / embeds.
+  function getConsoleId() {
+    return (
+      getConsoleIdFromPathname(window.location.pathname) ||
+      getConsoleIdFromSearch(window.location.search)
+    );
+  }
+
+  /** Canonical deep-link path for a console id (`nes` → `/emulator/nes/`). */
+  function emulatorConsolePath(id) {
+    return `/emulator/${id}/`;
+  }
+
+  /**
+   * On the hub (`/emulator/`) with `?console=<id>`, replace with the
+   * path lander so sitemap/canonical and the live URL match. Preserves
+   * other query params (`rom`, `tv`, …) and the hash.
+   * @returns {boolean} true if a navigation was started
+   */
+  function canonicalizeEmulatorConsoleUrl() {
+    if (getConsoleIdFromPathname(window.location.pathname)) return false;
+    const id = getConsoleIdFromSearch(window.location.search);
+    if (!id) return false;
+    const norm = String(window.location.pathname || '/')
+      .replace(/\/+$/, '')
+      .replace(/\/index\.html$/i, '');
+    if (norm !== '/emulator') return false;
+
+    const params = new URLSearchParams(window.location.search);
+    params.delete('console');
+    const qs = params.toString();
+    const dest = emulatorConsolePath(id) + (qs ? `?${qs}` : '') + (window.location.hash || '');
+    window.location.replace(dest);
+    return true;
+  }
+
+  window.EMULATOR_CONSOLES = CONSOLES;
+  window.getEmulatorConsole = function getEmulatorConsole() {
+    const id = getConsoleId();
+    return id ? CONSOLES[id] : null;
+  };
+  window.getEmulatorConsoleId = getConsoleId;
+  window.getEmulatorConsoleIdFromPathname = getConsoleIdFromPathname;
+  window.emulatorConsolePath = emulatorConsolePath;
+  window.canonicalizeEmulatorConsoleUrl = canonicalizeEmulatorConsoleUrl;
+})();
