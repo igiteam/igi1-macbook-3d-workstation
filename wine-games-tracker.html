@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wine games tracker</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        min-height: 100%;
+      }
+      body {
+        background: #ffffff;
+        color: #000000;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      /* ---- top bar (fixed at top while page scrolls) ---- */
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 20px;
+        background: #fff;
+        border-bottom: 1px solid #000;
+        gap: 16px;
+      }
+      .topbar h1 {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        white-space: nowrap;
+      }
+      .topbar .toolbar {
+        display: flex;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+      .topbar button {
+        background: #fff;
+        color: #000;
+        border: 1px solid #000;
+        padding: 6px 16px;
+        font-size: 13px;
+        font-family: inherit;
+        cursor: pointer;
+        text-transform: lowercase;
+        letter-spacing: 0.02em;
+      }
+      .topbar button:hover {
+        background: #000;
+        color: #fff;
+      }
+
+      /* ---- table ---- */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      col.col-wineskin {
+        width: 30%;
+      }
+      col.col-winegame {
+        width: 30%;
+      }
+      col.col-tick {
+        width: 6%;
+      }
+      col.col-comments {
+        width: 34%;
+      }
+
+      th,
+      td {
+        border: 1px solid #000;
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: middle;
+        font-size: 13px;
+        word-break: break-all;
+      }
+      th {
+        background: #000;
+        color: #fff;
+        font-weight: 600;
+        text-transform: lowercase;
+        letter-spacing: 0.02em;
+        position: sticky;
+        top: 49px; /* height of topbar */
+        z-index: 5;
+      }
+      td:nth-child(3) {
+        text-align: center;
+      }
+      input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        accent-color: #000;
+      }
+      input[type="text"] {
+        width: 100%;
+        border: 1px solid #000;
+        background: #fff;
+        color: #000;
+        padding: 4px 6px;
+        font-size: 13px;
+        font-family: inherit;
+        outline: none;
+      }
+      input[type="text"]:focus {
+        background: #000;
+        color: #fff;
+      }
+      input[type="text"]::placeholder {
+        color: #888;
+      }
+      input[type="text"]:focus::placeholder {
+        color: #ccc;
+      }
+
+      tr:hover td {
+        background: #f5f5f5;
+      }
+
+      /* ---- footer status bar ---- */
+      .statusbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 20px;
+        border-top: 1px solid #000;
+        font-size: 12px;
+        color: #000;
+        background: #fff;
+      }
+      .statusbar span {
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- top bar -->
+    <div class="topbar">
+      <h1>wine windows x86 games · tracker</h1>
+      <div class="toolbar">
+        <button onclick="saveJSON()">save json</button>
+        <button onclick="document.getElementById('fileInput').click()">
+          load json
+        </button>
+        <input
+          type="file"
+          id="fileInput"
+          accept=".json"
+          style="display: none"
+          onchange="loadJSON(event)"
+        />
+        <button onclick="tickAll(true)">tick all</button>
+        <button onclick="tickAll(false)">untick all</button>
+      </div>
+    </div>
+
+    <!-- full table, page scrolls -->
+    <table id="gameTable">
+      <colgroup>
+        <col class="col-wineskin" />
+        <col class="col-winegame" />
+        <col class="col-tick" />
+        <col class="col-comments" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>wineskin/</th>
+          <th>wine_windows_x86_games/</th>
+          <th>✓</th>
+          <th>comments</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- rows injected by js -->
+      </tbody>
+    </table>
+
+    <!-- footer -->
+    <div class="statusbar">
+      <span id="statusLeft">—</span>
+      <span id="statusRight">—</span>
+    </div>
+
+    <script>
+      // --------------------------------------------------------------
+      // full game list from `tree -d -L 1` output
+      // (sorted alphabetically, case-insensitive)
+      // --------------------------------------------------------------
+      const games = [
+        "007GoldeneyeN64",
+        "007Nightfire",
+        "007TheWorldIsNotEnoughN64",
+        "007TomorrowNeverDiesPS1",
+        "AlienResurrectionPS1",
+        "AlienTrilogy",
+        "AliensVsPredatorClassic2000",
+        "ArxFatalis",
+        "Battlefield1942",
+        "BladePS1",
+        "BloodRayne2003",
+        "BoilingPointRoadToHell",
+        "BourneConspiracyXbox360Recomp",
+        "BrothersInArmsHellsHighway2008",
+        "CallOfCthulhuDarkCornersOfTheEarth",
+        "CallOfDuty2003",
+        "CallOfDuty3Xbox360Recomp",
+        "CallOfJuarezBoundToBlood",
+        "CallofDuty2",
+        "ClashOfTheTitansXbox360Recomp",
+        "CondemnedCriminalOrigins",
+        "DarkMessiahOfMightAndMagic",
+        "DeusEx",
+        "DieHardNakatomiPlaza",
+        "DoomIII",
+        "DoomIIIE3",
+        "Driver2",
+        "DukeNukemForever2001",
+        "EnterTheMatrix",
+        "FEAR",
+        "FarCry2004",
+        "GTAIII",
+        "GunWarrior",
+        "HalfLife2",
+        "HiddenAndDangerousDeluxe",
+        "HitmanCodename47",
+        "HourOfVictory2008",
+        "IndependenceDay1996PS1",
+        "IndianaJonesAndTheEmperorsTomb",
+        "IndianaJonesAndTheInfernalMachine",
+        "LegoIsland2",
+        "LegoRacers",
+        "LineOfSightVietnam",
+        "Mafia2001",
+        "MaxPayne2001",
+        "MedalOfHonorAlliedAssaultSpearheadBreakthrough",
+        "MedalOfHonorPS1",
+        "MedalOfHonorPacificAssault",
+        "MedalOfHonorUndergroundPS1",
+        "MigAlley",
+        "MirrorsEdge2008",
+        "MissionImpossiblePS1",
+        "MobEnforcer",
+        "MobilRallyChampionshipPS1",
+        "NosferatuWrathOfMalachi",
+        "Oni",
+        "OperationFlashpointColdWarCrisis",
+        "PainkillerHeavensGotAHitman",
+        "PerfectDarkN64",
+        "Postal2",
+        "PrinceOfPersia3D",
+        "ProjectIGI",
+        "ProjectIGI2",
+        "Quake3Arena",
+        "RedFaction",
+        "RedFactionII",
+        "ReturnToCastleWolfeinstein",
+        "RiseOfTheArgonauts",
+        "SWAT3",
+        "SeriousSamTheFirstEncounter",
+        "SilentHillPS1",
+        "SpawnTheEthernalPS1",
+        "SpecOpsIIGreenBerets",
+        "SpiderManTheMovie",
+        "StalkerOblivionLost",
+        "StarWarsEpisodeIThePhantomMenace",
+        "StarWarsJediKnightDarkForcesIIMysteriesOfTheSith",
+        "StarshipTroopers",
+        "TheDarknessXbox360Recomp",
+        "TheFifthElementPS1",
+        "TheHistoryChannelBattleForThePacific",
+        "TheMark2007",
+        "TheMummyPS1",
+        "TheTerminatorFutureShock",
+        "TheTerminatorWarOfTheMachines",
+        "TheThing",
+        "TheTransformersTakaraJP2003PS2",
+        "ThiefGold",
+        "ThisIsFootball2005PS2Digimask",
+        "TomClancysGhostRecon2001",
+        "TomClancysRainbowSixVegas2006",
+        "TombRaider",
+        "Trespasser1998",
+        "Turok2008",
+        "UnderworldTheEthernalWarPS2",
+        "VampireTheMasquaradeRedemption",
+        "VanHelsingPS2",
+        "WS11WineCX20.0.4.app",
+        "WarOfTheWorlds2005",
+        "Wolfschanze1944",
+        "_dgVoodoo2_78_2",
+      ];
+
+      // --------------------------------------------------------------
+      // render the table rows
+      // --------------------------------------------------------------
+      const tbody = document.getElementById("tableBody");
+
+      function renderTable() {
+        tbody.innerHTML = "";
+        games.forEach((gameName, index) => {
+          const tr = document.createElement("tr");
+
+          // col 1: wineskin/  → gameName.app
+          const td1 = document.createElement("td");
+          td1.textContent = gameName + ".app";
+          tr.appendChild(td1);
+
+          // col 2: wine_windows_x86_games/  → gameName
+          const td2 = document.createElement("td");
+          td2.textContent = gameName;
+          tr.appendChild(td2);
+
+          // col 3: tick
+          const td3 = document.createElement("td");
+          const checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.id = "check_" + index;
+          checkbox.dataset.game = gameName;
+          checkbox.addEventListener("change", updateStatus);
+          td3.appendChild(checkbox);
+          tr.appendChild(td3);
+
+          // col 4: comments
+          const td4 = document.createElement("td");
+          const commentInput = document.createElement("input");
+          commentInput.type = "text";
+          commentInput.id = "comment_" + index;
+          commentInput.dataset.game = gameName;
+          commentInput.placeholder = "...";
+          td4.appendChild(commentInput);
+          tr.appendChild(td4);
+
+          tbody.appendChild(tr);
+        });
+        updateStatus();
+      }
+
+      renderTable();
+
+      // --------------------------------------------------------------
+      // status bar
+      // --------------------------------------------------------------
+      function updateStatus() {
+        const total = games.length;
+        const ticked = tbody.querySelectorAll(
+          'input[type="checkbox"]:checked',
+        ).length;
+        document.getElementById("statusLeft").textContent =
+          ticked + " / " + total + " ticked";
+        document.getElementById("statusRight").textContent =
+          total - ticked + " remaining";
+      }
+
+      function tickAll(state) {
+        tbody.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
+          cb.checked = state;
+        });
+        updateStatus();
+      }
+
+      // --------------------------------------------------------------
+      // save JSON
+      // --------------------------------------------------------------
+      function saveJSON() {
+        const rows = tbody.querySelectorAll("tr");
+        const data = [];
+
+        rows.forEach((row) => {
+          const checkbox = row.querySelector('input[type="checkbox"]');
+          const commentInput = row.querySelector('input[type="text"]');
+          if (!checkbox || !commentInput) return;
+
+          data.push({
+            game: checkbox.dataset.game,
+            ticked: checkbox.checked,
+            comment: commentInput.value,
+          });
+        });
+
+        const jsonStr = JSON.stringify(data, null, 2);
+        const blob = new Blob([jsonStr], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "wine_games_tracker.json";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+
+      // --------------------------------------------------------------
+      // load JSON
+      // --------------------------------------------------------------
+      function loadJSON(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          try {
+            const data = JSON.parse(e.target.result);
+            if (!Array.isArray(data)) {
+              alert("invalid json format – expected an array");
+              return;
+            }
+
+            const map = new Map();
+            data.forEach((item) => {
+              if (item && typeof item.game === "string") {
+                map.set(item.game, {
+                  ticked: !!item.ticked,
+                  comment: item.comment || "",
+                });
+              }
+            });
+
+            const rows = tbody.querySelectorAll("tr");
+            rows.forEach((row) => {
+              const checkbox = row.querySelector('input[type="checkbox"]');
+              const commentInput = row.querySelector('input[type="text"]');
+              if (!checkbox || !commentInput) return;
+
+              const gameName = checkbox.dataset.game;
+              const saved = map.get(gameName);
+              if (saved) {
+                checkbox.checked = saved.ticked;
+                commentInput.value = saved.comment;
+              }
+            });
+            updateStatus();
+          } catch (err) {
+            alert("error parsing json: " + err.message);
+          }
+          event.target.value = "";
+        };
+        reader.readAsText(file);
+      }
+    </script>
+  </body>
+</html>
