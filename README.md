@@ -23,6 +23,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhl2-wolfsc
 ## F.E.A.R - Dark Messiah of Might and Magic — Nosferatu Wrath of Malachi Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-dmmm-nosferatu-wrath-of-malachi%2Fblob%2Fmain%2FREADME.md
 
+## wine-games-tracker.html
+[https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/wine-games-tracker.html]([https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/wine-games-tracker.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/wine-games-tracker.html))
+
 ---
 
 ### Block 1
