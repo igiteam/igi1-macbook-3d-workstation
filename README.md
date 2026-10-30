@@ -1,5 +1,6 @@
 # igi1-macbook-3d-workstation
 > Read Macbooks.txt 
+![Read Macbooks.txt](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/Macbooks.txt)
 
 ![igi1-macbook-3d-workstation](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/igi1-macbook-3d-workstation.jpeg)
 
@@ -8,6 +9,53 @@
 ![panasonic-vierra-55vt30-3d-tv-active-glasses-x2](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/panasonic-vierra-55vt30-3d-tv-active-glasses-x2.jpeg)
 
 ![anaglyph_3d_glasses](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/anaglyph_3d_glasses.jpg)
+
+
+## 
+Operation Flashpoint Cold War Crisis - Project IGI
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc%2Fblob%2Fmain%2FREADME.md
+
+Postal 2 Half Dude - The Thing
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fpostal2-half-dude-the-thing%2Fblob%2Fmain%2FREADME.md
+
+Half-Life 2 — Wolfschanze 1944 Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhl2-wolfschanze1944%2Fblob%2Fmain%2FREADME.md
+
+F.E.A.R - Dark Messiah of Might and Magic — Nosferatu Wrath of Malachi Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-dmmm-nosferatu-wrath-of-malachi%2Fblob%2Fmain%2FREADME.md
+
+Block 1
+openofpcwc-projectigi
+postal2-half-dude-thething
+hl2-wolfschanze1944
+fear-dmmm-nosferatu-wrath-of-malachi
+
+Block 2
+openmohaa-medalofhonorpsx
+opentobey-spidermantrilogy
+lego-racer-island-2-spyrius
+openjkdf2-star-wars-episode-i-ii-iii
+
+Block 3
+enter-the-matrix-blade-trilogy
+die-hard-nakatomi-plaza-die-hard-trilogy
+oni-fifth-element
+007-nightfire-tomorrow-never-dies
+
+Block 4
+thief-gold-prince-of-persia-3d
+serious-sam-first-encounter-starship-troopers
+terminator-war-of-the-machines-future-shock
+arx-fatalis-vampire-the-masquerade-redemption
+
+Block 5
+openlara-the-mummy
+bloodrayne-spawn-the-eternal
+alien-vs-predator-classic-alien-resurrection
+red-faction-red-faction-2
+
+Block 6
+bloodrayne-underworld-trilogy
 
 # PORTABLE FORGEJOGITLF Ubuntu Git Server
 https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/raspberry-pi5-ssd/README.md
