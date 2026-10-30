@@ -56,7 +56,11 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-dmmm-
 - `red-faction-red-faction-2`
 
 ### Block 6
+- `mohpa-vietnam`
 - `bloodrayne-underworld-trilogy`
+- `openofpcwc-hidden-and-dangerous`
+- `transformers-takara-the-movie`
+- `openmohaa-project-igi-2`
 
 # PORTABLE FORGEJOGITLF Ubuntu Git Server
 https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/raspberry-pi5-ssd/README.md
