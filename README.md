@@ -69,6 +69,24 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-dmmm-
 - `transformers-takara-the-movie`
 - `openmohaa-project-igi-2`
 
+## Block 7
+- `cod2-hour-of-victory`
+- `cod1-brothers-in-arms`
+- `indiana-jones-emperors-tomb-infernal-machine`
+- `fear-history-channel-battle-for-pacific`
+
+## Block 8
+- `hitman-codename-47-mission-impossible-psx`
+- `colin-mcrae-rally-2-mobile-rally-championship-psx`
+- `call-of-juarez-bound-in-blood-gun-warrior`
+- `r6-vegas-kill-switch`
+
+## Block 9
+- `r6-vegas-ghost-recon-2001`
+- `virtual-cop-2-tokyo-zombie-arcade`
+- `gta-iii-they-live`
+- `mirrors-edge-rtcw`
+  
 # PORTABLE FORGEJOGITLF Ubuntu Git Server
 https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/raspberry-pi5-ssd/README.md
 ## Raspberry-pi-5-portable-1tb-forgejogitlf-ubuntu.pdf
