@@ -12,7 +12,6 @@
 
 [![smart-board-mx-v4-series-monitor](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/smart-board-mx-v4-series-monitor.jpg)](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/smart-board-mx-v4-series-monitor-manual.pdf)
 
-
 ## Operation Flashpoint Cold War Crisis - Project IGI
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc%2Fblob%2Fmain%2FREADME.md
 
