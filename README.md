@@ -12,6 +12,8 @@
 
 [![smart-board-mx-v4-series-monitor](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/smart-board-mx-v4-series-monitor.png)](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/smart-board-mx-v4-series-monitor-manual.pdf)
 
+[![raspberry-pi-5-portable-forgejolf]https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry-pi5-forgejogitlfs/raspberry-pi-5-portable-forgejolfs.png)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry-pi5-forgejogitlfs/Raspberry%20Pi%20Build%20Cost%20Comparison.html)
+
 ## Operation Flashpoint Cold War Crisis - Project IGI
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc%2Fblob%2Fmain%2FREADME.md
 
