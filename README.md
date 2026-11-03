@@ -57,7 +57,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2F007-golden
 - `enter-the-matrix-blade-trilogy`
 - `die-hard-nakatomi-plaza-die-hard-trilogy`
 - `oni-fifth-element`
-- `opentobey-spidermantrilogy`
+- `opentobey-spiderman-trilogy`
 
 ### Block 4
 - `lego-racer-island-2-spyrius`
