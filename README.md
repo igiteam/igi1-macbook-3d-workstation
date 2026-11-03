@@ -25,6 +25,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhl2-wolfsc
 ## F.E.A.R - Dark Messiah of Might and Magic — Nosferatu Wrath of Malachi Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-dmmm-nosferatu-wrath-of-malachi%2Fblob%2Fmain%2FREADME.md
 
+## Thief Gold: Prince of Persia 3D — The Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthief-gold-prince-of-persia-3d%2Fblob%2Fmaster%2FREADME.md
+
 ## wine-games-tracker.html
 [https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/wine-games-tracker.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/wine-games-tracker.html)
 
@@ -41,19 +44,19 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-dmmm-
 - `fear-dmmm-nosferatu-wrath-of-malachi`
 
 ### Block 2
+- `thief-gold-prince-of-persia-3d`
+- `007-nightfire-tomorrow-never-dies`
 - `openmohaa-medalofhonorpsx`
-- `opentobey-spidermantrilogy`
-- `lego-racer-island-2-spyrius`
 - `openjkdf2-star-wars-episode-i-ii-iii`
 
 ### Block 3
 - `enter-the-matrix-blade-trilogy`
 - `die-hard-nakatomi-plaza-die-hard-trilogy`
 - `oni-fifth-element`
-- `007-nightfire-tomorrow-never-dies`
+- `opentobey-spidermantrilogy`
 
 ### Block 4
-- `thief-gold-prince-of-persia-3d`
+- `lego-racer-island-2-spyrius`
 - `serious-sam-first-encounter-starship-troopers`
 - `terminator-war-of-the-machines-future-shock`
 - `arx-fatalis-vampire-the-masquerade-redemption`
@@ -67,14 +70,13 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-dmmm-
 ### Block 6
 - `mohpa-vietnam`
 - `bloodrayne-underworld-trilogy`
-- `openofpcwc-hidden-and-dangerous`
 - `transformers-takara-the-movie`
 - `openmohaa-project-igi-2`
 
 ## Block 7
+- `openofpcwc-hidden-and-dangerous`
 - `cod2-hour-of-victory`
 - `cod1-brothers-in-arms`
-- `indiana-jones-emperors-tomb-infernal-machine`
 - `fear-history-channel-battle-for-pacific`
 
 ## Block 8
@@ -88,6 +90,10 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-dmmm-
 - `virtual-cop-2-tokyo-zombie-arcade`
 - `gta-iii-they-live`
 - `mirrors-edge-rtcw`
+
+## Block 10
+- `indiana-jones-emperors-tomb-infernal-machine`
+
   
 # PORTABLE FORGEJOGITLF Ubuntu Git Server
 https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/raspberry-pi5-ssd/README.md
