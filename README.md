@@ -49,7 +49,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2F007-golden
 
 ### Block 2
 - `thief-gold-prince-of-persia-3d`
-- `007-nightfire-tomorrow-never-dies`
+- `007-goldeneye-tomorrow-never-dies`
 - `openmohaa-medalofhonorpsx`
 - `openjkdf2-star-wars-episode-i-ii-iii`
 
