@@ -48,14 +48,14 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenjkdf2-
 
 ### Block 1
 - `openofpcwc-projectigi`
-- `postal2-half-dude-thething`
+- `postal2-half-dude-the-thing`
 - `hl2-wolfschanze1944`
 - `fear-dmmm-nosferatu-wrath-of-malachi`
 
 ### Block 2
 - `thief-gold-prince-of-persia-3d`
 - `007-goldeneye-tomorrow-never-dies`
-- `openmohaa-medalofhonorpsx`
+- `openmohaa-medalofhonor-psx`
 - `openjkdf2-star-wars-episode-i-ii-iii`
 
 ### Block 3
