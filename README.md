@@ -124,7 +124,7 @@ Target list (so far):
 
     Project IGI → Operation Flashpoint
 
-    The Thing → RTCW / Doom 3
+    The Thing → Postal 2
 
     Wolfschanze 1944 → Half-Life 2
 
