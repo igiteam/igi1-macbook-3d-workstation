@@ -13,10 +13,10 @@
 [![smart-board-mx-v4-series-monitor](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/smart-board-mx-v4-series-monitor.png)](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/smart-board-mx-v4-series-monitor-manual.pdf)
 
 
-## Operation Flashpoint Cold War Crisis - Project IGI
+## Operation Flashpoint Cold War Crisis - Project IGI Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc%2Fblob%2Fmain%2FREADME.md
 
-## Postal 2 Half Dude - The Thing
+## Postal 2 Half Dude - The Thing Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fpostal2-half-dude-the-thing%2Fblob%2Fmain%2FREADME.md
 
 ## Half-Life 2 — Wolfschanze 1944 Remake
@@ -25,13 +25,13 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhl2-wolfsc
 ## F.E.A.R - Dark Messiah of Might and Magic — Nosferatu Wrath of Malachi Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-dmmm-nosferatu-wrath-of-malachi%2Fblob%2Fmain%2FREADME.md
 
-## Thief Gold: Prince of Persia 3D — The Remake
+## Thief Gold: Prince of Persia 3D Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthief-gold-prince-of-persia-3d%2Fblob%2Fmaster%2FREADME.md
 
 ## 007 Goldeneye - Tomorrow Never Dies Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2F007-goldeneye-tomorrow-never-dies%2Fblob%2Fmain%2Freadme.md
 
-## Medal Of Honor Allied Assault - Medal Of Honor PSX — The Remake
+## Medal Of Honor Allied Assault - Medal Of Honor PSX Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenmohaa-medal-of-honor-psx%2Fblob%2Fmain%2FREADME.md
 
 ## Jedi Knight Dark Forces 2 - Star Wars Episode I-II-III Remake
