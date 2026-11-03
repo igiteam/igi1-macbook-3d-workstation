@@ -31,6 +31,11 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthief-gold
 ## 007 Goldeneye - Tomorrow Never Dies Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2F007-goldeneye-tomorrow-never-dies%2Fblob%2Fmain%2Freadme.md
 
+## Medal Of Honor Allied Assault - Medal Of Honor PSX — The Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenmohaa-medal-of-honor-psx%2Fblob%2Fmain%2FREADME.md
+
+## Jedi Knight Dark Forces 2 - Star Wars Episode I-II-III Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenjkdf2-star-wars-episode-i-ii-iii%2Fblob%2Fmaster%2FREADME.md
 
 ## wine-games-tracker.html
 [https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/wine-games-tracker.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/wine-games-tracker.html)
