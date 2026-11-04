@@ -2,6 +2,8 @@
 > Read Macbooks.txt 
 [Read Macbooks.txt](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/Macbooks.txt)
 
+[https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Figi1-macbook-3d-workstation%2Fblob%2Fmain%2FREADME.md](https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Figi1-macbook-3d-workstation%2Fblob%2Fmain%2FREADME.md)
+
 ![igi1-macbook-3d-workstation](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/igi1-macbook-3d-workstation.jpeg)
 
 ![operation-flashpoint-project-igi-dual-screen](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/main/operation-flashpoint-project-igi-dual-screen.jpeg)
