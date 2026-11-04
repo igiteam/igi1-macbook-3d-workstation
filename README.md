@@ -277,3 +277,5 @@ Cert ID (Client Secret)	"Application Keys" → "Cert ID"
 
 Marketplace	EBAY-GB for UK, EBAY-US for US
 Rate limit	5 calls/sec default — the script sleeps 0.5s between items
+
+[batch-1-2.png](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/batch-1-2.png)
