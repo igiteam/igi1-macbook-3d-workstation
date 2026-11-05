@@ -45,6 +45,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Flego-racer
 ## WebAssembly Games 
 [https://github.com/igiteam/webassembly_games](https://github.com/igiteam/webassembly_games)
 
+## Nvidia DirectX Shaders Collection
+[https://nvidiashaders.netlify.app/](https://nvidiashaders.netlify.app/)
 
 ## wine-games-tracker.html
 [https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/wine-games-tracker.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/wine-games-tracker.html)
