@@ -64,16 +64,16 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Flego-racer
 - `openjkdf2-star-wars-episode-i-ii-iii`
 
 ### Block 3
-- `enter-the-matrix-blade-trilogy`
-- `die-hard-nakatomi-plaza-die-hard-trilogy`
-- `oni-fifth-element`
+- `lego-racer-island-2-spyrius`
+- `mohpa-vietnam`
+- `arx-fatalis-vampire-the-masquerade-redemption`
 - `opentobey-spiderman-trilogy`
 
 ### Block 4
-- `lego-racer-island-2-spyrius`
+- `enter-the-matrix-blade-trilogy`
 - `serious-sam-first-encounter-starship-troopers`
 - `terminator-war-of-the-machines-future-shock`
-- `arx-fatalis-vampire-the-masquerade-redemption`
+- `die-hard-nakatomi-plaza-die-hard-trilogy`
 
 ### Block 5
 - `openlara-the-mummy`
@@ -82,10 +82,10 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Flego-racer
 - `red-faction-red-faction-2`
 
 ### Block 6
-- `mohpa-vietnam`
 - `bloodrayne-underworld-trilogy`
 - `transformers-takara-the-movie`
 - `openmohaa-project-igi-2`
+- `oni-fifth-element`
 
 ## Block 7
 - `openofpcwc-hidden-and-dangerous`
