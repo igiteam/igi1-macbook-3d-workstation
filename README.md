@@ -42,6 +42,23 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenjkdf2-
 ## LEGO Racers - LEGO Island 2 - LEGO Spyrius
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Flego-racers-island-2-spyrius%2Fblob%2Fmain%2FREADME.md
 
+## In Progress
+[https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine](https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine)
+
+[https://github.com/igiteam/hitman-codename-47-mission-impossible-psx](https://github.com/igiteam/hitman-codename-47-mission-impossible-psx)
+
+[https://github.com/igiteam/opentobey-spiderman-trilogy](https://github.com/igiteam/opentobey-spiderman-trilogy)
+
+[https://github.com/igiteam/virtua-cop-2-tokyo-zombie](https://github.com/igiteam/virtua-cop-2-tokyo-zombie)
+
+[https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx](https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx)
+
+[https://github.com/igiteam/red-faction-red-faction-2](https://github.com/igiteam/red-faction-red-faction-2)
+
+[https://github.com/igiteam/mohpa-vietnam](https://github.com/igiteam/mohpa-vietnam)
+
+
+
 ## WebAssembly Games 
 [https://github.com/igiteam/webassembly_games](https://github.com/igiteam/webassembly_games)
 
