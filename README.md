@@ -72,7 +72,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Flego-racer
 ### Block 3
 - `lego-racer-island-2-spyrius`
 - `mohpa-vietnam`
-- `arx-fatalis-vampire-the-masquerade-redemption`
+- `red-faction-red-faction-2`
 - `opentobey-spiderman-trilogy`
 
 ### Block 4
@@ -85,7 +85,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Flego-racer
 - `openlara-the-mummy`
 - `bloodrayne-spawn-the-eternal`
 - `alien-vs-predator-classic-alien-resurrection`
-- `red-faction-red-faction-2`
+- `arx-fatalis-vampire-the-masquerade-redemption`
 
 ### Block 6
 - `bloodrayne-underworld-trilogy`
