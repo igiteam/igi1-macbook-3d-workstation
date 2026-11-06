@@ -45,9 +45,10 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Flego-racer
 ## Medal Of Honor Pacific Assault - Vietnam
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmohpa-vietnam%2Fblob%2Fmain%2FREADME.md
 
-## In Progress
-[https://github.com/igiteam/red-faction-red-faction-2](https://github.com/igiteam/red-faction-red-faction-2)
+## Red Faction - Red Faction II
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fred-faction-red-faction-2%2Fblob%2Fmaster%2FREADME.md
 
+## In Progress
 [https://github.com/igiteam/opentobey-spiderman-trilogy](https://github.com/igiteam/opentobey-spiderman-trilogy)
 
 [https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine](https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine)
