@@ -108,9 +108,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fred-factio
 [https://snesgames.macosxjs.com](https://snesgames.macosxjs.com)
 
 [https://segagenesisgames.macosxjs.com](https://segagenesisgames.macosxjs.com)
-  
-[https://filmstrip.macosxjs.com](https://filmstrip.macosxjs.com)
 
+---
+  
 [https://videogameslibrary.macosxjs.com](https://videogameslibrary.macosxjs.com)
 
 ---
@@ -120,6 +120,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fred-factio
 
 ## Nvidia DirectX Shaders Collection
 [https://nvidiashaders.netlify.app/](https://nvidiashaders.netlify.app/)
+
+## FilmStrip Creator
+[https://filmstrip.macosxjs.com](https://filmstrip.macosxjs.com)
 
 ## wine-games-tracker.html
 [https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/wine-games-tracker.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/wine-games-tracker.html)
