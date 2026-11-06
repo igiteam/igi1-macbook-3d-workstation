@@ -81,6 +81,32 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fred-factio
 
 [https://ps3games.macosxjs.com](https://ps3games.macosxjs.com)
 
+[https://3dogames.macosxjs.com](https://3dogames.macosxjs.com)
+
+[https://pspgames.macosxjs.com](https://pspgames.macosxjs.com)
+
+[https://segasaturngames.macosxjs.com](https://segasaturngames.macosxjs.com)
+
+[https://n64games.macosxjs.com](https://n64games.macosxjs.com)
+
+[https://ps2games.macosxjs.com](https://ps2games.macosxjs.com)
+
+[https://wiigames.macosxjs.com](https://wiigames.macosxjs.com)
+
+[https://ps1games.macosxjs.com](https://ps1games.macosxjs.com)
+
+[https://dreamcastgames.macosxjs.com](https://dreamcastgames.macosxjs.com)
+
+[https://gbagames.macosxjs.com](https://gbagames.macosxjs.com)
+
+[https://xboxgames.macosxjs.com](https://xboxgames.macosxjs.com)
+
+[https://gamecubegames.macosxjs.com](https://gamecubegames.macosxjs.com)
+
+[https://snesgames.macosxjs.com](https://snesgames.macosxjs.com)
+
+[https://segagenesisgames.macosxjs.com](https://segagenesisgames.macosxjs.com)
+  
 [https://filmstrip.macosxjs.com](https://filmstrip.macosxjs.com)
 
 [https://videogameslibrary.macosxjs.com](https://videogameslibrary.macosxjs.com)
