@@ -77,6 +77,10 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fred-factio
 
 [https://renderwareenginegames.macosxjs.com/](https://renderwareenginegames.macosxjs.com/)
 
+---
+
+[https://wiigames.macosxjs.com](https://wiigames.macosxjs.com)
+
 [https://xbox360games.macosxjs.com](https://xbox360games.macosxjs.com)
 
 [https://ps3games.macosxjs.com](https://ps3games.macosxjs.com)
@@ -90,8 +94,6 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fred-factio
 [https://n64games.macosxjs.com](https://n64games.macosxjs.com)
 
 [https://ps2games.macosxjs.com](https://ps2games.macosxjs.com)
-
-[https://wiigames.macosxjs.com](https://wiigames.macosxjs.com)
 
 [https://ps1games.macosxjs.com](https://ps1games.macosxjs.com)
 
@@ -111,6 +113,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fred-factio
 
 [https://videogameslibrary.macosxjs.com](https://videogameslibrary.macosxjs.com)
 
+---
 
 ## WebAssembly Games 
 [https://github.com/igiteam/webassembly_games](https://github.com/igiteam/webassembly_games)
