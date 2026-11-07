@@ -117,6 +117,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fred-factio
 
 ---
 
+## Support Buy Me Coffee
+[https://buymeacoffee.com/igiteam](https://buymeacoffee.com/igiteam)
+
 ## WebAssembly Games 
 [https://github.com/igiteam/webassembly_games](https://github.com/igiteam/webassembly_games)
 
