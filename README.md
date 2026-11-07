@@ -61,6 +61,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fred-factio
 
 [https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection](https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection)
 
+[https://github.com/igiteam/arx-fatalis-vampire-the-masquerade-redemption](https://github.com/igiteam/arx-fatalis-vampire-the-masquerade-redemption)
+
 ---
 
 ## Video Game Collections With Youtube
