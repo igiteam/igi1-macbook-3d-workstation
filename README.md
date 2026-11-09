@@ -96,6 +96,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopentobey-
 
 [https://ps1games.macosxjs.com](https://ps1games.macosxjs.com)
 
+[https://pcgames.macosxjs.com](https://pcgames.macosxjs.com)
+
 ---
 
 [https://3dogames.macosxjs.com](https://3dogames.macosxjs.com)
