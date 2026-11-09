@@ -197,6 +197,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fred-factio
 
 ## Block 10
 - `iortcw-mortyr-1944`
+- `cod3-hd`
 
   
 # PORTABLE FORGEJOGITLF Ubuntu Git Server
