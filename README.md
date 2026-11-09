@@ -127,10 +127,10 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fred-factio
 [https://buymeacoffee.com/igiteam](https://buymeacoffee.com/igiteam)
 
 ## WebAssembly Games 
-[https://github.com/igiteam/webassembly_games](https://github.com/igiteam/webassembly_games)
+[https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fwebassembly_games%2Fblob%2Fmain%2FREADME.md](https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fwebassembly_games%2Fblob%2Fmain%2FREADME.md)
 
 ## Nvidia DirectX Shaders Collection
-[https://nvidiashaders.netlify.app/](https://nvidiashaders.netlify.app/)
+[https://nvidiashaders.macosxjs.com/](https://nvidiashaders.macosxjs.com/)
 
 ## FilmStrip Creator
 [https://filmstrip.macosxjs.com](https://filmstrip.macosxjs.com)
