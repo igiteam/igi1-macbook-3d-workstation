@@ -134,7 +134,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fenter-the-
 ## WebAssembly Games 
 [https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fwebassembly_games%2Fblob%2Fmain%2FREADME.md](https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fwebassembly_games%2Fblob%2Fmain%2FREADME.md)
 
-[https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbottleship-windows-games%2Fblob%2Fmain%2FREADME.md](https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbottleship-windows-games%2Fblob%2Fmain%2FREADME.md)
+## Web Windows
+[https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fweb-windows-games%2Fblob%2Fmain%2FREADME.md](https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fweb-windows-games%2Fblob%2Fmain%2FREADME.md)
 
 ## Nvidia DirectX Shaders Collection
 [https://nvidiashaders.macosxjs.com/](https://nvidiashaders.macosxjs.com/)
