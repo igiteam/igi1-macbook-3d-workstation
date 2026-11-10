@@ -329,7 +329,7 @@ Every friction point has a dedicated machine, a dedicated OS, a dedicated screen
 
 ---
 
-## Support Buy Me Coffee
+# Support Buy Me Coffee
 [https://buymeacoffee.com/igiteam](https://buymeacoffee.com/igiteam)
 
 
