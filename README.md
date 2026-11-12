@@ -216,6 +216,15 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod3_hd%2F
 - `cod3-hd`
 - `halo-ce-1-2-3`
 
+### Reference Images: Sony MDR-V6
+
+These are period-correct studio monitors, highly recommended for testing the "analytical" side of Aureal Vortex A3D.
+
+| Image 1 | Image 2 | Image 3 | Image 4 |
+| :---: | :---: | :---: | :---: |
+| ![Sony MDR-V6 Image 1](https://raw.githubusercontent.com/igiteam/thief-gold-prince-of-persia-3d/refs/heads/master/aureal-a3d-sdk/sony_mdr_v6_1.png) | ![Sony MDR-V6 Image 2](https://raw.githubusercontent.com/igiteam/thief-gold-prince-of-persia-3d/refs/heads/master/aureal-a3d-sdk/sony_mdr_v6_2.png) | ![Sony MDR-V6 Image 3](https://raw.githubusercontent.com/igiteam/thief-gold-prince-of-persia-3d/refs/heads/master/aureal-a3d-sdk/sony_mdr_v6_3.png) | ![Sony MDR-V6 Image 4](https://raw.githubusercontent.com/igiteam/thief-gold-prince-of-persia-3d/refs/heads/master/aureal-a3d-sdk/sony_mdr_v6_4.png) |
+
+*(Note: These images are from an eBay listing, used here for product identification.)*
 
 ---
   
