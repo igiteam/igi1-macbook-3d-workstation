@@ -54,6 +54,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopentobey-
 ## Enter The Matrix - Blade 1-2-3
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fenter-the-matrix-blade-trilogy%2Fblob%2Fmain%2FREADME.md
 
+## Halo Campaign Evolved - HALO CE 1-2-3
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalo-ce-123%2Fblob%2Fmain%2FREADME.md
 
 ## In Progress
 [https://github.com/igiteam/cod3_hd](https://github.com/igiteam/cod3_hd)
@@ -210,6 +212,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fenter-the-
 ## Block 10
 - `iortcw-mortyr-1944`
 - `cod3-hd`
+- `halo-ce-1-2-3`
+
 
 ---
   
