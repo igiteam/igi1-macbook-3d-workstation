@@ -63,6 +63,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fvirtua-cop
 ## Call of Duty 3 - Call Of Duty 2003, Call Of Duty UO, Call Of Duty 2, Big Red One, Finest Hour
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod3_hd%2Fblob%2Fmain%2FREADME.md
 
+## Arx Fatalis - Vampire The Masquarade Redemption Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Farx-fatalis-vampire-the-masquerade-redemption%2Fblob%2Fmaster%2FREADME.md
+
 ## In Progress
 [https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine](https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine)
 
@@ -72,7 +75,6 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod3_hd%2F
 
 [https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection](https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection)
 
-[https://github.com/igiteam/arx-fatalis-vampire-the-masquerade-redemption](https://github.com/igiteam/arx-fatalis-vampire-the-masquerade-redemption)
 
 ---
 
