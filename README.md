@@ -199,7 +199,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Farx-fatali
 - `openofpcwc-hidden-and-dangerous`
 - `cod2-hour-of-victory`
 - `cod1-brothers-in-arms`
-- `fear-history-channel-battle-for-pacific`
+- `halo-ce-1-2-3`
 
 ## Block 8
 - `hitman-codename-47-mission-impossible-psx`
@@ -216,7 +216,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Farx-fatali
 ## Block 10
 - `iortcw-mortyr-1944`
 - `cod3-hd`
-- `halo-ce-1-2-3`
+- `fear-history-channel-battle-for-pacific`
+- `halo-ce-duke-nukem-3d`
 
 ### Reference Images: Sony MDR-V6
 
