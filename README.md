@@ -57,14 +57,16 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fenter-the-
 ## Halo Campaign Evolved - HALO CE 1-2-3
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalo-ce-123%2Fblob%2Fmain%2FREADME.md
 
-## In Progress
-[https://github.com/igiteam/cod3_hd](https://github.com/igiteam/cod3_hd)
+## Virtual Cop 2 - Tokyo Zombie
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fvirtua-cop-2-tokyo-zombie%2Fblob%2Fmain%2FREADME.md
 
+## Call of Duty 3 - Call Of Duty 2003, Call Of Duty UO, Call Of Duty 2, Big Red One, Finest Hour
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod3_hd%2Fblob%2Fmain%2FREADME.md
+
+## In Progress
 [https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine](https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine)
 
 [https://github.com/igiteam/hitman-codename-47-mission-impossible-psx](https://github.com/igiteam/hitman-codename-47-mission-impossible-psx)
-
-[https://github.com/igiteam/virtua-cop-2-tokyo-zombie](https://github.com/igiteam/virtua-cop-2-tokyo-zombie)
 
 [https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx](https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx)
 
