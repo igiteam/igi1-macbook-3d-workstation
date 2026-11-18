@@ -85,7 +85,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fiortcw-mor
 
 ---
 
-## Video Game Collections With Youtube
+## Video Game Engines
 
 [https://chromeenginegames.macosxjs.com/](https://chromeenginegames.macosxjs.com/)
 
@@ -98,6 +98,12 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fiortcw-mor
 [https://unrealenginegames.macosxjs.com/](https://unrealenginegames.macosxjs.com/)
 
 [https://renderwareenginegames.macosxjs.com/](https://renderwareenginegames.macosxjs.com/)
+
+---
+
+[https://igiteam.github.io/pczonemagazines/](https://igiteam.github.io/pczonemagazines/)
+
+[https://igiteam.github.io/xboxmagazines/](https://igiteam.github.io/xboxmagazines/)
 
 ---
 
