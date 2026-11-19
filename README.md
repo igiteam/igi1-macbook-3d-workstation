@@ -100,7 +100,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc
 ## Block 6
 - bloodrayne-underworld-trilogy
 - transformers-takara-the-movie
-- openmohaa-project-igi-2
+- deltaforceblackhawkdownteamsabre-project-igi-2
 - oni-fifth-element
 
 ## Block 8
@@ -238,7 +238,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc
 ### Block 6
 - `bloodrayne-underworld-trilogy`
 - `transformers-takara-the-movie`
-- `openmohaa-project-igi-2`
+- `deltaforceblackhawkdownteamsabre-project-igi-2`
 - `oni-fifth-element`
 
 ## Block 7
