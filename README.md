@@ -79,7 +79,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc
 
 ## In Progress
 
-[https://github.com/igiteam/dfbhdts-project-igi-2](https://github.com/igiteam/dfbhdts-project-igi-2)
+[https://github.com/igiteam/dfbhdts-projectigi-2](https://github.com/igiteam/dfbhdts-projectigi-2)
 
 [https://github.com/igiteam/hitman-codename-47-mission-impossible-psx](https://github.com/igiteam/hitman-codename-47-mission-impossible-psx)
 
@@ -102,7 +102,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc
 ## Block 6
 - bloodrayne-underworld-trilogy
 - transformers-takara-the-movie
-- dfbhdts-project-igi-2
+- dfbhdts-projectigi-2
 - oni-fifth-element
 
 ## Block 8
@@ -240,7 +240,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc
 ### Block 6
 - `bloodrayne-underworld-trilogy`
 - `transformers-takara-the-movie`
-- `dfbhdts-project-igi-2`
+- `dfbhdts-projectigi-2`
 - `oni-fifth-element`
 
 ## Block 7
