@@ -86,6 +86,36 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc
 [https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection](https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection)
 
 
+# to-do
+
+## Block 4
+- serious-sam-first-encounter-starship-troopers
+- terminator-war-of-the-machines-future-shock
+- die-hard-nakatomi-plaza-die-hard-trilogy
+
+## Block 5
+- openlara-the-mummy
+- bloodrayne-spawn-the-eternal
+
+## Block 6
+- bloodrayne-underworld-trilogy
+- transformers-takara-the-movie
+- openmohaa-project-igi-2
+- oni-fifth-element
+
+## Block 8
+- call-of-juarez-bound-in-blood-gun-warrior
+- r6-vegas-kill-switch
+
+## Block 9
+- r6-vegas-ghost-recon-2001
+- gta-iii-they-live
+
+## Block 10
+- fear-history-channel-battle-for-pacific
+- halo-ce-duke-nukem-3d
+
+  
 ---
 
 ## Video Game Engines
