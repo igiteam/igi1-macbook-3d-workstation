@@ -79,6 +79,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc
 
 ## In Progress
 
+[https://github.com/igiteam/dfbhdts-project-igi-2](https://github.com/igiteam/dfbhdts-project-igi-2)
+
 [https://github.com/igiteam/hitman-codename-47-mission-impossible-psx](https://github.com/igiteam/hitman-codename-47-mission-impossible-psx)
 
 [https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx](https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx)
@@ -100,7 +102,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc
 ## Block 6
 - bloodrayne-underworld-trilogy
 - transformers-takara-the-movie
-- deltaforceblackhawkdownteamsabre-project-igi-2
+- dfbhdts-project-igi-2
 - oni-fifth-element
 
 ## Block 8
@@ -238,7 +240,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc
 ### Block 6
 - `bloodrayne-underworld-trilogy`
 - `transformers-takara-the-movie`
-- `deltaforceblackhawkdownteamsabre-project-igi-2`
+- `dfbhdts-project-igi-2`
 - `oni-fifth-element`
 
 ## Block 7
