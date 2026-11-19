@@ -74,6 +74,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Findiana-jo
 ## Return To Castle Wolfeinstein - Mortyr 1944 Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fiortcw-mortyr-1944%2Fblob%2Fmaster%2FREADME.md
 
+## Operation Flashpoint: Cold War Crisis — Hidden & Dangerous Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc-hidden-and-dangerous%2Fblob%2Fmain%2FREADME.md
+
 ## In Progress
 
 [https://github.com/igiteam/hitman-codename-47-mission-impossible-psx](https://github.com/igiteam/hitman-codename-47-mission-impossible-psx)
