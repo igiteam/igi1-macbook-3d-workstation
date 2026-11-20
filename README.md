@@ -89,8 +89,15 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Foni-the-fi
 ## Halo Combat Evolved - Duke Nukem 3D Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalo-ce-duke-nukem-3d%2Fblob%2Fmain%2FREADME.md
 
+## Terminator War of The Machines - Terminator Future Shock Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fterminator-war-of-the-machines-future-shock%2Fblob%2Fmain%2FREADME.md
+
+## Serious Sam The First Encounter - Starship Troopers Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fserious-sam-first-encounter-starship-troopers%2Fblob%2Fmain%2FREADME.md
+
+
 ## In Progress
-[https://github.com/igiteam/terminator-war-of-the-machines-future-shock](https://github.com/igiteam/terminator-war-of-the-machines-future-shock)
+[https://github.com/igiteam/openlara-the-mummy](https://github.com/igiteam/openlara-the-mummy)
 
 [https://github.com/igiteam/hitman-codename-47-mission-impossible-psx](https://github.com/igiteam/hitman-codename-47-mission-impossible-psx)
 
@@ -101,12 +108,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalo-ce-du
 
 # to-do
 
-## Block 4
-- serious-sam-first-encounter-starship-troopers
-
-
 ## Block 5
-- openlara-the-mummy
 - bloodrayne-spawn-the-eternal
 
 ## Block 6
