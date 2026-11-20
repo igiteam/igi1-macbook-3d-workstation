@@ -80,11 +80,17 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc
 ## Delta Force Black Hawk Down Team Sabre - Project IGI 2 Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdfbhdts-projectigi-2%2Fblob%2Fmain%2FREADME.md
 
+## Die Hard Nakatomi Plaza - Die Hard Trilogy Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdie-hard-nakatomi-plaza-die-hard-trilogy%2Fblob%2Fmain%2FREADME.md
+
+## ONI - The Fifth Element Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Foni-the-fifth-element%2Fblob%2Fmain%2FREADME.md
+
+## Halo Combat Evolved - Duke Nukem 3D Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalo-ce-duke-nukem-3d%2Fblob%2Fmain%2FREADME.md
+
 ## In Progress
-
-[https://github.com/igiteam/oni-the-fifth-element](https://github.com/igiteam/oni-the-fifth-element)
-
-[https://github.com/igiteam/die-hard-nakatomi-plaza-die-hard-trilogy](https://github.com/igiteam/die-hard-nakatomi-plaza-die-hard-trilogy)
+[https://github.com/igiteam/terminator-war-of-the-machines-future-shock](https://github.com/igiteam/terminator-war-of-the-machines-future-shock)
 
 [https://github.com/igiteam/hitman-codename-47-mission-impossible-psx](https://github.com/igiteam/hitman-codename-47-mission-impossible-psx)
 
@@ -97,8 +103,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdfbhdts-pr
 
 ## Block 4
 - serious-sam-first-encounter-starship-troopers
-- terminator-war-of-the-machines-future-shock
-- die-hard-nakatomi-plaza-die-hard-trilogy
+
 
 ## Block 5
 - openlara-the-mummy
@@ -118,7 +123,6 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdfbhdts-pr
 
 ## Block 10
 - fear-history-channel-battle-for-pacific
-- halo-ce-duke-nukem-3d
 
   
 ---
