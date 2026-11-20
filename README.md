@@ -23,14 +23,17 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc
 ## Postal 2 Half Dude - The Thing Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fpostal2-half-dude-the-thing%2Fblob%2Fmain%2FREADME.md
 
+## Delta Force Black Hawk Down Team Sabre - Project IGI 2 Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdfbhdts-projectigi-2%2Fblob%2Fmain%2FREADME.md
+
+## Thief Gold: Prince of Persia 3D Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthief-gold-prince-of-persia-3d%2Fblob%2Fmaster%2FREADME.md
+
 ## Half-Life 2 — Wolfschanze 1944 Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhl2-wolfschanze1944%2Fblob%2Fmain%2FREADME.md
 
 ## F.E.A.R - Dark Messiah of Might and Magic — Nosferatu Wrath of Malachi Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-dmmm-nosferatu-wrath-of-malachi%2Fblob%2Fmain%2FREADME.md
-
-## Thief Gold: Prince of Persia 3D Remake
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthief-gold-prince-of-persia-3d%2Fblob%2Fmaster%2FREADME.md
 
 ## 007 Goldeneye - Tomorrow Never Dies Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2F007-goldeneye-tomorrow-never-dies%2Fblob%2Fmain%2Freadme.md
@@ -76,9 +79,6 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fiortcw-mor
 
 ## Operation Flashpoint: Cold War Crisis — Hidden & Dangerous Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc-hidden-and-dangerous%2Fblob%2Fmain%2FREADME.md
-
-## Delta Force Black Hawk Down Team Sabre - Project IGI 2 Remake
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdfbhdts-projectigi-2%2Fblob%2Fmain%2FREADME.md
 
 ## Die Hard Nakatomi Plaza - Die Hard Trilogy Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdie-hard-nakatomi-plaza-die-hard-trilogy%2Fblob%2Fmain%2FREADME.md
