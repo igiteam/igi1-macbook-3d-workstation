@@ -145,13 +145,13 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fserious-sa
 
 [https://renderwareenginegames.macosxjs.com/](https://renderwareenginegames.macosxjs.com/)
 
----
+## Video Game Magazines
 
 [https://igiteam.github.io/pczonemagazines/](https://igiteam.github.io/pczonemagazines/)
 
 [https://igiteam.github.io/xboxmagazines/](https://igiteam.github.io/xboxmagazines/)
 
----
+## Video Game Covers
 
 [https://xboxgames.macosxjs.com](https://xboxgames.macosxjs.com)
 
@@ -187,7 +187,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fserious-sa
 
 [https://segagenesisgames.macosxjs.com](https://segagenesisgames.macosxjs.com)
 
----
+## Video Games
   
 [https://videogameslibrary.macosxjs.com](https://videogameslibrary.macosxjs.com)
 
