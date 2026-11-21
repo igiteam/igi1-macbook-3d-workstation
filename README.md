@@ -95,19 +95,26 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fterminator
 ## Serious Sam The First Encounter - Starship Troopers Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fserious-sam-first-encounter-starship-troopers%2Fblob%2Fmain%2FREADME.md
 
+## Duke Nukem Forever 2001
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fduke-nukem-forever-2001%2Fblob%2Fmain%2FREADME.md
+
+## Midtown Madness 3 - Redriver Driv3r Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmidtown-madness-3-redriver-driv3r%2Fblob%2Fmain%2FREADME.md
+
+## S.T.A.L.K.E.R - Oblivion Lost 
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fstalker-oblivion-lost%2Fblob%2Fdev%2FREADME.md
+
+## Hitman Codename 47 - Mission Impossible PSX Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhitman-codename-47-mission-impossible-psx%2Fblob%2Fmain%2FREADME.md
+
 
 ## In Progress
 [https://github.com/igiteam/openlara-the-mummy](https://github.com/igiteam/openlara-the-mummy)
-
-[https://github.com/igiteam/midtown-madness-3-redriver-driv3r](https://github.com/igiteam/midtown-madness-3-redriver-driv3r)
-
-[https://github.com/igiteam/hitman-codename-47-mission-impossible-psx](https://github.com/igiteam/hitman-codename-47-mission-impossible-psx)
 
 [https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx](https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx)
 
 [https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection](https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection)
 
-[https://github.com/igiteam/stalker-oblivion-lost](https://github.com/igiteam/stalker-oblivion-lost)
 
 
 # to-do
@@ -284,7 +291,11 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fserious-sa
 - `fear-history-channel-battle-for-pacific`
 - `halo-ce-duke-nukem-3d`
 
-- stalker-oblivion-lost
+## Block 11
+- `stalker-oblivion-lost`
+- `duke-nukem-forever-2001`
+- `midtown-madness-3-redriver-driv3r`
+
 
 ### Reference Images: Sony MDR-V6
 
