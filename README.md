@@ -113,13 +113,20 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmax-payne-
 ## Bloodrayne - Underworld Trilogy 
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbloodrayne-underworld-trilogy%2Fblob%2Fmain%2FREADME.md
 
+## Far Cry 2004
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffar-cry-2004%2Fblob%2Fmain%2FREADME.md
+
+## Call of Duty 2 - Hour of Victory Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod2-hour-of-victory%2Fblob%2Fmain%2FREADME.md
+
+## Alien Vs Predator Classic - Aluien Resurrection Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Falien-vs-predator-classic-alien-resurrection%2Fblob%2Fmain%2FREADME.md
+
 
 ## In Progress
 [https://github.com/igiteam/openlara-the-mummy](https://github.com/igiteam/openlara-the-mummy)
 
 [https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx](https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx)
-
-[https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection](https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection)
 
 
 # to-do
@@ -128,11 +135,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbloodrayne
 - bloodrayne-spawn-the-eternal
 
 ## Block 6
-- bloodrayne-underworld-trilogy
 - transformers-takara-the-movie
 
 ## Block 7
-- cod2-hour-of-victory
 - cod1-brothers-in-arms
   
 ## Block 8
@@ -228,6 +233,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbloodrayne
 
 ## wine-games-tracker.html
 [https://html.macosxjs.com/?https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/wine-games-tracker.html](https://html.macosxjs.com/?https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/wine-games-tracker.html)
+
+## Games Decompilations List
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreates-Games-Decompilations-List%2Fblob%2Fmain%2FREADME.md
 
 ## WS11WineCX20.0.4 (MacOSX Big Sur 32bit)
 [WS11WineCX20.0.4.tar.7z](https://github.com/vitor251093/porting-kit-engines/releases/download/wineskin/WS11WineCX20.0.4.tar.7z)
