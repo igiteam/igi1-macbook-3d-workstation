@@ -132,8 +132,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbloodrayne
 - transformers-takara-the-movie
 
 ## Block 7
-- `cod2-hour-of-victory`
-- `cod1-brothers-in-arms`
+- cod2-hour-of-victory
+- cod1-brothers-in-arms
   
 ## Block 8
 - call-of-juarez-bound-in-blood-gun-warrior
@@ -302,6 +302,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbloodrayne
 - `midtown-madness-3-redriver-driv3r`
 - `max-payne-2001`
 
+## Block 12
+- `far-cry-2004`
 
 ### Reference Images: Sony MDR-V6
 
