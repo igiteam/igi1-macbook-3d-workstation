@@ -312,6 +312,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 
 ## Block 12
 - `far-cry-2004`
+- `deadly-dozen-2001`
 
 ### Reference Images: Sony MDR-V6
 
