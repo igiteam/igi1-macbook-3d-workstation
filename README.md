@@ -313,6 +313,8 @@ These are period-correct studio monitors, highly recommended for testing the "an
 
 *(Note: These images are from an eBay listing, used here for product identification.)*
 
+![Turtle Beach Aureal A3D](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/Turtle%20Beach%20Montego%20Aureal%20Vortex%201%20PCI%20Sound%20Card%20Vintage%20A3D.png)
+
 ---
   
 ```
