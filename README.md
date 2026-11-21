@@ -107,6 +107,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fserious-sa
 
 [https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection](https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection)
 
+[https://github.com/igiteam/stalker-oblivion-lost](https://github.com/igiteam/stalker-oblivion-lost)
+
 
 # to-do
 
@@ -117,6 +119,10 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fserious-sa
 - bloodrayne-underworld-trilogy
 - transformers-takara-the-movie
 
+## Block 7
+- `cod2-hour-of-victory`
+- `cod1-brothers-in-arms`
+  
 ## Block 8
 - call-of-juarez-bound-in-blood-gun-warrior
 - r6-vegas-kill-switch
@@ -277,6 +283,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fserious-sa
 - `cod3-hd`
 - `fear-history-channel-battle-for-pacific`
 - `halo-ce-duke-nukem-3d`
+
+- stalker-oblivion-lost
 
 ### Reference Images: Sony MDR-V6
 
