@@ -20,7 +20,7 @@
 
 
 ## Operation Flashpoint Cold War Crisis - Project IGI Remake
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc%2Fblob%2Fmain%2FREADME.md
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc-projectigi%2Fblob%2Fmain%2FREADME.md
 
 ## Postal 2 Half Dude - The Thing Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fpostal2-half-dude-the-thing%2Fblob%2Fmain%2FREADME.md
