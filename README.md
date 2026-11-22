@@ -122,6 +122,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod2-hour-
 ## Alien Vs Predator Classic - Aluien Resurrection Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Falien-vs-predator-classic-alien-resurrection%2Fblob%2Fmain%2FREADME.md
 
+## Tactical Intervention - Rainbow Six 1998
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftactical-intervention-rainbow-six-1998%2Fblob%2Fmain%2FREADME.md
 
 ## In Progress
 [https://github.com/igiteam/openlara-the-mummy](https://github.com/igiteam/openlara-the-mummy)
@@ -325,6 +327,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 
 ## Block 13
 - `medal-of-honor-vanguard-wii`
+- `tactical-intervention-rainbow-six-1998`
+- 
 
 ### Reference Images: Sony MDR-V6
 
