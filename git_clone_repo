@@ -1,4 +1,4 @@
-cat > ~/Downloads/mirror-repo.sh <<'EOF'
+cat > ~/Downloads/git_clone_repo.sh <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -113,4 +113,4 @@ git -C "${BARE_DIR}" push --mirror "${AUTH_NEW}"
 echo
 echo "Done. New repo: https://github.com/${NEW_OWNER}/${NEW_REPO}"
 EOF
-chmod +x ~/Downloads/mirror-repo.sh && ~/Downloads/mirror-repo.sh
+chmod +x ~/Downloads/git_clone_repo.sh && ~/Downloads/git_clone_repo.sh
