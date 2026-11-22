@@ -134,6 +134,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftransforme
 ## Far Cry 2004 - Aliens vs Predator 2
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffar-cry-2004-aliens-vs-predator-2%2Fblob%2Fmain%2FREADME.md
 
+## Call of Duty 2003 - Brothers in Arms Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod2003-brothers-in-arms%2Fblob%2Fmain%2FREADME.md
+
 
 ## In Progress
 [https://github.com/igiteam/openlara-the-mummy](https://github.com/igiteam/openlara-the-mummy)
@@ -146,8 +149,6 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffar-cry-20
 ## Block 5
 - bloodrayne-spawn-the-eternal
 
-## Block 7
-- cod1-brothers-in-arms
   
 ## Block 8
 - call-of-juarez-bound-in-blood-gun-warrior
@@ -299,7 +300,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 ## Block 7
 - `openofpcwc-hidden-and-dangerous`
 - `cod2-hour-of-victory`
-- `cod1-brothers-in-arms`
+- `cod2003-brothers-in-arms`
 - `halo-ce-1-2-3`
 
 ## Block 8
