@@ -131,8 +131,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdoom3-e3-a
 ## Far Cry 2004 - Aliens vs Predator 2
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffar-cry-2004-aliens-vs-predator-2%2Fblob%2Fmain%2FREADME.md
 
-## Transformers Takara - Transformers The Movie 
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftransformers-takara-the-movie%2Fblob%2Fmain%2FREADME.md
+## Transformers Takara - Transformers The Movie 1986
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftransformers-takara-transformers-the-movie-1986%2Fblob%2Fmain%2FREADME.md
 
 
 ## In Progress
@@ -292,7 +292,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 
 ### Block 6
 - `bloodrayne-underworld-trilogy`
-- `transformers-takara-the-movie`
+- `transformers-takara-transformers-the-movie-1986`
 - `oni-fifth-element`
 - `bloodrayne-spawn-the-eternal`
 
