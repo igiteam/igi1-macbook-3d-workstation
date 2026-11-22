@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>igi1-macbook-3d-workstation</title>
+<link rel="stylesheet" href="./igi1-macbook-3d-workstation_files/github-markdown.min.css">
+<style>
+  :root { color-scheme: light dark; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    background: #fff;
+    color: #111;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #0d1117; color: #e6edf3; }
+    #bar { background: #161b22; border-color: #30363d; }
+    #bar input { background: #0d1117; color: #e6edf3; border-color: #30363d; }
+    #bar button { background: #21262d; color: #e6edf3; border-color: #30363d; }
+    #bar button:hover { background: #30363d; }
+    #bar button.on { background: #238636; border-color: #2ea043; color: #fff; }
+    #bar button:disabled { opacity: 0.4; cursor: default; background: #21262d; }
+    #status { color: #8b949e; }
+  }
+
+  /* ---- top bar: horizontally scrollable on overflow ---- */
+  #bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    padding: 6px 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  #bar > * { flex: 0 0 auto; }
+  #bar input {
+    font: inherit;
+    flex: 0 0 auto;
+    padding: 3px 6px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    /* default (desktop): grow to fill leftover space */
+    flex: 1 1 480px;
+    min-width: 480px;
+    max-width: none;
+  }
+  #bar button {
+    font: inherit;
+    padding: 3px 10px;
+    border: 1px solid #bbb;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  #bar button:hover { background: #eee; }
+  #bar button.on { background: #1a7f37; border-color: #1a7f37; color: #fff; }
+  #bar button:disabled { opacity: 0.4; cursor: default; background: #fff; }
+  #bar button:disabled:hover { background: #fff; }
+  #bar button.flash { background: #238636; border-color: #2ea043; color: #fff; }
+  @media (prefers-color-scheme: dark) {
+    #bar button:disabled { background: #21262d; }
+    #bar button:disabled:hover { background: #21262d; }
+  }
+
+  /* ---- responsive widths ---- */
+  /* Large desktop */
+  @media (min-width: 1100px) {
+    #bar input { flex: 1 1 640px; min-width: 640px; }
+  }
+  /* Typical laptop */
+  @media (max-width: 1099px) and (min-width: 769px) {
+    #bar input { flex: 1 1 420px; min-width: 420px; }
+  }
+  /* Tablet / large phone landscape */
+  @media (max-width: 768px) and (min-width: 501px) {
+    #bar input { flex: 1 1 260px; min-width: 260px; }
+  }
+  /* Small phones (iPhone SE 1st/2nd/3rd gen = 320 / 375 / 375 wide) */
+  @media (max-width: 500px) {
+    #bar { padding: 5px 6px; gap: 6px; }
+    #bar input { flex: 1 1 180px; min-width: 180px; }
+    #bar button { padding: 3px 8px; }
+  }
+  /* Very narrow (iPhone SE 1st gen portrait = 320px) */
+  @media (max-width: 340px) {
+    #bar input { flex: 1 1 140px; min-width: 140px; }
+    #bar button { padding: 3px 7px; font-size: 11px; }
+  }
+
+  #status { padding: 6px 8px; color: #666; font-size: 12px; }
+  #status:empty { display: none; }
+
+  #readme-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px 32px 64px;
+  }
+  #readme { min-height: 100px; }
+  #readme:empty { display: none; }
+
+  /* tighter readme padding on phones */
+  @media (max-width: 500px) {
+    #readme-wrap { padding: 16px 14px 48px; }
+  }
+
+  #error {
+    display: none;
+    max-width: 980px;
+    margin: 24px auto;
+    padding: 12px 16px;
+    background: #ffebe9;
+    border: 1px solid #ff818266;
+    border-radius: 6px;
+    color: #cf222e;
+    white-space: pre-wrap;
+    font-family: ui-monospace, monospace;
+    font-size: 13px;
+  }
+  #error.show { display: block; }
+  @media (prefers-color-scheme: dark) {
+    #error { background: #3d1d1d; border-color: #f85149; color: #ffa198; }
+  }
+</style>
+<script src="./igi1-macbook-3d-workstation_files/marked.min.js"></script>
+<script src="./igi1-macbook-3d-workstation_files/purify.min.js"></script>
+</head>
+<body>
+
+<div id="bar">
+  <input id="url" type="text" placeholder="https://github.com/owner/repo  ·  …/blob/main/README.md  ·  owner/repo">
+  <button id="load">Load</button>
+  <button id="engine" title="Toggle renderer: local marked.js (default, no limit) vs GitHub API (exact, 60/hr, 4KB body limit)">
+    Renderer: local
+  </button>
+  <button id="copy" title="Copy the resolved README URL to the clipboard">Copy</button>
+  <button id="open" title="Open the actual README on GitHub in a new tab">Open ↗</button>
+</div>
+<div id="status"></div>
+<div id="error"></div>
+<div id="readme-wrap">
+  <article id="readme" class="markdown-body"><h1>IGI Team – Game Remake Projects</h1>
+<p><a href="https://meyt.macosxjs.com/">https://meyt.macosxjs.com/</a> <a href="https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fwebassembly_games%2Fblob%2Fmain%2FREADME.md">https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fwebassembly_games%2Fblob%2Fmain%2FREADME.md</a></p>
+<table>
+<thead>
+<tr>
+<th>GitHub Repository</th>
+<th>WebAssembly / GitHub Pages</th>
+<th>Releases</th>
+<th>README</th>
+<th>TreeGit</th>
+<th>GitImages</th>
+<th>GitVideos</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://github.com/igiteam/openofpcwc-projectigi">Operation Flashpoint – Project IGI Remake</a></td>
+<td><a href="https://igiteam.github.io/openofpcwc-projectigi/">Play</a></td>
+<td><a href="https://github.com/igiteam/openofpcwc-projectigi/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/openofpcwc-projectigi/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/openofpcwc-projectigi">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/openofpcwc-projectigi">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/openofpcwc-projectigi">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/postal2-half-dude-the-thing">Postal 2 – Half Dude / The Thing Remake</a></td>
+<td><a href="https://igiteam.github.io/postal2-half-dude-the-thing/">Play</a></td>
+<td><a href="https://github.com/igiteam/postal2-half-dude-the-thing/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/postal2-half-dude-the-thing/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/postal2-half-dude-the-thing">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/postal2-half-dude-the-thing">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/postal2-half-dude-the-thing">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/dfbhdts-projectigi-2">Delta Force BHD Team Sabre – Project IGI 2 Remake</a></td>
+<td><a href="https://igiteam.github.io/dfbhdts-projectigi-2/">Play</a></td>
+<td><a href="https://github.com/igiteam/dfbhdts-projectigi-2/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/dfbhdts-projectigi-2/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/dfbhdts-projectigi-2">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/dfbhdts-projectigi-2">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/dfbhdts-projectigi-2">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/thief-gold-prince-of-persia-3d">Thief Gold – Prince of Persia 3D Remake</a></td>
+<td><a href="https://igiteam.github.io/thief-gold-prince-of-persia-3d/">Play</a></td>
+<td><a href="https://github.com/igiteam/thief-gold-prince-of-persia-3d/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/thief-gold-prince-of-persia-3d/blob/master/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/thief-gold-prince-of-persia-3d">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/thief-gold-prince-of-persia-3d">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/thief-gold-prince-of-persia-3d">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/hl2-wolfschanze1944">Half-Life 2 – Wolfschanze 1944 Remake</a></td>
+<td><a href="https://igiteam.github.io/hl2-wolfschanze1944/">Play</a></td>
+<td><a href="https://github.com/igiteam/hl2-wolfschanze1944/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/hl2-wolfschanze1944/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/hl2-wolfschanze1944">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/hl2-wolfschanze1944">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/hl2-wolfschanze1944">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/fear-dmmm-nosferatu-wrath-of-malachi">F.E.A.R – Dark Messiah / Nosferatu Remake</a></td>
+<td><a href="https://igiteam.github.io/fear-dmmm-nosferatu-wrath-of-malachi/">Play</a></td>
+<td><a href="https://github.com/igiteam/fear-dmmm-nosferatu-wrath-of-malachi/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/fear-dmmm-nosferatu-wrath-of-malachi/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/fear-dmmm-nosferatu-wrath-of-malachi">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/fear-dmmm-nosferatu-wrath-of-malachi">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/fear-dmmm-nosferatu-wrath-of-malachi">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/007-goldeneye-tomorrow-never-dies">007 GoldenEye – Tomorrow Never Dies Remake</a></td>
+<td><a href="https://igiteam.github.io/007-goldeneye-tomorrow-never-dies/">Play</a></td>
+<td><a href="https://github.com/igiteam/007-goldeneye-tomorrow-never-dies/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/007-goldeneye-tomorrow-never-dies/blob/main/readme.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/007-goldeneye-tomorrow-never-dies">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/007-goldeneye-tomorrow-never-dies">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/007-goldeneye-tomorrow-never-dies">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/openmohaa-medal-of-honor-psx">Medal of Honor Allied Assault – PSX Remake</a></td>
+<td><a href="https://igiteam.github.io/openmohaa-medal-of-honor-psx/">Play</a></td>
+<td><a href="https://github.com/igiteam/openmohaa-medal-of-honor-psx/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/openmohaa-medal-of-honor-psx/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/openmohaa-medal-of-honor-psx">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/openmohaa-medal-of-honor-psx">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/openmohaa-medal-of-honor-psx">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/openjkdf2-star-wars-episode-i-ii-iii">Jedi Knight Dark Forces 2 – Star Wars Episodes I–III Remake</a></td>
+<td><a href="https://igiteam.github.io/openjkdf2-star-wars-episode-i-ii-iii/">Play</a></td>
+<td><a href="https://github.com/igiteam/openjkdf2-star-wars-episode-i-ii-iii/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/openjkdf2-star-wars-episode-i-ii-iii/blob/master/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/openjkdf2-star-wars-episode-i-ii-iii">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/openjkdf2-star-wars-episode-i-ii-iii">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/openjkdf2-star-wars-episode-i-ii-iii">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/lego-racers-island-2-spyrius">LEGO Racers – LEGO Island 2 – LEGO Spyrius</a></td>
+<td><a href="https://igiteam.github.io/lego-racers-island-2-spyrius/">Play</a></td>
+<td><a href="https://github.com/igiteam/lego-racers-island-2-spyrius/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/lego-racers-island-2-spyrius/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/lego-racers-island-2-spyrius">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/lego-racers-island-2-spyrius">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/lego-racers-island-2-spyrius">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/mohpa-vietnam">Medal of Honor Pacific Assault – Vietnam</a></td>
+<td><a href="https://igiteam.github.io/mohpa-vietnam/">Play</a></td>
+<td><a href="https://github.com/igiteam/mohpa-vietnam/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/mohpa-vietnam/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/mohpa-vietnam">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/mohpa-vietnam">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/mohpa-vietnam">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/red-faction-red-faction-2">Red Faction – Red Faction II</a></td>
+<td><a href="https://igiteam.github.io/red-faction-red-faction-2/">Play</a></td>
+<td><a href="https://github.com/igiteam/red-faction-red-faction-2/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/red-faction-red-faction-2/blob/master/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/red-faction-red-faction-2">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/red-faction-red-faction-2">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/red-faction-red-faction-2">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/opentobey-spiderman-trilogy">Spider-Man – The Movie Trilogy</a></td>
+<td><a href="https://igiteam.github.io/opentobey-spiderman-trilogy/">Play</a></td>
+<td><a href="https://github.com/igiteam/opentobey-spiderman-trilogy/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/opentobey-spiderman-trilogy/blob/master/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/opentobey-spiderman-trilogy">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/opentobey-spiderman-trilogy">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/opentobey-spiderman-trilogy">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/enter-the-matrix-blade-trilogy">Enter the Matrix – Blade Trilogy</a></td>
+<td><a href="https://igiteam.github.io/enter-the-matrix-blade-trilogy/">Play</a></td>
+<td><a href="https://github.com/igiteam/enter-the-matrix-blade-trilogy/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/enter-the-matrix-blade-trilogy/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/enter-the-matrix-blade-trilogy">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/enter-the-matrix-blade-trilogy">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/enter-the-matrix-blade-trilogy">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/halo-ce-123">Halo Campaign Evolved – Halo CE 1–3</a></td>
+<td><a href="https://igiteam.github.io/halo-ce-123/">Play</a></td>
+<td><a href="https://github.com/igiteam/halo-ce-123/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/halo-ce-123/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/halo-ce-123">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/halo-ce-123">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/halo-ce-123">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/virtua-cop-2-tokyo-zombie">Virtua Cop 2 – Tokyo Zombie</a></td>
+<td><a href="https://igiteam.github.io/virtua-cop-2-tokyo-zombie/">Play</a></td>
+<td><a href="https://github.com/igiteam/virtua-cop-2-tokyo-zombie/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/virtua-cop-2-tokyo-zombie/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/virtua-cop-2-tokyo-zombie">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/virtua-cop-2-tokyo-zombie">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/virtua-cop-2-tokyo-zombie">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/cod3_hd">Call of Duty 3 – COD 2003 / UO / COD2 / Big Red One / Finest Hour</a></td>
+<td><a href="https://igiteam.github.io/cod3_hd/">Play</a></td>
+<td><a href="https://github.com/igiteam/cod3_hd/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/cod3_hd/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/cod3_hd">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/cod3_hd">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/cod3_hd">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/arx-fatalis-vampire-the-masquerade-redemption">Arx Fatalis – Vampire The Masquerade Redemption Remake</a></td>
+<td><a href="https://igiteam.github.io/arx-fatalis-vampire-the-masquerade-redemption/">Play</a></td>
+<td><a href="https://github.com/igiteam/arx-fatalis-vampire-the-masquerade-redemption/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/arx-fatalis-vampire-the-masquerade-redemption/blob/master/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/arx-fatalis-vampire-the-masquerade-redemption">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/arx-fatalis-vampire-the-masquerade-redemption">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/arx-fatalis-vampire-the-masquerade-redemption">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine">Indiana Jones and the Emperor's Tomb – Infernal Machine Remake</a></td>
+<td><a href="https://igiteam.github.io/indiana-jones-emperors-tomb-infernal-machine/">Play</a></td>
+<td><a href="https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/indiana-jones-emperors-tomb-infernal-machine">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/iortcw-mortyr-1944">Return to Castle Wolfenstein – Mortyr 1944 Remake</a></td>
+<td><a href="https://igiteam.github.io/iortcw-mortyr-1944/">Play</a></td>
+<td><a href="https://github.com/igiteam/iortcw-mortyr-1944/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/iortcw-mortyr-1944/blob/master/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/iortcw-mortyr-1944">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/iortcw-mortyr-1944">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/iortcw-mortyr-1944">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/openofpcwc-hidden-and-dangerous">Operation Flashpoint – Hidden &amp; Dangerous Remake</a></td>
+<td><a href="https://igiteam.github.io/openofpcwc-hidden-and-dangerous/">Play</a></td>
+<td><a href="https://github.com/igiteam/openofpcwc-hidden-and-dangerous/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/openofpcwc-hidden-and-dangerous/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/openofpcwc-hidden-and-dangerous">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/openofpcwc-hidden-and-dangerous">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/openofpcwc-hidden-and-dangerous">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/die-hard-nakatomi-plaza-die-hard-trilogy">Die Hard Nakatomi Plaza – Die Hard Trilogy Remake</a></td>
+<td><a href="https://igiteam.github.io/die-hard-nakatomi-plaza-die-hard-trilogy/">Play</a></td>
+<td><a href="https://github.com/igiteam/die-hard-nakatomi-plaza-die-hard-trilogy/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/die-hard-nakatomi-plaza-die-hard-trilogy/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/die-hard-nakatomi-plaza-die-hard-trilogy">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/die-hard-nakatomi-plaza-die-hard-trilogy">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/die-hard-nakatomi-plaza-die-hard-trilogy">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/oni-the-fifth-element">ONI – The Fifth Element Remake</a></td>
+<td><a href="https://igiteam.github.io/oni-the-fifth-element/">Play</a></td>
+<td><a href="https://github.com/igiteam/oni-the-fifth-element/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/oni-the-fifth-element/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/oni-the-fifth-element">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/oni-the-fifth-element">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/oni-the-fifth-element">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/halo-ce-duke-nukem-3d">Halo Combat Evolved – Duke Nukem 3D Remake</a></td>
+<td><a href="https://igiteam.github.io/halo-ce-duke-nukem-3d/">Play</a></td>
+<td><a href="https://github.com/igiteam/halo-ce-duke-nukem-3d/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/halo-ce-duke-nukem-3d/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/halo-ce-duke-nukem-3d">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/halo-ce-duke-nukem-3d">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/halo-ce-duke-nukem-3d">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/terminator-war-of-the-machines-future-shock">Terminator War of the Machines – Future Shock Remake</a></td>
+<td><a href="https://igiteam.github.io/terminator-war-of-the-machines-future-shock/">Play</a></td>
+<td><a href="https://github.com/igiteam/terminator-war-of-the-machines-future-shock/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/terminator-war-of-the-machines-future-shock/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/terminator-war-of-the-machines-future-shock">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/terminator-war-of-the-machines-future-shock">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/terminator-war-of-the-machines-future-shock">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/serious-sam-first-encounter-starship-troopers">Serious Sam The First Encounter – Starship Troopers Remake</a></td>
+<td><a href="https://igiteam.github.io/serious-sam-first-encounter-starship-troopers/">Play</a></td>
+<td><a href="https://github.com/igiteam/serious-sam-first-encounter-starship-troopers/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/serious-sam-first-encounter-starship-troopers/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/serious-sam-first-encounter-starship-troopers">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/serious-sam-first-encounter-starship-troopers">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/serious-sam-first-encounter-starship-troopers">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/duke-nukem-forever-2001">Duke Nukem Forever 2001</a></td>
+<td><a href="https://igiteam.github.io/duke-nukem-forever-2001/">Play</a></td>
+<td><a href="https://github.com/igiteam/duke-nukem-forever-2001/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/duke-nukem-forever-2001/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/duke-nukem-forever-2001">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/duke-nukem-forever-2001">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/duke-nukem-forever-2001">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/midtown-madness-3-redriver-driv3r">Midtown Madness 3 – Redriver Driv3r Remake</a></td>
+<td><a href="https://igiteam.github.io/midtown-madness-3-redriver-driv3r/">Play</a></td>
+<td><a href="https://github.com/igiteam/midtown-madness-3-redriver-driv3r/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/midtown-madness-3-redriver-driv3r/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/midtown-madness-3-redriver-driv3r">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/midtown-madness-3-redriver-driv3r">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/midtown-madness-3-redriver-driv3r">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/stalker-oblivion-lost">S.T.A.L.K.E.R – Oblivion Lost</a></td>
+<td><a href="https://igiteam.github.io/stalker-oblivion-lost/">Play</a></td>
+<td><a href="https://github.com/igiteam/stalker-oblivion-lost/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/stalker-oblivion-lost/blob/dev/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/stalker-oblivion-lost">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/stalker-oblivion-lost">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/stalker-oblivion-lost">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/hitman-codename-47-mission-impossible-psx">Hitman Codename 47 – Mission Impossible PSX Remake</a></td>
+<td><a href="https://igiteam.github.io/hitman-codename-47-mission-impossible-psx/">Play</a></td>
+<td><a href="https://github.com/igiteam/hitman-codename-47-mission-impossible-psx/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/hitman-codename-47-mission-impossible-psx/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/hitman-codename-47-mission-impossible-psx">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/hitman-codename-47-mission-impossible-psx">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/hitman-codename-47-mission-impossible-psx">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/max-payne-2001">Max Payne 2001</a></td>
+<td><a href="https://igiteam.github.io/max-payne-2001/">Play</a></td>
+<td><a href="https://github.com/igiteam/max-payne-2001/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/max-payne-2001/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/max-payne-2001">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/max-payne-2001">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/max-payne-2001">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/bloodrayne-underworld-trilogy">BloodRayne – Underworld Trilogy</a></td>
+<td><a href="https://igiteam.github.io/bloodrayne-underworld-trilogy/">Play</a></td>
+<td><a href="https://github.com/igiteam/bloodrayne-underworld-trilogy/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/bloodrayne-underworld-trilogy/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/bloodrayne-underworld-trilogy">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/bloodrayne-underworld-trilogy">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/bloodrayne-underworld-trilogy">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/far-cry-2004">Far Cry 2004</a></td>
+<td><a href="https://igiteam.github.io/far-cry-2004/">Play</a></td>
+<td><a href="https://github.com/igiteam/far-cry-2004/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/far-cry-2004/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/far-cry-2004">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/far-cry-2004">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/far-cry-2004">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/cod2-hour-of-victory">Call of Duty 2 – Hour of Victory Remake</a></td>
+<td><a href="https://igiteam.github.io/cod2-hour-of-victory/">Play</a></td>
+<td><a href="https://github.com/igiteam/cod2-hour-of-victory/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/cod2-hour-of-victory/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/cod2-hour-of-victory">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/cod2-hour-of-victory">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/cod2-hour-of-victory">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection">Alien vs Predator Classic – Alien Resurrection Remake</a></td>
+<td><a href="https://igiteam.github.io/alien-vs-predator-classic-alien-resurrection/">Play</a></td>
+<td><a href="https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/alien-vs-predator-classic-alien-resurrection">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/tactical-intervention-rainbow-six-1998">Tactical Intervention – Rainbow Six 1998</a></td>
+<td><a href="https://igiteam.github.io/tactical-intervention-rainbow-six-1998/">Play</a></td>
+<td><a href="https://github.com/igiteam/tactical-intervention-rainbow-six-1998/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/tactical-intervention-rainbow-six-1998/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/tactical-intervention-rainbow-six-1998">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/tactical-intervention-rainbow-six-1998">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/tactical-intervention-rainbow-six-1998">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/doom3-e3-alpha-rtcw">Doom 3 E3 Alpha – Return to Castle Wolfenstein</a></td>
+<td><a href="https://igiteam.github.io/doom3-e3-alpha-rtcw/">Play</a></td>
+<td><a href="https://github.com/igiteam/doom3-e3-alpha-rtcw/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/doom3-e3-alpha-rtcw/blob/master/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/doom3-e3-alpha-rtcw">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/doom3-e3-alpha-rtcw">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/doom3-e3-alpha-rtcw">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/transformers-takara-transformers-the-movie-1986">Transformers Takara – Transformers: The Movie 1986</a></td>
+<td><a href="https://igiteam.github.io/transformers-takara-transformers-the-movie-1986/">Play</a></td>
+<td><a href="https://github.com/igiteam/transformers-takara-transformers-the-movie-1986/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/transformers-takara-transformers-the-movie-1986/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/transformers-takara-transformers-the-movie-1986">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/transformers-takara-transformers-the-movie-1986">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/transformers-takara-transformers-the-movie-1986">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/far-cry-2004-aliens-vs-predator-2">Far Cry 2004 – Aliens vs Predator 2</a></td>
+<td><a href="https://igiteam.github.io/far-cry-2004-aliens-vs-predator-2/">Play</a></td>
+<td><a href="https://github.com/igiteam/far-cry-2004-aliens-vs-predator-2/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/far-cry-2004-aliens-vs-predator-2/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/far-cry-2004-aliens-vs-predator-2">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/far-cry-2004-aliens-vs-predator-2">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/far-cry-2004-aliens-vs-predator-2">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/cod2003-brothers-in-arms">Call of Duty 2003 – Brothers in Arms Remake</a></td>
+<td><a href="https://igiteam.github.io/cod2003-brothers-in-arms/">Play</a></td>
+<td><a href="https://github.com/igiteam/cod2003-brothers-in-arms/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/cod2003-brothers-in-arms/blob/main/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/cod2003-brothers-in-arms">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/cod2003-brothers-in-arms">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/cod2003-brothers-in-arms">Videos</a></td>
+</tr>
+</tbody></table>
+<h2>In Progress</h2>
+<table>
+<thead>
+<tr>
+<th>GitHub Repository</th>
+<th>WebAssembly / GitHub Pages</th>
+<th>Releases</th>
+<th>README</th>
+<th>TreeGit</th>
+<th>GitImages</th>
+<th>GitVideos</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://github.com/igiteam/openlara-the-mummy">OpenLara – The Mummy</a></td>
+<td><a href="https://igiteam.github.io/openlara-the-mummy/">Play</a></td>
+<td><a href="https://github.com/igiteam/openlara-the-mummy/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/openlara-the-mummy/blob/HEAD/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/openlara-the-mummy">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/openlara-the-mummy">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/openlara-the-mummy">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx">Colin McRae Rally 2 – Mobile Rally Championship PSX</a></td>
+<td><a href="https://igiteam.github.io/colin-mcrae-rally-2-mobile-rally-championship-psx/">Play</a></td>
+<td><a href="https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx/blob/HEAD/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx">Videos</a></td>
+</tr>
+</tbody></table>
+<h2>Missing</h2>
+<table>
+<thead>
+<tr>
+<th>GitHub Repository</th>
+<th>WebAssembly / GitHub Pages</th>
+<th>Releases</th>
+<th>README</th>
+<th>TreeGit</th>
+<th>GitImages</th>
+<th>GitVideos</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://github.com/igiteam/bloodrayne-spawn-the-eternal">BloodRayne – Spawn: The Eternal</a></td>
+<td><a href="https://igiteam.github.io/bloodrayne-spawn-the-eternal/">Play</a></td>
+<td><a href="https://github.com/igiteam/bloodrayne-spawn-the-eternal/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/bloodrayne-spawn-the-eternal/blob/HEAD/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/bloodrayne-spawn-the-eternal">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/bloodrayne-spawn-the-eternal">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/bloodrayne-spawn-the-eternal">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/call-of-juarez-bound-in-blood-gun-warrior">Call of Juarez – Bound in Blood / Gun.Warrior</a></td>
+<td><a href="https://igiteam.github.io/call-of-juarez-bound-in-blood-gun-warrior/">Play</a></td>
+<td><a href="https://github.com/igiteam/call-of-juarez-bound-in-blood-gun-warrior/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/call-of-juarez-bound-in-blood-gun-warrior/blob/HEAD/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/call-of-juarez-bound-in-blood-gun-warrior">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/call-of-juarez-bound-in-blood-gun-warrior">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/call-of-juarez-bound-in-blood-gun-warrior">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/r6-vegas-kill-switch">Rainbow Six Vegas – Kill.Switch</a></td>
+<td><a href="https://igiteam.github.io/r6-vegas-kill-switch/">Play</a></td>
+<td><a href="https://github.com/igiteam/r6-vegas-kill-switch/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/r6-vegas-kill-switch/blob/HEAD/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/r6-vegas-kill-switch">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/r6-vegas-kill-switch">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/r6-vegas-kill-switch">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/r6-vegas-ghost-recon-2001">Rainbow Six Vegas – Ghost Recon 2001</a></td>
+<td><a href="https://igiteam.github.io/r6-vegas-ghost-recon-2001/">Play</a></td>
+<td><a href="https://github.com/igiteam/r6-vegas-ghost-recon-2001/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/r6-vegas-ghost-recon-2001/blob/HEAD/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/r6-vegas-ghost-recon-2001">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/r6-vegas-ghost-recon-2001">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/r6-vegas-ghost-recon-2001">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/gta-iii-they-live">GTA III – They Live</a></td>
+<td><a href="https://igiteam.github.io/gta-iii-they-live/">Play</a></td>
+<td><a href="https://github.com/igiteam/gta-iii-they-live/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/gta-iii-they-live/blob/HEAD/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/gta-iii-they-live">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/gta-iii-they-live">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/gta-iii-they-live">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/fear-history-channel-battle-for-pacific">F.E.A.R – History Channel: Battle for the Pacific</a></td>
+<td><a href="https://igiteam.github.io/fear-history-channel-battle-for-pacific/">Play</a></td>
+<td><a href="https://github.com/igiteam/fear-history-channel-battle-for-pacific/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/fear-history-channel-battle-for-pacific/blob/HEAD/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/fear-history-channel-battle-for-pacific">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/fear-history-channel-battle-for-pacific">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/fear-history-channel-battle-for-pacific">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/deadly-dozen-2001">Deadly Dozen 2001</a></td>
+<td><a href="https://igiteam.github.io/deadly-dozen-2001/">Play</a></td>
+<td><a href="https://github.com/igiteam/deadly-dozen-2001/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/deadly-dozen-2001/blob/HEAD/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/deadly-dozen-2001">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/deadly-dozen-2001">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/deadly-dozen-2001">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/elite-forces-ww2">Elite Forces WW2</a></td>
+<td><a href="https://igiteam.github.io/elite-forces-ww2/">Play</a></td>
+<td><a href="https://github.com/igiteam/elite-forces-ww2/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/elite-forces-ww2/blob/HEAD/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/elite-forces-ww2">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/elite-forces-ww2">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/elite-forces-ww2">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/marines-modern-urban-combat-wii">Marines: Modern Urban Combat – Wii</a></td>
+<td><a href="https://igiteam.github.io/marines-modern-urban-combat-wii/">Play</a></td>
+<td><a href="https://github.com/igiteam/marines-modern-urban-combat-wii/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/marines-modern-urban-combat-wii/blob/HEAD/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/marines-modern-urban-combat-wii">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/marines-modern-urban-combat-wii">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/marines-modern-urban-combat-wii">Videos</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/igiteam/medal-of-honor-vanguard-wii">Medal of Honor Vanguard – Wii</a></td>
+<td><a href="https://igiteam.github.io/medal-of-honor-vanguard-wii/">Play</a></td>
+<td><a href="https://github.com/igiteam/medal-of-honor-vanguard-wii/releases">Download</a></td>
+<td><a href="https://readme.macosxjs.com/?url=https://github.com/igiteam/medal-of-honor-vanguard-wii/blob/HEAD/README.md">README</a></td>
+<td><a href="https://treegit.macosxjs.com/?url=https://github.com/igiteam/medal-of-honor-vanguard-wii">Tree</a></td>
+<td><a href="https://gitimages.macosxjs.com/?url=https://github.com/igiteam/medal-of-honor-vanguard-wii">Images</a></td>
+<td><a href="https://gitvideos.macosxjs.com/?url=https://github.com/igiteam/medal-of-honor-vanguard-wii">Videos</a></td>
+</tr>
+</tbody></table>
+</article>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  const GITHUB_API   = "https://api.github.com";
+  const RAW_BASE     = "https://raw.githubusercontent.com/";
+  const GITHUB_BLOB  = "https://github.com/";
+  const MARKDOWN_API = "https://api.github.com/markdown/raw";
+  const PROXY        = "https://api.codetabs.com/v1/proxy/?quest=";
+
+  const urlEl    = document.getElementById("url");
+  const loadBtn  = document.getElementById("load");
+  const engineBtn = document.getElementById("engine");
+  const copyBtn  = document.getElementById("copy");
+  const openBtn  = document.getElementById("open");
+  const statusEl = document.getElementById("status");
+  const errorEl  = document.getElementById("error");
+  const readmeEl = document.getElementById("readme");
+
+  const BASE_TITLE = "GitHub README Reader";
+
+  let engine = "local";   // "local" | "github"
+  let lastTarget = null;  // for re-render on engine toggle
+  let lastMarkdown = null;
+
+  function setStatus(m) { statusEl.textContent = m || ""; }
+  function showError(m) {
+    errorEl.textContent = "⚠ " + m;
+    errorEl.classList.add("show");
+  }
+  function clearError() {
+    errorEl.textContent = "";
+    errorEl.classList.remove("show");
+  }
+
+  // ---------- Copy / Open buttons ----------
+  function setLinkButtons(enabled) {
+    copyBtn.disabled = !enabled;
+    openBtn.disabled = !enabled;
+  }
+
+  async function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      try { await navigator.clipboard.writeText(text); return true; } catch (e) {}
+    }
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.top = "-1000px";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function flash(btn, text) {
+    const original = btn.textContent;
+    btn.textContent = text;
+    btn.classList.add("flash");
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove("flash");
+    }, 1200);
+  }
+
+  copyBtn.addEventListener("click", async function () {
+    if (!lastTarget) return;
+    const url = lastTarget.htmlUrl;
+    const ok = await copyText(url);
+    if (ok) {
+      flash(copyBtn, "Copied!");
+    } else {
+      window.prompt("Copy this URL:", url);
+    }
+  });
+
+  openBtn.addEventListener("click", function () {
+    if (!lastTarget) return;
+    window.open(lastTarget.htmlUrl, "_blank", "noopener,noreferrer");
+  });
+
+  // ---------- marked config (GitHub-flavored) ----------
+  marked.setOptions({
+    gfm: true,
+    breaks: false,
+    headerIds: true,
+    mangle: false,
+  });
+
+  // ---------- Parse input ----------
+  function parseInput(input) {
+    input = (input || "").trim();
+    if (!input) return null;
+
+    if (!/^https?:/i.test(input) && !input.includes("raw.githubusercontent.com")) {
+      const m = input.match(/^([^\/\s]+)\/([^\/\s#?]+)/);
+      if (m) return { kind: "repo", owner: m[1], repo: m[2].replace(/\.git$/, "") };
+      return null;
+    }
+
+    let u;
+    try { u = new URL(input); } catch (e) { return null; }
+
+    if (/^raw\.githubusercontent\.com$/i.test(u.hostname)) {
+      const parts = u.pathname.split("/").filter(Boolean).map(decodeURIComponent);
+      if (parts.length < 4) return null;
+      return {
+        kind: "raw",
+        owner: parts[0], repo: parts[1], branch: parts[2],
+        path: parts.slice(3).join("/"),
+      };
+    }
+
+    if (!/^github\.com$/i.test(u.hostname)) return null;
+    const parts = u.pathname.split("/").filter(Boolean).map(decodeURIComponent);
+    if (parts.length < 2) return null;
+
+    const owner = parts[0];
+    const repo  = parts[1].replace(/\.git$/, "");
+
+    if (parts.length === 2) return { kind: "repo", owner, repo };
+    if (parts[2] === "blob" && parts.length >= 5) {
+      return { kind: "file", owner, repo, branch: parts[3], path: parts.slice(4).join("/") };
+    }
+    return { kind: "repo", owner, repo };
+  }
+
+  // ---------- Fetch helpers ----------
+  async function fetchText(url) {
+    const attempts = [
+      () => fetch(url, { cache: "no-store" }),
+      () => fetch(PROXY + encodeURIComponent(url), { cache: "no-store" }),
+    ];
+    let lastErr;
+    for (const attempt of attempts) {
+      try {
+        const res = await attempt();
+        if (!res.ok) throw new Error("HTTP " + res.status + " " + res.statusText + " for " + url);
+        return await res.text();
+      } catch (e) { lastErr = e; }
+    }
+    throw lastErr;
+  }
+
+  async function ghJson(url) {
+    const res = await fetch(url, { headers: { Accept: "application/vnd.github+json" } });
+    if (res.status === 404) throw new Error("Not found: " + url);
+    if (res.status === 403) throw new Error("GitHub API rate limit hit. Wait an hour or use a token.");
+    if (!res.ok) throw new Error("GitHub API " + res.status + " " + res.statusText);
+    return res.json();
+  }
+
+  // ---------- Resolve repo -> README ----------
+  async function resolveReadme(owner, repo) {
+    try {
+      const info = await ghJson(GITHUB_API + "/repos/" + owner + "/" + repo + "/readme");
+      if (info && info.download_url) {
+        const m = info.download_url.match(/raw\.githubusercontent\.com\/[^/]+\/[^/]+\/([^/]+)\//);
+        return {
+          owner, repo,
+          branch: m ? m[1] : "HEAD",
+          path: info.path,
+          url: info.download_url,
+          htmlUrl: info.html_url,
+        };
+      }
+    } catch (e) { /* fall through */ }
+
+    const repoInfo = await ghJson(GITHUB_API + "/repos/" + owner + "/" + repo);
+    const branch = repoInfo.default_branch || "main";
+    const candidates = ["README.md", "readme.md", "Readme.md", "README.markdown", "README"];
+    for (const name of candidates) {
+      const url = RAW_BASE + owner + "/" + repo + "/" + branch + "/" + name;
+      try {
+        const res = await fetch(url, { method: "HEAD", cache: "no-store" });
+        if (res.ok) {
+          return {
+            owner, repo, branch, path: name, url,
+            htmlUrl: GITHUB_BLOB + owner + "/" + repo + "/blob/" + branch + "/" + name,
+          };
+        }
+      } catch (e) { /* keep probing */ }
+    }
+    throw new Error("No README found in " + owner + "/" + repo + " on branch " + branch);
+  }
+
+  // ---------- Fix relative URLs in HTML ----------
+  function absolutize(html, ctx) {
+    const container = document.createElement("div");
+    container.innerHTML = html;
+
+    const repoDir = ctx.path.includes("/")
+      ? ctx.path.slice(0, ctx.path.lastIndexOf("/") + 1)
+      : "";
+    const rawBase  = RAW_BASE    + ctx.owner + "/" + ctx.repo + "/" + ctx.branch + "/" + repoDir;
+    const blobBase = GITHUB_BLOB + ctx.owner + "/" + ctx.repo + "/blob/" + ctx.branch + "/" + repoDir;
+
+    container.querySelectorAll("img[src], source[src], video[poster]").forEach(function (el) {
+      const attr = el.hasAttribute("src") ? "src" : "poster";
+      const v = el.getAttribute(attr);
+      if (!v) return;
+      if (/^(https?:|data:|mailto:|#)/i.test(v)) return;
+      try { el.setAttribute(attr, new URL(v, rawBase).href); } catch (e) {}
+    });
+
+    container.querySelectorAll("a[href]").forEach(function (a) {
+      const v = a.getAttribute("href");
+      if (!v) return;
+      if (/^(https?:|mailto:|#)/i.test(v)) return;
+      try {
+        a.setAttribute("href", new URL(v, blobBase).href);
+        a.setAttribute("target", "_blank");
+        a.setAttribute("rel", "noopener noreferrer");
+      } catch (e) {}
+    });
+
+    return container.innerHTML;
+  }
+
+  // ---------- Render: LOCAL (marked.js) — no size limit ----------
+  function renderLocal(markdown, ctx) {
+    const rawHtml = marked.parse(markdown);
+    const fixed   = absolutize(rawHtml, ctx);
+    return window.DOMPurify ? DOMPurify.sanitize(fixed) : fixed;
+  }
+
+  // ---------- Render: GITHUB API — chunked to bypass 4KB body limit ----------
+  async function renderGithub(markdown) {
+    const chunks = [];
+    let current = "";
+    const MAX = 3500;
+    for (const block of markdown.split(/\n{2,}/)) {
+      const piece = block + "\n\n";
+      if (current.length + piece.length > MAX && current) {
+        chunks.push(current);
+        current = piece;
+      } else {
+        current += piece;
+      }
+    }
+    if (current.trim()) chunks.push(current);
+    if (!chunks.length) chunks.push(markdown);
+
+    let out = "";
+    for (const chunk of chunks) {
+      const res = await fetch(MARKDOWN_API, {
+        method: "POST",
+        headers: { "Content-Type": "text/x-markdown" },
+        body: chunk,
+      });
+      if (!res.ok) {
+        const body = await res.text().catch(() => "");
+        throw new Error(
+          "GitHub Markdown API HTTP " + res.status +
+          " (rate limit 60/hr)." + (body ? " " + body : "")
+        );
+      }
+      out += await res.text();
+    }
+    return out;
+  }
+
+  // ---------- Render dispatcher ----------
+  async function render(markdown, ctx) {
+    if (engine === "github") {
+      const html = await renderGithub(markdown);
+      const fixed = absolutize(html, ctx);
+      return window.DOMPurify ? DOMPurify.sanitize(fixed) : fixed;
+    }
+    return renderLocal(markdown, ctx);
+  }
+
+  // ---------- Main ----------
+  async function run(input) {
+    const parsed = parseInput(input);
+    if (!parsed) {
+      document.title = BASE_TITLE;
+      setLinkButtons(false);
+      showError("Couldn't parse that. Try https://github.com/owner/repo or owner/repo.");
+      return;
+    }
+
+    clearError();
+    readmeEl.innerHTML = "";
+    lastTarget = null;
+    lastMarkdown = null;
+    setLinkButtons(false);
+    setStatus("Resolving…");
+
+    try {
+      let target;
+      if (parsed.kind === "repo") {
+        target = await resolveReadme(parsed.owner, parsed.repo);
+      } else {
+        const rawPath = parsed.path.split("/").map(encodeURIComponent).join("/");
+        target = {
+          owner: parsed.owner,
+          repo: parsed.repo,
+          branch: parsed.branch,
+          path: parsed.path,
+          url: RAW_BASE + parsed.owner + "/" + parsed.repo + "/" + parsed.branch + "/" + rawPath,
+          htmlUrl: GITHUB_BLOB + parsed.owner + "/" + parsed.repo + "/blob/" + parsed.branch + "/" + rawPath,
+        };
+      }
+
+      lastTarget = target;
+      urlEl.value = target.htmlUrl;
+
+      document.title = target.repo;
+
+      setStatus("Fetching markdown… (" + (engine === "github" ? "GitHub API" : "local") + ")");
+      const md = await fetchText(target.url);
+      lastMarkdown = md;
+
+      setStatus("Rendering " + md.length.toLocaleString() + " bytes…");
+      const html = await render(md, target);
+
+      setStatus("");
+      readmeEl.innerHTML = html;
+      setLinkButtons(true);
+
+      try {
+        history.replaceState(null, "", "?url=" + encodeURIComponent(target.htmlUrl));
+      } catch (e) { /* file:// */ }
+    } catch (err) {
+      console.error(err);
+      setStatus("");
+      readmeEl.innerHTML = "";
+      document.title = BASE_TITLE;
+      setLinkButtons(false);
+      showError(err.message || String(err));
+    }
+  }
+
+  // ---------- Wiring ----------
+  loadBtn.addEventListener("click", function () { run(urlEl.value); });
+  urlEl.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") run(urlEl.value);
+  });
+
+  engineBtn.addEventListener("click", async function () {
+    engine = (engine === "local") ? "github" : "local";
+    engineBtn.textContent = "Renderer: " + engine;
+    engineBtn.classList.toggle("on", engine === "github");
+
+    if (lastMarkdown && lastTarget) {
+      clearError();
+      setStatus("Re-rendering (" + engine + ")…");
+      try {
+        const html = await render(lastMarkdown, lastTarget);
+        readmeEl.innerHTML = html;
+        setStatus("");
+      } catch (err) {
+        setStatus("");
+        readmeEl.innerHTML = "";
+        document.title = BASE_TITLE;
+        showError(err.message || String(err));
+      }
+    }
+  });
+
+  const params = new URLSearchParams(location.search);
+  const initial = params.get("url");
+  if (initial) {
+    urlEl.value = initial;
+    run(initial);
+  }
+})();
+</script>
+
+</body></html>
