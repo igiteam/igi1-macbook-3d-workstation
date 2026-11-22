@@ -128,11 +128,11 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftactical-i
 ## Doom3 E3 Alpha - Return To Castle Wolfeinstein
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdoom3-e3-alpha-rtcw%2Fblob%2Fmaster%2FREADME.md
 
-## Far Cry 2004 - Aliens vs Predator 2
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffar-cry-2004-aliens-vs-predator-2%2Fblob%2Fmain%2FREADME.md
-
 ## Transformers Takara - Transformers The Movie 1986
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftransformers-takara-transformers-the-movie-1986%2Fblob%2Fmain%2FREADME.md
+
+## Far Cry 2004 - Aliens vs Predator 2
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffar-cry-2004-aliens-vs-predator-2%2Fblob%2Fmain%2FREADME.md
 
 
 ## In Progress
