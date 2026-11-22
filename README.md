@@ -128,6 +128,10 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftactical-i
 ## Doom3 E3 Alpha - Return To Castle Wolfeinstein
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdoom3-e3-alpha-rtcw%2Fblob%2Fmaster%2FREADME.md
 
+## Far Cry 2004 - Aliens vs Predator 2
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffar-cry-2004-aliens-vs-predator-2%2Fblob%2Fmain%2FREADME.md
+
+
 ## In Progress
 [https://github.com/igiteam/openlara-the-mummy](https://github.com/igiteam/openlara-the-mummy)
 
@@ -332,6 +336,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `medal-of-honor-vanguard-wii`
 - `tactical-intervention-rainbow-six-1998`
 - `doom3-e3-alpha-rtcw`
+- `far-cry-2004-aliens-vs-predator-2`
   
 
 ### Reference Images: Sony MDR-V6
