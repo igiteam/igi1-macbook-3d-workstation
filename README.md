@@ -119,7 +119,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffar-cry-20
 ## Call of Duty 2 - Hour of Victory Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod2-hour-of-victory%2Fblob%2Fmain%2FREADME.md
 
-## Alien Vs Predator Classic - Aluien Resurrection Remake
+## Alien Vs Predator Classic - Alien Resurrection Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Falien-vs-predator-classic-alien-resurrection%2Fblob%2Fmain%2FREADME.md
 
 ## Tactical Intervention - Rainbow Six 1998
