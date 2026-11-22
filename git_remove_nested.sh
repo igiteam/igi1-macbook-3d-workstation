@@ -1,100 +1,102 @@
 #!/bin/bash
 
-# Remove nested Git repositories while preserving all project files.
-# Keeps the main repository, .gitignore files and Git LFS files intact.
-# Does NOT automatically commit or push.
+# Script to find and fix nested Git repositories
+# Fully automatic version
 
-set -u
+echo "=== Finding and fixing nested Git repositories ==="
 
-echo "=== Nested Git Repository Cleanup ==="
-
-# Find main repository
-if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-    echo "Error: This is not inside a Git repository."
+# Check if we're in a git repository
+if ! git rev-parse --git-dir > /dev/null 2>&1; then
+    echo "Error: This is not a git repository"
     exit 1
 fi
 
-REPO_ROOT="$(git rev-parse --show-toplevel)"
-cd "$REPO_ROOT" || exit 1
-
-echo "Main repository: $REPO_ROOT"
+# Check for Git LFS
+if git lfs env | grep -q "git-lfs"; then
+    echo "✓ Git LFS is available"
+    LFS_AVAILABLE=true
+else
+    echo "⚠ Git LFS is not available"
+    LFS_AVAILABLE=false
+fi
 
 found_nested=0
 fixed_count=0
 
-# Find nested .git directories and .git files.
-# Prune each .git entry so we never scan Git's internal data.
-while IFS= read -r -d '' gitmeta; do
-
-    # Never remove the main repository's Git metadata.
-    if [ "$gitmeta" = "./.git" ]; then
+find . -name ".git" -type d | while read gitdir; do
+    dirpath=$(dirname "$gitdir")
+    
+    # Skip the main .git folder and common exclusions
+    if [ "$dirpath" = "." ] || [[ "$dirpath" == *"/.git/"* ]] || [[ "$dirpath" == *"/node_modules/"* ]] || [[ "$dirpath" == *"/build/"* ]]; then
         continue
     fi
 
-    dirpath="${gitmeta%/.git}"
-
-    found_nested=$((found_nested + 1))
-
+    ((found_nested++))
     echo ""
-    echo "Found nested repository: $dirpath"
-
-    # Count existing files before cleanup.
-    file_count=$(find "$dirpath" -type f ! -path "*/.git/*" | wc -l | tr -d ' ')
-    echo "  Files found: $file_count"
-
-    # Remove nested repository references from the main Git index.
-    # This is particularly important for submodules (gitlinks).
-    git rm --cached -r -f --ignore-unmatch -- "$dirpath" >/dev/null 2>&1 || true
-
-    # Remove ONLY the nested Git metadata.
-    rm -rf "$gitmeta"
-
-    if [ -e "$gitmeta" ]; then
-        echo "  ERROR: Could not remove $gitmeta"
-        continue
+    echo "Found nested repo: $dirpath"
+    
+    # Check if this might be a Git LFS pointer issue
+    if [ "$LFS_AVAILABLE" = true ]; then
+        lfs_files=$(find "$dirpath" -type f -exec file {} \; | grep -i "git lfs" | wc -l)
+        if [ $lfs_files -gt 0 ]; then
+            echo "  ⚠ Contains $lfs_files Git LFS pointer files"
+        fi
     fi
+    
+    # Count files in the directory
+    file_count=$(find "$dirpath" -type f | wc -l)
+    echo "  📁 Contains $file_count files"
+    
+    # Automatically choose option 1: Remove the .git folder
+    echo "  Automatically removing .git folder..."
+    rm -rf "$gitdir"
+    # Also remove .gitignore if it exists
+    rm -f "$dirpath/.gitignore"
+    git add "$dirpath"
+    ((fixed_count++))
+    echo "  ✓ Removed .git folder from $dirpath"
+done
 
-    # Add the directory as ordinary project files.
-    if git add -A -- "$dirpath"; then
-        fixed_count=$((fixed_count + 1))
-        echo "  ✓ Converted into a regular project directory."
-    else
-        echo "  ERROR: Could not stage $dirpath"
-    fi
-
-done < <(find . -name ".git" -prune -print0)
-
-echo ""
-echo "=== Cleanup Summary ==="
-echo "Nested repositories found: $found_nested"
-echo "Successfully processed: $fixed_count"
-
-echo ""
-echo "=== Remaining Git Metadata ==="
-find . -name ".git" -prune -print
+# Wait for the find loop to complete
+wait
 
 echo ""
-echo "=== Git Status ==="
+echo "=== Summary ==="
+echo "Found $found_nested nested repositories"
+echo "Fixed $fixed_count nested repositories"
+
+# Show status
+echo ""
+echo "=== Current status ==="
 git status
 
-echo ""
-echo "=== Next Steps ==="
-
-if [ "$found_nested" -gt 0 ]; then
-    echo "Nested repository cleanup finished."
+# Automatically commit if there are changes
+if [ $found_nested -gt 0 ] && [ $fixed_count -gt 0 ]; then
     echo ""
-    echo "Review staged changes with:"
-    echo "  git diff --cached --stat"
-    echo "  git diff --cached"
-    echo ""
-    echo "When everything looks correct, commit with:"
-    echo "  git commit -m \"Remove nested Git repositories\""
-    echo ""
-    echo "Then push with:"
-    echo "  git push"
+    echo "Automatically committing changes..."
+    git commit -m "Fix nested repositories: removed $fixed_count nested .git folders"
+    echo "✓ Changes committed"
+    
+    echo "Automatically pushing changes..."
+    git push
+    echo "✓ Changes pushed"
 else
-    echo "No nested Git repositories found."
+    echo "No nested repositories found or fixed"
 fi
 
-echo ""
+# Ask if user wants to commit
+read -p "Do you want to commit these changes? (y/n): " commit_choice
+if [ "$commit_choice" = "y" ] || [ "$commit_choice" = "Y" ]; then
+    git commit -m "Fix nested repositories and ensure all files are tracked"
+    echo "✓ Changes committed"
+    
+    read -p "Do you want to push? (y/n): " push_choice
+    if [ "$push_choice" = "y" ] || [ "$push_choice" = "Y" ]; then
+        git push
+        echo "✓ Changes pushed"
+    fi
+else
+    echo "⚠ Changes staged but not committed"
+fi
+
 echo "Done!"
