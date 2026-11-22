@@ -98,5 +98,3 @@ if [ "$commit_choice" = "y" ] || [ "$commit_choice" = "Y" ]; then
 else
     echo "⚠ Changes staged but not committed"
 fi
-
-echo "Done!"
