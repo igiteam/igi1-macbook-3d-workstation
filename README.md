@@ -162,7 +162,6 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgtaiv-the-
 
 [https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx](https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx)
 
-[https://github.com/igiteam/gtaiv-the-getaway](https://github.com/igiteam/gtaiv-the-getaway)
 
 # to-do
 
