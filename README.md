@@ -160,6 +160,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmedal-of-h
 
 [https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx](https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx)
 
+[https://github.com/igiteam/gta4-the-getaway](https://github.com/igiteam/gta4-the-getaway)
 
 # to-do
 
@@ -176,8 +177,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmedal-of-h
 
 ## Block 12
 - deadly-dozen-2001
-- elite-forces-ww2
-
+- elite-forces-ww2-normandy
 
   
 ---
@@ -353,6 +353,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 ## Block 14
 - `mafia-2001`
 - `half-life-decay-2001`
+- `gta4-the-getaway`
 
   
 
