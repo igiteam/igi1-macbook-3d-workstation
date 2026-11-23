@@ -172,13 +172,14 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fww2-combat
 ## Deadly Dozen 2001
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdeadly-dozen-2001%2Fblob%2Fmain%2FREADME.md
 
+## GTAIII - They live
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgta-iii-they-live%2Fblob%2Fmain%2FREADME.md
+
 # to-do
 
 ## Block 8
 - call-of-juarez-bound-in-blood-gun-warrior
 
-## Block 9
-- gta-iii-they-live
 
 ## Block 10
 - fear-history-channel-battle-for-pacific
