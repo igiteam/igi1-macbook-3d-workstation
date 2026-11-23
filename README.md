@@ -160,8 +160,11 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgtaiv-the-
 ## Colin McRae Rally 2 - Mobile Rally Championship PSX Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcolin-mcrae-rally-2-mobile-rally-championship-psx%2Fblob%2Fmain%2FREADME.md
 
-## Tomb Raider 1996 - The Mummy PSX
+## Tomb Raider 1996 - The Mummy PSX Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftomb-raider-1996-the-mummy-psx%2Fblob%2Fmaster%2FREADME.md
+
+## Soldier of Fortune 2000 - Syphon Filter PSX Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsoldier-of-fortune-2000-syphon-filter-psx%2Fblob%2Fmaster%2FREADME.md
 
 
 # to-do
@@ -356,6 +359,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `mafia-2001`
 - `half-life-decay-2001`
 - `gtaiv-the-getaway`
+- `soldier-of-fortune-2000-syphon-filter-psx`
 
   
 
