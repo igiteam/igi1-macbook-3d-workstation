@@ -166,15 +166,15 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftomb-raide
 ## Soldier of Fortune 2000 - Syphon Filter PSX Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsoldier-of-fortune-2000-syphon-filter-psx%2Fblob%2Fmaster%2FREADME.md
 
+## World War 2 Combat Road To Berlin
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fww2-combat-road-to-berlin%2Fblob%2Fmain%2FREADME.md
 
 # to-do
 
 ## Block 8
 - call-of-juarez-bound-in-blood-gun-warrior
-- r6-vegas-kill-switch-2004
 
 ## Block 9
-- r6-vegas-ghost-recon-2001
 - gta-iii-they-live
 
 ## Block 10
@@ -182,7 +182,6 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsoldier-of
 
 ## Block 12
 - deadly-dozen-2001
-- ww2-combat-road-to-berlin
 
   
 ---
