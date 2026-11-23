@@ -68,7 +68,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalo-ce-12
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fvirtua-cop-2-tokyo-zombie%2Fblob%2Fmain%2FREADME.md
 
 ## Call of Duty 3 - Call Of Duty 2003, Call Of Duty UO, Call Of Duty 2, Big Red One, Finest Hour
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcall_of_duty_2006%2Fblob%2Fmain%2FREADME.md
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcall_of_duty_3_2006%2Fblob%2Fmain%2FREADME.md
 
 ## Arx Fatalis - Vampire The Masquarade Redemption Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Farx-fatalis-vampire-the-masquerade-redemption%2Fblob%2Fmaster%2FREADME.md
