@@ -136,8 +136,20 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftransforme
 ## Far Cry 2004 - Aliens vs Predator 2
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffar-cry-2004-aliens-vs-predator-2%2Fblob%2Fmain%2FREADME.md
 
-## Call of Duty 2003 - Brothers in Arms Remake
+## Call of Duty 2003 - Brothers in Arms Wii Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod2003-brothers-in-arms%2Fblob%2Fmain%2FREADME.md
+
+## Marines Modern Urban Combat Wii - Swat3 Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmarines-modern-urban-combat-wii-swat3%2Fblob%2Fmain%2FREADME.md
+
+## Mafia 2001
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmafia-2001%2Fblob%2Fmain%2FREADME.md
+
+## Bloodrayne 2 - Spawn The Eternal PSX Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbloodrayne2-spawn-the-eternal%2Fblob%2Fmain%2FREADME.md
+
+## Half-Life Decay 2001
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalf-life-decay%2Fblob%2Fmain%2FREADME.md
 
 
 ## In Progress
@@ -148,10 +160,6 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod2003-br
 
 # to-do
 
-## Block 5
-- bloodrayne-spawn-the-eternal
-
-  
 ## Block 8
 - call-of-juarez-bound-in-blood-gun-warrior
 - r6-vegas-kill-switch
@@ -166,7 +174,6 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod2003-br
 ## Block 12
 - deadly-dozen-2001
 - elite-forces-ww2
-- marines-modern-urban-combat-wii
 
 ## Block 13
 - medal-of-honor-vanguard-wii
@@ -283,8 +290,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 
 ### Block 4
 - `enter-the-matrix-blade-trilogy`
-- `serious-sam-first-encounter-starship-troopers`
-- `terminator-war-of-the-machines-future-shock`
+- `serious-sam-first-encounter-starship-troopers-2005`
+- `terminator-war-of-the-machines-terminator-future-shock`
 - `die-hard-nakatomi-plaza-die-hard-trilogy`
 
 ### Block 5
@@ -297,12 +304,12 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `bloodrayne-underworld-trilogy`
 - `transformers-takara-transformers-the-movie-1986`
 - `oni-fifth-element`
-- `bloodrayne-spawn-the-eternal`
+- `bloodrayne2-spawn-the-eternal-psx`
 
 ## Block 7
 - `openofpcwc-hidden-and-dangerous`
 - `cod2-hour-of-victory`
-- `cod2003-brothers-in-arms`
+- `cod2003-brothers-in-arms-wii`
 - `halo-ce-1-2-3`
 
 ## Block 8
@@ -315,7 +322,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `r6-vegas-ghost-recon-2001`
 - `virtual-cop-2-tokyo-zombie-arcade`
 - `gta-iii-they-live`
-- `indiana-jones-emperors-tomb-infernal-machine`
+- `indiana-jones-emperors-tomb-indiana-jones-infernal-machine`
 
 ## Block 10
 - `iortcw-mortyr-1944`
@@ -333,13 +340,18 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `far-cry-2004`
 - `deadly-dozen-2001`
 - `elite-forces-ww2`
-- `marines-modern-urban-combat-wii`
+- `marines-modern-urban-combat-wii-swat3`
 
 ## Block 13
 - `medal-of-honor-vanguard-wii`
 - `tactical-intervention-rainbow-six-1998`
 - `doom3-e3-alpha-rtcw`
 - `far-cry-2004-aliens-vs-predator-2`
+  
+## Block 14
+- `mafia-2001`
+- `half-life-decay`
+
   
 
 ### Reference Images: Sony MDR-V6
