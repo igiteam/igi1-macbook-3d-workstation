@@ -74,7 +74,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod3_hd%2F
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Farx-fatalis-vampire-the-masquerade-redemption%2Fblob%2Fmaster%2FREADME.md
 
 ## Indiana Jones and the Emperor's Tomb - Indiana Jones and the Infernal Machine Remake
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Findiana-jones-emperors-tomb-infernal-machine%2Fblob%2Fmain%2FREADME.md
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Findiana-jones-emperors-tomb-indiana-jones-infernal-machine%2Fblob%2Fmain%2FREADME.md
 
 ## Return To Castle Wolfeinstein - Mortyr 1944 Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fiortcw-mortyr-1944%2Fblob%2Fmaster%2FREADME.md
@@ -92,7 +92,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Foni-the-fi
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalo-ce-duke-nukem-3d%2Fblob%2Fmain%2FREADME.md
 
 ## Terminator War of The Machines - Terminator Future Shock Remake
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fterminator-war-of-the-machines-future-shock%2Fblob%2Fmain%2FREADME.md
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fterminator-war-of-the-machines-terminator-future-shock%2Fblob%2Fmain%2FREADME.md
 
 ## Serious Sam The First Encounter - Starship Troopers Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fserious-sam-first-encounter-starship-troopers%2Fblob%2Fmain%2FREADME.md
@@ -137,7 +137,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftransforme
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffar-cry-2004-aliens-vs-predator-2%2Fblob%2Fmain%2FREADME.md
 
 ## Call of Duty 2003 - Brothers in Arms Wii Remake
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod2003-brothers-in-arms%2Fblob%2Fmain%2FREADME.md
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod2003-brothers-in-arms-wii%2Fblob%2Fmain%2FREADME.md
 
 ## Marines Modern Urban Combat Wii - Swat3 Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmarines-modern-urban-combat-wii-swat3%2Fblob%2Fmain%2FREADME.md
