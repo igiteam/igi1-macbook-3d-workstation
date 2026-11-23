@@ -29,7 +29,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fpostal2-ha
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdfbhdts-projectigi-2%2Fblob%2Fmain%2FREADME.md
 
 ## Thief Dark Project - Prince of Persia 3D Remake
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthief-gold-prince-of-persia-3d%2Fblob%2Fmaster%2FREADME.md
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthief-dark-project-prince-of-persia-3d%2Fblob%2Fmaster%2FREADME.md
 
 ## Half-Life 2 — Wolfschanze 1944 Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhl2-wolfschanze1944%2Fblob%2Fmain%2FREADME.md
@@ -277,7 +277,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 ### Block 1
 - `openofpcwc-projectigi`
 - `postal2-half-dude-the-thing`
-- `thief-gold-prince-of-persia-3d`
+- `thief-dark-project-prince-of-persia-3d`
 - `dfbhdts-projectigi-2`
 
 ### Block 2
@@ -365,7 +365,7 @@ These are period-correct studio monitors, highly recommended for testing the "an
 
 | Image 1 | Image 2 | Image 3 | Image 4 |
 | :---: | :---: | :---: | :---: |
-| ![Sony MDR-V6 Image 1](https://raw.githubusercontent.com/igiteam/thief-gold-prince-of-persia-3d/refs/heads/master/aureal-a3d-sdk/sony_mdr_v6_1.png) | ![Sony MDR-V6 Image 2](https://raw.githubusercontent.com/igiteam/thief-gold-prince-of-persia-3d/refs/heads/master/aureal-a3d-sdk/sony_mdr_v6_2.png) | ![Sony MDR-V6 Image 3](https://raw.githubusercontent.com/igiteam/thief-gold-prince-of-persia-3d/refs/heads/master/aureal-a3d-sdk/sony_mdr_v6_3.png) | ![Sony MDR-V6 Image 4](https://raw.githubusercontent.com/igiteam/thief-gold-prince-of-persia-3d/refs/heads/master/aureal-a3d-sdk/sony_mdr_v6_4.png) |
+| ![Sony MDR-V6 Image 1](https://raw.githubusercontent.com/igiteam/thief-dark-project-prince-of-persia-3d/refs/heads/master/aureal-a3d-sdk/sony_mdr_v6_1.png) | ![Sony MDR-V6 Image 2](https://raw.githubusercontent.com/igiteam/thief-dark-project-prince-of-persia-3d/refs/heads/master/aureal-a3d-sdk/sony_mdr_v6_2.png) | ![Sony MDR-V6 Image 3](https://raw.githubusercontent.com/igiteam/thief-dark-project-prince-of-persia-3d/refs/heads/master/aureal-a3d-sdk/sony_mdr_v6_3.png) | ![Sony MDR-V6 Image 4](https://raw.githubusercontent.com/igiteam/thief-dark-project-prince-of-persia-3d/refs/heads/master/aureal-a3d-sdk/sony_mdr_v6_4.png) |
 
 *(Note: These images are from an eBay listing, used here for product identification.)*
 
