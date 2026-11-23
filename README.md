@@ -160,8 +160,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgtaiv-the-
 ## Colin McRae Rally 2 - Mobile Rally Championship PSX Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcolin-mcrae-rally-2-mobile-rally-championship-psx%2Fblob%2Fmain%2FREADME.md
 
-## In Progress
-[https://github.com/igiteam/openlara-the-mummy](https://github.com/igiteam/openlara-the-mummy)
+## Tomb Raider 1996 - The Mummy PSX
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftomb-raider-1996-the-mummy-psx%2Fblob%2Fmaster%2FREADME.md
 
 
 # to-do
@@ -300,7 +300,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 
 ### Block 5
 - `007-goldeneye-tomorrow-never-dies`
-- `openlara-the-mummy`
+- `tomb-raider-1996-the-mummy-psx`
 - `alien-vs-predator-classic-alien-resurrection`
 - `arx-fatalis-vampire-the-masquerade-redemption`
 
