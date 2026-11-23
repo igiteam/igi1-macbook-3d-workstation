@@ -154,6 +154,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalf-life-
 ## Medal of Honor Vanguard Wii
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmedal-of-honor-vanguard-wii%2Fblob%2Fmain%2FREADME.md
 
+## Grand Theft Auto IV - The Getaway Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgtaiv-the-getaway%2Fblob%2Fmain%2FREADME.md
 
 ## In Progress
 [https://github.com/igiteam/openlara-the-mummy](https://github.com/igiteam/openlara-the-mummy)
