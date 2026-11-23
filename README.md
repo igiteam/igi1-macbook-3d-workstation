@@ -157,10 +157,11 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmedal-of-h
 ## Grand Theft Auto IV - The Getaway Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgtaiv-the-getaway%2Fblob%2Fmain%2FREADME.md
 
+## Colin McRae Rally 2 - Mobile Rally Championship PSX Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcolin-mcrae-rally-2-mobile-rally-championship-psx%2Fblob%2Fmain%2FREADME.md
+
 ## In Progress
 [https://github.com/igiteam/openlara-the-mummy](https://github.com/igiteam/openlara-the-mummy)
-
-[https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx](https://github.com/igiteam/colin-mcrae-rally-2-mobile-rally-championship-psx)
 
 
 # to-do
