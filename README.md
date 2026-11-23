@@ -94,8 +94,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalo-ce-du
 ## Terminator War of The Machines - Terminator Future Shock Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fterminator-war-of-the-machines-terminator-future-shock%2Fblob%2Fmain%2FREADME.md
 
-## Serious Sam The First Encounter - Starship Troopers Remake
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fserious-sam-first-encounter-starship-troopers%2Fblob%2Fmain%2FREADME.md
+## Serious Sam The First Encounter - Starship Troopers 2005 Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fserious-sam-first-encounter-starship-troopers-2005%2Fblob%2Fmain%2FREADME.md
 
 ## Duke Nukem Forever 2001
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fduke-nukem-forever-2001%2Fblob%2Fmain%2FREADME.md
@@ -290,7 +290,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 
 ### Block 4
 - `enter-the-matrix-blade-trilogy`
-- `serious-sam-first-encounter-starship-troopers-2005`
+- `serious-sam-first-encounter-starship-troopers-2005-2005`
 - `terminator-war-of-the-machines-terminator-future-shock`
 - `die-hard-nakatomi-plaza-die-hard-trilogy`
 
