@@ -28,7 +28,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fpostal2-ha
 ## Delta Force Black Hawk Down Team Sabre - Project IGI 2 Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdfbhdts-projectigi-2%2Fblob%2Fmain%2FREADME.md
 
-## Thief Gold: Prince of Persia 3D Remake
+## Thief Dark Project - Prince of Persia 3D Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthief-gold-prince-of-persia-3d%2Fblob%2Fmaster%2FREADME.md
 
 ## Half-Life 2 — Wolfschanze 1944 Remake
@@ -52,13 +52,13 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Flego-racer
 ## Medal Of Honor Pacific Assault - Vietnam
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmohpa-vietnam%2Fblob%2Fmain%2FREADME.md
 
-## Red Faction - Red Faction II
+## Red Faction - Red Faction II Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fred-faction-red-faction-2%2Fblob%2Fmaster%2FREADME.md
 
-## Spider-Man: The Movie 1-2-3
+## Spider-Man The Movie - Spider-Man The Movie Trilogy
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopentobey-spiderman-trilogy%2Fblob%2Fmaster%2FREADME.md
 
-## Enter The Matrix - Blade 1-2-3
+## Enter The Matrix - Blade Trilogy
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fenter-the-matrix-blade-trilogy%2Fblob%2Fmain%2FREADME.md
 
 ## Halo Campaign Evolved - HALO CE 1-2-3
@@ -68,7 +68,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalo-ce-12
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fvirtua-cop-2-tokyo-zombie%2Fblob%2Fmain%2FREADME.md
 
 ## Call of Duty 3 - Call Of Duty 2003, Call Of Duty UO, Call Of Duty 2, Big Red One, Finest Hour
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcall_of_duty_3_2006%2Fblob%2Fmain%2FREADME.md
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcall-of-duty-3-2006%2Fblob%2Fmain%2FREADME.md
 
 ## Arx Fatalis - Vampire The Masquarade Redemption Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Farx-fatalis-vampire-the-masquerade-redemption%2Fblob%2Fmaster%2FREADME.md
@@ -79,7 +79,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Findiana-jo
 ## Return To Castle Wolfeinstein - Mortyr 1944 Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fiortcw-mortyr-1944%2Fblob%2Fmaster%2FREADME.md
 
-## Operation Flashpoint: Cold War Crisis — Hidden & Dangerous Remake
+## Operation Flashpoint Cold War Crisis — Hidden & Dangerous Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fopenofpcwc-hidden-and-dangerous%2Fblob%2Fmain%2FREADME.md
 
 ## Die Hard Nakatomi Plaza - Die Hard Trilogy Remake
@@ -124,16 +124,16 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcod2-hour-
 ## Alien Vs Predator Classic - Alien Resurrection Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Falien-vs-predator-classic-alien-resurrection%2Fblob%2Fmain%2FREADME.md
 
-## Tactical Intervention - Rainbow Six 1998
+## Tactical Intervention - Rainbow Six 1998 Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftactical-intervention-rainbow-six-1998%2Fblob%2Fmain%2FREADME.md
 
-## Doom3 E3 Alpha - Return To Castle Wolfeinstein
+## Doom3 E3 Alpha - Return To Castle Wolfeinstein Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdoom3-e3-alpha-rtcw%2Fblob%2Fmaster%2FREADME.md
 
 ## Transformers Takara - Transformers The Movie 1986
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftransformers-takara-transformers-the-movie-1986%2Fblob%2Fmain%2FREADME.md
 
-## Far Cry 2004 - Aliens vs Predator 2
+## Far Cry 2004 - Aliens vs Predator 2 Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffar-cry-2004-aliens-vs-predator-2%2Fblob%2Fmain%2FREADME.md
 
 ## Call of Duty 2003 - Brothers in Arms Wii Remake
@@ -150,6 +150,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbloodrayne
 
 ## Half-Life Decay 2001
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalf-life-decay-2001%2Fblob%2Fmain%2FREADME.md
+
+## Medal of Honor Vanguard Wii
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmedal-of-honor-vanguard-wii%2Fblob%2Fmain%2FREADME.md
 
 
 ## In Progress
@@ -175,8 +178,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalf-life-
 - deadly-dozen-2001
 - elite-forces-ww2
 
-## Block 13
-- medal-of-honor-vanguard-wii
+
   
 ---
 
@@ -320,13 +322,13 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 
 ## Block 9
 - `r6-vegas-ghost-recon-2001`
-- `virtual-cop-2-tokyo-zombie-arcade`
+- `virtua-cop-2-tokyo-zombie`
 - `gta-iii-they-live`
 - `indiana-jones-emperors-tomb-indiana-jones-infernal-machine`
 
 ## Block 10
 - `iortcw-mortyr-1944`
-- `cod3-hd`
+- `call-of-duty-3-2006`
 - `fear-history-channel-battle-for-pacific`
 - `halo-ce-duke-nukem-3d`
 
@@ -339,7 +341,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 ## Block 12
 - `far-cry-2004`
 - `deadly-dozen-2001`
-- `elite-forces-ww2`
+- `elite-forces-ww2-normandy`
 - `marines-modern-urban-combat-wii-swat3`
 
 ## Block 13
