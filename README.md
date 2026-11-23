@@ -169,6 +169,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsoldier-of
 ## World War 2 Combat Road To Berlin
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fww2-combat-road-to-berlin%2Fblob%2Fmain%2FREADME.md
 
+## Deadly Dozen 2001
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdeadly-dozen-2001%2Fblob%2Fmain%2FREADME.md
+
 # to-do
 
 ## Block 8
@@ -180,10 +183,6 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fww2-combat
 ## Block 10
 - fear-history-channel-battle-for-pacific
 
-## Block 12
-- deadly-dozen-2001
-
-  
 ---
 
 ## Video Game Engines
