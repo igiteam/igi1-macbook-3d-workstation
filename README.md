@@ -154,8 +154,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalf-life-
 ## Medal of Honor Vanguard Wii
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmedal-of-honor-vanguard-wii%2Fblob%2Fmain%2FREADME.md
 
-## Grand Theft Auto IV - The Getaway Remake
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgtaiv-the-getaway%2Fblob%2Fmain%2FREADME.md
+## Grand Theft Auto IV - The Getaway PSX Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgtaiv-the-getaway-psx%2Fblob%2Fmain%2FREADME.md
 
 ## Colin McRae Rally 2 - Mobile Rally Championship PSX Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcolin-mcrae-rally-2-mobile-rally-championship-psx%2Fblob%2Fmain%2FREADME.md
@@ -357,7 +357,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 ## Block 14
 - `mafia-2001`
 - `half-life-decay-2001`
-- `gtaiv-the-getaway`
+- `gtaiv-the-getaway-psx`
 - `soldier-of-fortune-2000-syphon-filter-psx`
 
   
