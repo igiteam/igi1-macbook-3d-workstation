@@ -146,7 +146,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmarines-mo
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmafia-2001%2Fblob%2Fmain%2FREADME.md
 
 ## Bloodrayne 2 - Spawn The Eternal PSX Remake
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbloodrayne2-spawn-the-eternal%2Fblob%2Fmain%2FREADME.md
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbloodrayne2-spawn-the-eternal-psx%2Fblob%2Fmain%2FREADME.md
 
 ## Half-Life Decay 2001
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalf-life-decay%2Fblob%2Fmain%2FREADME.md
