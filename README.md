@@ -171,7 +171,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsoldier-of
 
 ## Block 8
 - call-of-juarez-bound-in-blood-gun-warrior
-- r6-vegas-kill-switch
+- r6-vegas-kill-switch-2004
 
 ## Block 9
 - r6-vegas-ghost-recon-2001
@@ -323,7 +323,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `hitman-codename-47-mission-impossible-psx`
 - `colin-mcrae-rally-2-mobile-rally-championship-psx`
 - `call-of-juarez-bound-in-blood-gun-warrior`
-- `r6-vegas-kill-switch`
+- `r6-vegas-kill-switch-2004`
 
 ## Block 9
 - `r6-vegas-ghost-recon-2001`
