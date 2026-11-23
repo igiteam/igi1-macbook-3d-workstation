@@ -149,7 +149,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmafia-2001
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbloodrayne2-spawn-the-eternal-psx%2Fblob%2Fmain%2FREADME.md
 
 ## Half-Life Decay 2001
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalf-life-decay%2Fblob%2Fmain%2FREADME.md
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalf-life-decay-2001%2Fblob%2Fmain%2FREADME.md
 
 
 ## In Progress
@@ -350,7 +350,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
   
 ## Block 14
 - `mafia-2001`
-- `half-life-decay`
+- `half-life-decay-2001`
 
   
 
