@@ -163,19 +163,20 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftomb-raide
 ## Soldier of Fortune 2000 - Syphon Filter PSX Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsoldier-of-fortune-2000-syphon-filter-psx%2Fblob%2Fmaster%2FREADME.md
 
-## Ghost Recon Advanced Warfighter 2006 - Deadly Dozen 2001
+## Ghost Recon Advanced Warfighter 2006 - Deadly Dozen 2001 Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fghost-recon-advanced-warfighter-2006-deadly-dozen-2001%2Fblob%2Fmain%2FREADME.md
 
-## GTAIII - They live
+## GTAIII - They Live
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgta-iii-they-live%2Fblob%2Fmain%2FREADME.md
 
 ## Call Of Juarez Bound in Blood - Gun Warrior Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcall-of-juarez-bound-in-blood-gun-warrior%2Fblob%2Fmain%2FREADME.md
 
-## F.E.A.R - History Channel Battle For Pacific Remake
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-history-channel-battle-for-pacific%2Fblob%2Fmain%2FREADME.md
+## F.E.A.R - History Channel Battle For Pacific Wii Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-history-channel-battle-for-pacific-wii%2Fblob%2Fmain%2FREADME.md
 
-
+## Silent Hill Shattered Memories Wii - Alone in the Dark The New Nightmare
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsilent-hill-shattered-memories-wii-alone-in-the-dark-the-new-nightmare%2Fblob%2Fmain%2FREADME.md
 
 ---
 
@@ -326,7 +327,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 ## Block 10
 - `iortcw-mortyr-1944`
 - `call-of-duty-3-2006`
-- `fear-history-channel-battle-for-pacific`
+- `fear-history-channel-battle-for-pacific-wii`
 - `halo-ce-duke-nukem-3d`
 
 ## Block 11
@@ -338,7 +339,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 ## Block 12
 - `far-cry-2004`
 - `ghost-recon-advanced-warfighter-2006-deadly-dozen-2001`
-- `ww2-combat-road-to-berlin`
+- `silent-hill-shattered-memories-wii-alone-in-the-dark-the-new-nightmare`
 - `marines-modern-urban-combat-wii-swat3`
 
 ## Block 13
