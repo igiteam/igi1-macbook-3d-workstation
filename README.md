@@ -151,8 +151,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbloodrayne
 ## Half-Life Decay 2001
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fhalf-life-decay-2001%2Fblob%2Fmain%2FREADME.md
 
-## Medal of Honor Vanguard Wii
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmedal-of-honor-vanguard-wii%2Fblob%2Fmain%2FREADME.md
+## Medal of Honor Vanguard Wii - WW2 Combat Road To Berlin Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmedal-of-honor-vanguard-wii-ww2-combat-road-to-berlin%2Fblob%2Fmain%2FREADME.md
 
 ## Grand Theft Auto IV - The Getaway PSX Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgtaiv-the-getaway-psx%2Fblob%2Fmain%2FREADME.md
@@ -166,23 +166,19 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ftomb-raide
 ## Soldier of Fortune 2000 - Syphon Filter PSX Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsoldier-of-fortune-2000-syphon-filter-psx%2Fblob%2Fmaster%2FREADME.md
 
-## World War 2 Combat Road To Berlin
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fww2-combat-road-to-berlin%2Fblob%2Fmain%2FREADME.md
-
 ## Ghost Recon Advanced Warfighter 2006 - Deadly Dozen 2001
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fghost-recon-advanced-warfighter-2006-deadly-dozen-2001%2Fblob%2Fmain%2FREADME.md
 
 ## GTAIII - They live
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgta-iii-they-live%2Fblob%2Fmain%2FREADME.md
 
-# to-do
+## Call Of Juarez Bound in Blood - Gun Warrior Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcall-of-juarez-bound-in-blood-gun-warrior%2Fblob%2Fmain%2FREADME.md
 
-## Block 8
-- call-of-juarez-bound-in-blood-gun-warrior
+## F.E.A.R - History Channel Battle For Pacific Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-history-channel-battle-for-pacific%2Fblob%2Fmain%2FREADME.md
 
 
-## Block 10
-- fear-history-channel-battle-for-pacific
 
 ---
 
@@ -349,7 +345,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `marines-modern-urban-combat-wii-swat3`
 
 ## Block 13
-- `medal-of-honor-vanguard-wii`
+- `medal-of-honor-vanguard-wii-ww2-combat-road-to-berlin`
 - `tactical-intervention-rainbow-six-1998`
 - `doom3-e3-alpha-rtcw`
 - `far-cry-2004-aliens-vs-predator-2`
