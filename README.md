@@ -1,7 +1,7 @@
 # igi1-macbook-3d-workstation
 [Read Macbooks.txt](https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/Macbooks.txt)
 
-> [RELEASE.md](https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Figi1-macbook-3d-workstation%2Fblob%2Fmain%2FRELEASE.md) [README.md](https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Figi1-macbook-3d-workstation%2Fblob%2Fmain%2FREADME.md) [gitimages](https://gitimages.macosxjs.com/?url==https%3A%2F%2Fgithub.com%2Figiteam%2Figi1-macbook-3d-workstation%2Fblob%2Fmain%2FRELEASE.md) [gitvideos](https://gitvideos.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Figi1-macbook-3d-workstation%2Fblob%2Fmain%2FRELEASE.md)
+> [RELEASE.md](https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Figi1-macbook-3d-workstation%2Fblob%2Fmain%2FRELEASE.md) [README.md](https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Figi1-macbook-3d-workstation%2Fblob%2Fmain%2FREADME.md) [gitimages](https://gitimages.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Figi1-macbook-3d-workstation%2Fblob%2Fmain%2FRELEASE.md) [gitvideos](https://gitvideos.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Figi1-macbook-3d-workstation%2Fblob%2Fmain%2FRELEASE.md)
 
 [https://igiteam.github.io/igi1-macbook-3d-workstation/](https://igiteam.github.io/igi1-macbook-3d-workstation/)
 
