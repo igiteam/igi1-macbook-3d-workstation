@@ -204,6 +204,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsilent-hil
 
 [https://xboxgames.macosxjs.com](https://xboxgames.macosxjs.com)
 
+[https://ps2games.macosxjs.com](https://ps2games.macosxjs.com)
+
 [https://wiigames.macosxjs.com](https://wiigames.macosxjs.com)
 
 [https://ps3games.macosxjs.com](https://ps3games.macosxjs.com)
@@ -214,8 +216,6 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsilent-hil
 
 [https://ps1games.macosxjs.com](https://ps1games.macosxjs.com)
 
-[https://pcgames.macosxjs.com](https://pcgames.macosxjs.com)
-
 [https://n64games.macosxjs.com](https://n64games.macosxjs.com)
 
 [https://dreamcastgames.macosxjs.com](https://dreamcastgames.macosxjs.com)
@@ -224,9 +224,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsilent-hil
 
 [https://gamecubegames.macosxjs.com](https://gamecubegames.macosxjs.com)
 
----
+[https://pcgames.macosxjs.com](https://pcgames.macosxjs.com)
 
-[https://ps2games.macosxjs.com](https://ps2games.macosxjs.com)
+---
 
 [https://3dogames.macosxjs.com](https://3dogames.macosxjs.com)
 
