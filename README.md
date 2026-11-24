@@ -169,8 +169,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsoldier-of
 ## World War 2 Combat Road To Berlin
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fww2-combat-road-to-berlin%2Fblob%2Fmain%2FREADME.md
 
-## Deadly Dozen 2001
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdeadly-dozen-2001%2Fblob%2Fmain%2FREADME.md
+## Ghost Recon Advanced Warfighter 2006 - Deadly Dozen 2001
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fghost-recon-advanced-warfighter-2006-deadly-dozen-2001%2Fblob%2Fmain%2FREADME.md
 
 ## GTAIII - They live
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgta-iii-they-live%2Fblob%2Fmain%2FREADME.md
@@ -344,7 +344,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 
 ## Block 12
 - `far-cry-2004`
-- `deadly-dozen-2001`
+- `ghost-recon-advanced-warfighter-2006-deadly-dozen-2001`
 - `ww2-combat-road-to-berlin`
 - `marines-modern-urban-combat-wii-swat3`
 
