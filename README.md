@@ -172,6 +172,12 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgta-iii-th
 ## Call Of Juarez Bound in Blood - Gun Warrior Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcall-of-juarez-bound-in-blood-gun-warrior%2Fblob%2Fmain%2FREADME.md
 
+## Rainbow Six Vegas - Kill.Switch 2004 Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fr6-vegas-kill-switch-2004%2Fblob%2Fmain%2FREADME.md
+
+## Rainbow Six Vegas - Ghost Recon 2001 Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fr6-vegas-ghost-recon-2001%2Fblob%2Fmain%2FREADME.md
+
 ## F.E.A.R - History Channel Battle For Pacific Wii Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-history-channel-battle-for-pacific-wii%2Fblob%2Fmain%2FREADME.md
 
@@ -183,9 +189,6 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fnovalogic-
 
 ## The Darkness PSX - Blood II Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthe-darkness-psx-blood-ii%2Fblob%2Fmain%2FREADME.md
-
-## NovaLogic Delta Force 1998-2002
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fnovalogic-delta-force-1998-2002%2Fblob%2FHEAD%2FREADME.md
 
 ## The Conduit Wii - Area 51 2005 Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthe-conduit-wii-area51-2005%2Fblob%2FHEAD%2FREADME.md
