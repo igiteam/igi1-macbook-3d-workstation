@@ -184,6 +184,26 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fnovalogic-
 ## The Darkness PSX - Blood II Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthe-darkness-psx-blood-ii%2Fblob%2Fmain%2FREADME.md
 
+## NovaLogic Delta Force 1998-2002
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fnovalogic-delta-force-1998-2002%2Fblob%2FHEAD%2FREADME.md
+
+## The Conduit Wii - Area 51 2005 Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthe-conduit-wii-area51-2005%2Fblob%2FHEAD%2FREADME.md
+
+## Beat Down Fist of Vengeance PSX - Tekken 3 PSX Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fbeat-down-fist-of-vegeance-psx-tekken3-psx%2Fblob%2FHEAD%2FREADME.md
+
+## Crysis 2 - Battle: Los Angeles Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcrysis2-battle-los-angeles%2Fblob%2FHEAD%2FREADME.md
+
+## 007 Quantum of Solace PSX
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2F007-quantum-of-solace-psx%2Fblob%2FHEAD%2FREADME.md
+
+## Grand Prix Legends - Battle Gear PSX Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgrand-prix-legends-battle-gear-psx%2Fblob%2FHEAD%2FREADME.md
+
+## Fahrenheit PSX - Spider-Man 2 PSX
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffahrenheit-psx-spider-man-2-psx%2Fblob%2FHEAD%2FREADME.md
 
 ---
 
@@ -369,6 +389,17 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 
 ## Block 16
 - `the-darkness-psx-blood-ii`
+- `novalogic-delta-force-1998-2002`
+- `the-conduit-wii-area51-2005`
+- `crysis2-battle-los-angeles`
+
+## Block 17
+- `beat-down-fist-of-vegeance-psx-tekken3-psx`
+- `007-quantum-of-solace-psx`
+- `grand-prix-legends-battle-gear-psx`
+- `fahrenheit-psx-spider-man-2-psx`
+
+## Block 18
 
 ### Reference Images: Sony MDR-V6
 
