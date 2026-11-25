@@ -178,6 +178,9 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffear-histo
 ## Silent Hill Shattered Memories Wii - Alone in the Dark The New Nightmare
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsilent-hill-shattered-memories-wii-alone-in-the-dark-the-new-nightmare%2Fblob%2Fmain%2FREADME.md
 
+## Novalogic Delta Force 1998-2002
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fnovalogic-delta-force-1998-2002%2Fblob%2Fmain%2FREADME.md
+
 ---
 
 ## Video Game Engines
@@ -354,7 +357,14 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `gtaiv-the-getaway-psx`
 - `soldier-of-fortune-2000-syphon-filter-psx`
 
-  
+## Block 15
+- `novalogic-delta-force-1998-2002`
+- `sniper-elite-wii-spec-ops-ii-green-berets`
+- `men-in-black-alien-crisis-wii-bad-boys-2`
+- `conduit-wii-area51-psx`
+
+## Block 16
+- `the-darkness-psx-blood2`
 
 ### Reference Images: Sony MDR-V6
 
