@@ -202,8 +202,21 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2F007-quantu
 ## Grand Prix Legends - Battle Gear PSX Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgrand-prix-legends-battle-gear-psx%2Fblob%2FHEAD%2FREADME.md
 
-## Fahrenheit PSX - Spider-Man 2 PSX
+## Fahrenheit PSX - Spider-Man 2 PSX Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffahrenheit-psx-spider-man-2-psx%2Fblob%2FHEAD%2FREADME.md
+
+## Sniper Elite Wii - Spec Ops II Green Berets 1999 Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsniper-elite-wii-spec-ops-ii-green-berets-1999%2Fblob%2FHEAD%2FREADME.md
+
+## Deus Ex Invisible War - Deus Ex 2000 Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fdeus-ex-invisible-war-deus-ex-2000%2Fblob%2FHEAD%2FREADME.md
+
+## Men in Black Alien Crisis Wii - Bad Boys 2 Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fmen-in-black-alien-crisis-wii-bad-boys-2%2Fblob%2FHEAD%2FREADME.md
+
+## Heroes of Might and Magic Quest For the Dragon Bone Staff PSX - Colosseum Road To Freedom PSX Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fheroes-of-mm-quest-for-the-dragon-bone-staff-psx-colosseum-road-to-freedom-psx%2Fblob%2FHEAD%2FREADME.md
+
 
 ---
 
@@ -398,6 +411,12 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `007-quantum-of-solace-psx`
 - `grand-prix-legends-battle-gear-psx`
 - `fahrenheit-psx-spider-man-2-psx`
+
+## Block 18
+- `sniper-elite-wii-spec-ops-ii-green-berets-1999`
+- `deus-ex-invisible-war-deus-ex-2000`
+- `men-in-black-alien-crisis-wii-bad-boys-2`
+- `heroes-of-mm-quest-for-the-dragon-bone-staff-psx-colosseum-road-to-freedom-psx`
 
 ## Block 18
 
