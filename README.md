@@ -402,8 +402,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 
 ## Block 16
 - `the-darkness-psx-blood-ii`
-- `novalogic-delta-force-1998-2002`
-- `the-conduit-wii-area51-2005`
+- `heroes-of-mm-quest-for-the-dragon-bone-staff-psx-colosseum-road-to-freedom-psx`
+- `deus-ex-invisible-war-deus-ex-2000`
 - `crysis2-battle-los-angeles`
 
 ## Block 17
@@ -412,13 +412,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `grand-prix-legends-battle-gear-2-psx`
 - `fahrenheit-psx-spider-man-2-psx`
 
-## Block 18
-- `sniper-elite-wii-spec-ops-ii-green-berets-1999`
-- `deus-ex-invisible-war-deus-ex-2000`
-- `men-in-black-alien-crisis-wii-bad-boys-2`
-- `heroes-of-mm-quest-for-the-dragon-bone-staff-psx-colosseum-road-to-freedom-psx`
 
-## Block 18
 
 ### Reference Images: Sony MDR-V6
 
