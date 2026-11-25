@@ -353,7 +353,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `openofpcwc-hidden-and-dangerous`
 - `cod2-hour-of-victory`
 - `cod2003-brothers-in-arms-wii`
-- `halo-ce-1-2-3`
+- `halo-ce-123`
 
 ## Block 8
 - `hitman-codename-47-mission-impossible-psx`
@@ -401,7 +401,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `novalogic-delta-force-1998-2002`
 - `sniper-elite-wii-spec-ops-ii-green-berets`
 - `men-in-black-alien-crisis-wii-bad-boys-2`
-- `conduit-wii-area51-psx`
+- `conduit-wii-area51-2005`
 
 ## Block 16
 - `the-darkness-psx-blood-ii`
