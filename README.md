@@ -199,8 +199,8 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fcrysis2-ba
 ## 007 Quantum of Solace PSX
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2F007-quantum-of-solace-psx%2Fblob%2FHEAD%2FREADME.md
 
-## Grand Prix Legends - Battle Gear PSX Remake
-https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgrand-prix-legends-battle-gear-psx%2Fblob%2FHEAD%2FREADME.md
+## Grand Prix Legends - Battle Gear 2 PSX Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fgrand-prix-legends-battle-gear-2-psx%2Fblob%2FHEAD%2FREADME.md
 
 ## Fahrenheit PSX - Spider-Man 2 PSX Remake
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Ffahrenheit-psx-spider-man-2-psx%2Fblob%2FHEAD%2FREADME.md
@@ -409,7 +409,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 ## Block 17
 - `beat-down-fist-of-vegeance-psx-tekken3-psx`
 - `007-quantum-of-solace-psx`
-- `grand-prix-legends-battle-gear-psx`
+- `grand-prix-legends-battle-gear-2-psx`
 - `fahrenheit-psx-spider-man-2-psx`
 
 ## Block 18
