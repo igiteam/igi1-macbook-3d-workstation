@@ -181,6 +181,10 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fsilent-hil
 ## Novalogic Delta Force 1998-2002
 https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fnovalogic-delta-force-1998-2002%2Fblob%2Fmain%2FREADME.md
 
+## The Darkness PSX - Blood II Remake
+https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fthe-darkness-psx-blood-ii%2Fblob%2Fmain%2FREADME.md
+
+
 ---
 
 ## Video Game Engines
@@ -364,7 +368,7 @@ https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2FCarter54git%2FGreate
 - `conduit-wii-area51-psx`
 
 ## Block 16
-- `the-darkness-psx-blood2`
+- `the-darkness-psx-blood-ii`
 
 ### Reference Images: Sony MDR-V6
 
