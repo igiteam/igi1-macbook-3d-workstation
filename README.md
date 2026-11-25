@@ -498,5 +498,22 @@ https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads
 ## WineJS 1-bash Ubuntu Server Projects
 https://github.com/igiteam/winejs-projects
 
+https://github.com/igiteam/winejs_firefox_addons
+
+https://github.com/igiteam/logitec_mx_mouse_3_macos
+
+https://github.com/igiteam/winejs_macosx_tips
+
+https://github.com/igiteam/wine_macosx
+
+https://github.com/igiteam/winejs
+
+## WS11WineCX20.0.4 (macOS Big Sur 32-bit)
+
+[WS11WineCX20.0.4.tar.7z](https://github.com/vitor251093/porting-kit-engines/releases/download/wineskin/WS11WineCX20.0.4.tar.7z)
+
+[![Wine Windows games on macOS](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/wine-engine-config.png)](https://github.com/igiteam/wine_engines)
+
+
 [![raspberry-pi-5-portable-forgejolf](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry-pi5-forgejogitlfs/raspberry-pi-5-portable-forgejolfs.png)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry-pi5-forgejogitlfs/Raspberry%20Pi%20Build%20Cost%20Comparison.html)
 
