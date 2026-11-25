@@ -495,6 +495,8 @@ Every friction point has a dedicated machine, a dedicated OS, a dedicated screen
 https://github.com/igiteam/igi1-macbook-3d-workstation/blob/main/raspberry-pi5-ssd/README.md
 ## Raspberry-pi-5-portable-1tb-forgejogitlf-ubuntu.pdf
 https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/raspberry-pi5-ssd/raspberry-pi-5-portable-forgejogitlf-ubuntu.pdf
+## WineJS 1-bash Ubuntu Server Projects
+https://github.com/igiteam/winejs-projects
 
 [![raspberry-pi-5-portable-forgejolf](https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry-pi5-forgejogitlfs/raspberry-pi-5-portable-forgejolfs.png)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/igiteam/igi1-macbook-3d-workstation/refs/heads/main/rapsberry-pi5-forgejogitlfs/Raspberry%20Pi%20Build%20Cost%20Comparison.html)
 
