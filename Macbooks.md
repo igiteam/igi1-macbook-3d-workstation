@@ -17,6 +17,7 @@ Grace Digital GDI-BTPB300 3Play Bluetooth Audio Receiver
 
 Logitech MX Master 3 Mac Edition +  Logitech MX Keys Mini Wireless Keyboard
 https://github.com/igiteam/logitec_mx_mouse_3_macos 
+```
 ┌─────────────────────────────────────────────────────────────────────────────────────────┐
 │                       3D DEVELOPMENT STUDIO                                             │
 │                                                                                         │
@@ -58,7 +59,8 @@ https://github.com/igiteam/logitec_mx_mouse_3_macos
 │  📡  2 x Infrared Sensor Bar for pointer tracking                                       │
 │  🎧  3.5mm Earphones for audio                                                          │
 └─────────────────────────────────────────────────────────────────────────────────────────┘
-
+```
+```
 ┌───────────────────────────────────────────────────────┐
 │                                                       │
 │   [IR BAR 1]  ← on the Mac (desk)                     │
@@ -74,61 +76,62 @@ https://github.com/igiteam/logitec_mx_mouse_3_macos
 │   [VT30 55" Plasma]  ← eventually                     │
 │                                                       │
 └───────────────────────────────────────────────────────┘
+```
 
 MacBook Pro 16" 2019 → Apple USB-C to Digital AV HDMI Multiport Adapter (A2119) → HDMI 3m cable → TV
 Macbook Pro 15.4" 2014 → native HDMI port → HDMI 3m cable → TV
-
-    ╔══════════════════════════════════════════════════════════════════════════╗
-    ║                                                                          ║
-    ║                    3D DEVELOPMENT STUDIO — MASTER MAP                    ║
-    ║                                                                          ║
-    ╚══════════════════════════════════════════════════════════════════════════╝
-                                                ┌─────────────────┐    ┌──────────────────────┐
-                                               │WiiSensorBar(USB-A)│  │   WiiSensorBar(USB-A)  │
-                                                └──────────────┬──┘    └───────────────────┬──┘ 
-        ┌─────────────────┐ ┌─────────────────┐ ┌──────────────▲──┐    ┌───────────────────▲──┐
-        │     MAC 1       │ │     MAC 2       │ │     MAC 3       │    │   PANASONIC VT30     │
-        │   THE CANVAS    │ │  THE REFERENCE  │ │   THE TESTER    │    │   55" 3D PLASMA      │
-        │                 │ │                 │ │                 │    │                      │
-        │  Monterey 12.4  │ │  Sonoma 14.5    │ │  Big Sur 11.7   │    │   ┌──────┐           │
-        │  MBP 16" 2019   │ │  MBP 16" 2019   │ │  MBP 15" 2014   │    │   │HDMI 1│   (MAC3)  │
-        │  i9 8-core      │ │  i9 8-core      │ │  i7 dual-core   │    │   ├──────┤           │
-        │  32GB / 1TB     │ │  32GB / 1TB     │ │  16GB / 500GB   │    │   │HDMI 2│           │
-        │  AMD 5500M 8GB  │ │  AMD 5500M 4GB  │ │  GT 750M 2GB    │    │   ├──────┤           │
-        │                 │ │                 │ │                 │    │   │HDMI 3│           │
-        │  ▸ BUILD        │ │  ▸ LOOK         │ │  ▸ PLAY         │    │   └──────┘           │
-        │  ▸ EDIT         │ │  ▸ COMPARE      │ │  ▸ BREAK        │    │                      │
-        │  ▸ COMPILE      │ │  ▸ READ         │ │  ▸ VERIFY       │    │   🕶️  3D READY       │
-        └────────┬────────┘ └────────┬────────┘ └────────┬────┬───┘    └──────────▲───────────┘
-                 │                   │                   │    │                   │
-                 │                   │                   │    │                   │
-                 │                   │                   │    └───────────────────┘
-                 │                   │                   │        HDMI 1  (live)
-                 └───────────────────┼───────────────────┘
-                                     │
-                       ┌─────────────┴─────────────┐───────────────────────────┐
-                       │                           │                           │
-                       ▼                           ▼                           ▼
-            ┌──────────────────────┐    ┌──────────────────────┐    ┌──────────────────────┐
-            │  ᛒINPUT — LEFT HAND  │    │  ᛒINPUT — RIGHT HAND │    │   ᛒAUDIO             │ 
-            │                      │    │                      │    │   OUTPUT - MAC 1/2/3 │ 
-            │  ⌨️  MX KEYS MINI    │    │  🖱️  MX MASTER 3      │    │   Grace Digital      │ 
-            │  Logitech Flow       │    │  Logitech Flow       │    │   GDI-BTPB300 3Play  │ 
-            │  Custom app:         │    │  Custom app:         │    │   └─ 3.5mm jack      │  
-            │  MXKeysSwitch        │    │  logitec_mx_mouse_3  │    │   🎧 JBL Quantum 200 │ 
-            │                      │    │                      │    │                      │  
-            │  Host 1/2/3 via menu │    │  Host 1/2/3 via menu │    │  Host 1/2/3 via menu │
-            └──────────────────────┘    └──────────────────────┘    └──────────────────────┘
-                      │                           │
-                      └─────────────┬─────────────┘
-                                    │
-                                    ▼
-                        ┌──────────────────────────┐
-                        │   3 MACS, 1 MOUSE,       │
-                        │   1 KEYBOARD, 0 KVM      │
-                        │                          │
-                        │   Flow moves both.       │
-                        │   Menu bar switches.     │
+```
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║                    3D DEVELOPMENT STUDIO — MASTER MAP                    ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+                                            ┌─────────────────┐    ┌──────────────────────┐
+                                           │WiiSensorBar(USB-A)│  │   WiiSensorBar(USB-A)  │
+                                            └──────────────┬──┘    └───────────────────┬──┘ 
+    ┌─────────────────┐ ┌─────────────────┐ ┌──────────────▲──┐    ┌───────────────────▲──┐
+    │     MAC 1       │ │     MAC 2       │ │     MAC 3       │    │   PANASONIC VT30     │
+    │   THE CANVAS    │ │  THE REFERENCE  │ │   THE TESTER    │    │   55" 3D PLASMA      │
+    │                 │ │                 │ │                 │    │                      │
+    │  Monterey 12.4  │ │  Sonoma 14.5    │ │  Big Sur 11.7   │    │   ┌──────┐           │
+    │  MBP 16" 2019   │ │  MBP 16" 2019   │ │  MBP 15" 2014   │    │   │HDMI 1│   (MAC3)  │
+    │  i9 8-core      │ │  i9 8-core      │ │  i7 dual-core   │    │   ├──────┤           │
+    │  32GB / 1TB     │ │  32GB / 1TB     │ │  16GB / 500GB   │    │   │HDMI 2│           │
+    │  AMD 5500M 8GB  │ │  AMD 5500M 4GB  │ │  GT 750M 2GB    │    │   ├──────┤           │
+    │                 │ │                 │ │                 │    │   │HDMI 3│           │
+    │  ▸ BUILD        │ │  ▸ LOOK         │ │  ▸ PLAY         │    │   └──────┘           │
+    │  ▸ EDIT         │ │  ▸ COMPARE      │ │  ▸ BREAK        │    │                      │
+    │  ▸ COMPILE      │ │  ▸ READ         │ │  ▸ VERIFY       │    │   🕶️  3D READY       │
+    └────────┬────────┘ └────────┬────────┘ └────────┬────┬───┘    └──────────▲───────────┘
+             │                   │                   │    │                   │
+             │                   │                   │    │                   │
+             │                   │                   │    └───────────────────┘
+             │                   │                   │        HDMI 1  (live)
+             └───────────────────┼───────────────────┘
+                                 │
+                   ┌─────────────┴─────────────┐───────────────────────────┐
+                   │                           │                           │
+                   ▼                           ▼                           ▼
+        ┌──────────────────────┐    ┌──────────────────────┐    ┌──────────────────────┐
+        │  ᛒINPUT — LEFT HAND  │    │  ᛒINPUT — RIGHT HAND │    │   ᛒAUDIO             │ 
+        │                      │    │                      │    │   OUTPUT - MAC 1/2/3 │ 
+        │  ⌨️  MX KEYS MINI    │    │  🖱️  MX MASTER 3      │    │   Grace Digital      │ 
+        │  Logitech Flow       │    │  Logitech Flow       │    │   GDI-BTPB300 3Play  │ 
+        │  Custom app:         │    │  Custom app:         │    │   └─ 3.5mm jack      │  
+        │  MXKeysSwitch        │    │  logitec_mx_mouse_3  │    │   🎧 JBL Quantum 200 │ 
+        │                      │    │                      │    │                      │  
+        │  Host 1/2/3 via menu │    │  Host 1/2/3 via menu │    │  Host 1/2/3 via menu │
+        └──────────────────────┘    └──────────────────────┘    └──────────────────────┘
+                  │                           │
+                  └─────────────┬─────────────┘
+                                │
+                                ▼
+                    ┌──────────────────────────┐
+                    │   3 MACS, 1 MOUSE,       │
+                    │   1 KEYBOARD, 0 KVM      │
+                    │                          │
+                    │   Flow moves both.       │
+                    │   Menu bar switches.     │
                         └──────────────────────────┘
-
+```
 
