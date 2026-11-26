@@ -117,9 +117,9 @@ Macbook Pro 15.4" 2014 → native HDMI port → HDMI 3m cable → TV
         │  ᛒINPUT — LEFT HAND  │    │  ᛒINPUT — RIGHT HAND │    │   ᛒAUDIO             │ 
         │                      │    │                      │    │   OUTPUT - MAC 1/2/3 │ 
         │  ⌨️  MX KEYS MINI    │    │  🖱️  MX MASTER 3      │    │   Grace Digital      │ 
-        │  Logitech Flow       │    │  Logitech Flow       │    │   GDI-BTPB300 3Play  │ 
+        │  Logitech Flow       │    │  Logitech Flow       │    │   3Play GDI-BTPB300  │ 
         │  Custom app:         │    │  Custom app:         │    │   └─ 3.5mm jack      │  
-        │  MXKeysSwitch        │    │  logitec_mx_mouse_3  │    │   🎧 JBL Quantum 200 │ 
+        │  MXKeysSwitch        │    │  logitec_mx_mouse_3  │    │   🎧 Sony MDR-V6     │ 
         │                      │    │                      │    │                      │  
         │  Host 1/2/3 via menu │    │  Host 1/2/3 via menu │    │  Host 1/2/3 via menu │
         └──────────────────────┘    └──────────────────────┘    └──────────────────────┘
