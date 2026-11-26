@@ -99,7 +99,7 @@ Macbook Pro 15.4" 2014 → native HDMI port → HDMI 3m cable → TV
     │  i9 8-core      │ │  i9 8-core      │ │  i7 dual-core   │    │   ├──────┤           │
     │  32GB / 1TB     │ │  32GB / 1TB     │ │  16GB / 500GB   │    │   │HDMI 2│           │
     │  AMD 5500M 8GB  │ │  AMD 5500M 4GB  │ │  GT 750M 2GB    │    │   ├──────┤           │
-    │                 │ │                 │ │                 │    │   │HDMI 3│           │
+    │    (repo)       ◂ ▸   (repo)        ◂ ▸   (repo)        │    │   │HDMI 3│           │
     │  ▸ BUILD        │ │  ▸ LOOK         │ │  ▸ PLAY         │    │   └──────┘           │
     │  ▸ EDIT         │ │  ▸ COMPARE      │ │  ▸ BREAK        │    │                      │
     │  ▸ COMPILE      │ │  ▸ READ         │ │  ▸ VERIFY       │    │   🕶️  3D READY       │
