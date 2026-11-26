@@ -87,9 +87,9 @@ Macbook Pro 15.4" 2014 → native HDMI port → HDMI 3m cable → TV
 ║                    3D DEVELOPMENT STUDIO — MASTER MAP                    ║
 ║                                                                          ║
 ╚══════════════════════════════════════════════════════════════════════════╝
-                                            ┌─────────────────┐    ┌──────────────────────┐
-                                           │WiiSensorBar(USB-A)│  │   WiiSensorBar(USB-A)  │
-                                            └──────────────┬──┘    └───────────────────┬──┘ 
+                                            ┌───────────────────┐     ┌───────────────────┐
+                                            │WiiSensorBar(USB-A)│     │WiiSensorBar(USB-A)│
+                                            └──────────────┬────┘     └─────────────────┬─┘ 
     ┌─────────────────┐ ┌─────────────────┐ ┌──────────────▲──┐    ┌───────────────────▲──┐
     │     MAC 1       │ │     MAC 2       │ │     MAC 3       │    │   PANASONIC VT30     │
     │   THE CANVAS    │ │  THE REFERENCE  │ │   THE TESTER    │    │   55" 3D PLASMA      │
@@ -133,6 +133,6 @@ Macbook Pro 15.4" 2014 → native HDMI port → HDMI 3m cable → TV
                     │                          │
                     │   Flow moves both.       │
                     │   Menu bar switches.     │
-                        └──────────────────────────┘
+                    └──────────────────────────┘
 ```
 
