@@ -1,0 +1,1 @@
+cd ~/Downloads && find . -maxdepth 1 -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.webp' -o -iname '*.gif' -o -iname '*.bmp' -o -iname '*.tiff' -o -iname '*.tif' -o -iname '*.heic' -o -iname '*.heif' \) -exec sh -c 'for f do sips -s format png "$f" --out "${f%.*}.png" && rm "$f"; done' sh {} +
